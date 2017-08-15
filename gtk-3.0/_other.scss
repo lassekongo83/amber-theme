@@ -1,0 +1,216 @@
+// Global panel button styles
+%panelbutton {
+  color: transparentize($dark_fg_color, 0.1);
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+
+  &:hover {
+    color: $dark_fg_color;
+    background-color: lighten($dark_bg_color, 4%);
+  }
+  &:active, &:checked {
+    color: $dark_fg_color;
+    background-color: lighten($dark_bg_color, 8%);
+    &:hover { background-color: lighten($dark_bg_color, 9%); }
+  }
+}
+
+/*
+  XFCE GTK3 Styling
+  Note: If you wish to edit the theme for XFCE 4.12 or earlier you do it in the GTK-2.0 folder.
+*/
+
+CatfishWindow .pane-separator {
+  background-color: darken($base_color, 10%);
+}
+
+XfceHeading,
+.XfceHeading {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  background-image: none;
+  background-color: $bg_color;
+  color: $text_color;
+  text-shadow: none;
+}
+
+.budgie-panel,
+.xfce4-panel {
+  background-color: $dark_bg_color;
+  color: $dark_fg_color;
+  font-style: normal;
+  
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+  
+  button { @extend %panelbutton; }
+}
+
+.xfce4-panel frame > border {
+  border-style: none;
+}
+
+.xfce4-panel menu {
+  -gtk-icon-effect: none;
+  text-shadow: none;
+}
+
+// Temporary fixes for certain XFCE applets using GTK3
+#pulseaudio-button, #indicator-button {
+  @extend %panelbutton;
+}
+
+/*
+  Mate/Gnome Flashback Panel
+*/
+.gnome-panel-menu-bar,
+.mate-panel-menu-bar {
+
+  &, menubar { background-color: $dark_bg_color; }
+
+  menubar,
+  #PanelApplet label,
+  #PanelApplet image { color: $dark_fg_color; }
+
+  // Panel buttons
+  button:not(#tasklist-button) {
+    @extend %panelbutton;
+  }
+
+  button,
+  #tasklist-button {
+    label, image { color: inherit; }
+  }
+
+  .wnck-pager {
+    color: mix($dark_fg_color, black, 50%);
+    background-color: darken($dark_bg_color, 10%);
+
+    &:hover {
+      background-color: lighten($dark_bg_color, 5%);
+    }
+
+    &:selected {
+      color: lighten($selected_bg_color, 20%);
+      background-color: $selected_bg_color;
+    }
+  }
+
+  na-tray-applet {
+    -NaTrayApplet-icon-padding: 0;
+    -NaTrayApplet-icon-size: 16px;
+  }
+}
+
+// Application specific fixes should be avoided as much as possible! In some cases they are unavoidable.
+
+// Firefox
+menu,
+.menu,
+.context-menu {
+  .separator:not(label),
+  .csd & .separator:not(label) { color: darken($dark_bg_color, 5%); }
+}
+
+// Caja
+.caja-desktop { @extend .nautilus-desktop.nautilus-canvas-item; }
+.caja-notebook { border-top: 1px solid $borders_color; }
+.caja-side-pane .frame { border-width: 1px 0 0; }
+.caja-notebook .frame { border-width: 0 0 1px; }
+
+// Nautilus and nemo
+.nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
+  color: white;
+  text-shadow: 1px 1px 2px transparentize(black, 0.2);
+}
+
+.nautilus-window {
+  // Workaround for https://bugzilla.gnome.org/show_bug.cgi?id=724096
+
+  searchbar { border-top: 1px solid $borders_color; }
+  .searchbar-container { margin-top: -1px; }
+}
+
+// Without this nautilus iconview grabs the bg_color
+.nautilus-window notebook,
+.nautilus-window notebook > stack:not(:only-child) searchbar {
+  @extend %view;
+}
+
+// Shouldn't be needed
+.disk-space-display {
+  border-style: solid;
+  border-width: 2px;
+
+  &.unknown {
+    background-color: darken($bg_color, 20%);
+    border-color: darken($bg_color, 30%);
+  }
+  &.used {
+    background-color: $selected_bg_color;
+    border-color: darken($selected_bg_color, 20%);
+  }
+  &.free {
+    background-color: $bg_color;
+    border-color: darken($bg_color, 20%);
+  }
+}
+
+// Nemo is very ugly and needs special fixes
+.nemo-window {
+
+  .nemo-places-sidebar.frame { border-width: 0; }
+  notebook { @extend .view; }
+
+  // Rename entry
+  .nemo-window-pane widget.entry {
+    border: 1px solid;
+    border-radius: 3px;
+
+    @include entry(focus);
+
+    &:selected { &:focus, & { @extend %selected_items; }}
+  }
+}
+
+// Nemo is so bad
+.places-treeview {
+  -NemoPlacesTreeView-disk-full-bg-color: $base_color;
+  -NemoPlacesTreeView-disk-full-fg-color: $selected_bg_color;
+  -NemoPlacesTreeView-disk-full-bar-width: 2px;
+  -NemoPlacesTreeView-disk-full-bar-radius: 1px;
+  -NemoPlacesTreeView-disk-full-bottom-padding: 1px;
+  -NemoPlacesTreeView-disk-full-max-length: 70px;
+
+  &:selected {
+    -NemoPlacesTreeView-disk-full-bg-color: $base_color;
+    -NemoPlacesTreeView-disk-full-fg-color: darken($selected_bg_color, 15%);
+  }
+}
+
+.nemo-window .sidebar .view {
+  background-color: mix($bg_color, $base_color, 50%);
+}
+
+.nemo-window .sidebar treeview .cell:selected {
+  @extend %selected_items;
+}
+
+// Evolution - https://github.com/lassekongo83/zuki-themes/issues/119
+.table-header {
+  @extend %column_header_button;
+  padding: 4px 0 4px 0;
+  min-height: 24px;
+}
+
+// Chromium - https://github.com/lassekongo83/plano-theme/issues/15 and 16
+window.background.chromium {
+  background-color: $bg_color;
+  
+  button { // tab borders
+    border-color: $borders_color;
+  }
+}
