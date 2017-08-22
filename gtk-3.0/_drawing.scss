@@ -113,42 +113,49 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   @else { @return darken($c, 20%); }
 }
 
+// These shadows acts like borders on the buttons
 @mixin btn-shadow($children: true) {
-  @if $children or $children == false {
+  $sc: transparentize(black, 0.92); // main shadow
+  $scb: transparentize(black, 0.8); // bottom shadow (should be a little bit more intense)
+  $sch: transparentize(white, 0.92); // top hilight
+  @if $children or $children == normal {
     & {
-      box-shadow: 1px 0 transparentize(black, 0.92), 
-        0 1px 1px transparentize(black, 0.8), 
-        0 2px transparentize(black, 0.92), 
-        -1px 0 transparentize(black, 0.92), 
-        0 -1px transparentize(black, 0.92),
-        inset 0 1px transparentize(white, 0.94);
+      box-shadow: 1px 0 $sc,
+        0 1px 1px $scb,
+        0 2px $sc,
+        -1px 0 $sc,
+        0 -1px $sc,
+        inset 0 1px $sch;
     }
   }
-  @elseif $children or $children == first-child {
+  @else if $children or $children == first-child {
     &:first-child {
-      box-shadow: 0 0 transparentize(black, 0.92), 
-        0 1px 1px transparentize(black, 0.8), 
-        -1px 0 transparentize(black, 0.92), 
-        0 -1px transparentize(black, 0.92),
-        inset 0 1px transparentize(white, 0.94);
+      box-shadow: 0 0 $sc,
+        0 1px 1px $scb, 
+        0 2px $sc,
+        -1px 0 $sc,
+        0 -1px $sc,
+        inset 0 1px $sch;
     }
   }
-  @elseif $children or $children == last-child {
+  @else if $children or $children == last-child {
     &:last-child {
-      box-shadow: 1px 0 transparentize(black, 0.92), 
-        0 1px 1px transparentize(black, 0.8), 
-        0 0 transparentize(black, 0.92), 
-        0 -1px transparentize(black, 0.92),
-        inset 0 1px transparentize(white, 0.94);
+      box-shadow: 1px 0 $sc,
+        0 1px 1px $scb,
+        0 2px $sc,
+        0 0 $sc,
+        0 -1px $sc,
+        inset 0 1px $sch;
     }
   }
-  @elseif $children or $children == only-child {
+  @else if $children or $children == only-child {
     &:only-child {
-      box-shadow: 1px 0 transparentize(black, 0.92), 
-        0 1px 1px transparentize(black, 0.8), 
-        -1px 0 transparentize(black, 0.92), 
-        0 -1px transparentize(black, 0.92),
-        inset 0 1px transparentize(white, 0.94);
+      box-shadow: 1px 0 $sc,
+        0 1px 1px $scb,
+        0 2px $sc,
+        -1px 0 $sc,
+        0 -1px $sc,
+        inset 0 1px $sch;
     }
   }
 }
@@ -191,9 +198,8 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   // normal button
     color: $tc;
     outline-color: transparentize($tc, 0.7);
-    //border-color: $btn-border;
     background-color: lighten($c, 5%);
-    @include btn-shadow();
+    @include btn-shadow(normal);
   }
   @if $t==normal-alt {
   // normal button alternative look
@@ -272,9 +278,8 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   @else if $t==headerbutton-hover {
   // hovered header button
     color: $dfc;
-    outline-color: transparentize($tc, 0.7);
     border-color: $selected_bg_color;
-    background-color: lighten($dc, 5%);
+    background-color: lighten($dc, 14%);
   }
   @else if $t==headerbutton-active {
   // active header button
@@ -396,7 +401,7 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   @else { box-shadow: none; }
 }
 
-@mixin headerbar_fill($c:$bg_color, $hc:transparentize($top_hilight, 0.9)) {
+@mixin headerbar_fill($c:$bg_color, $hc:transparentize(white, 0.92)) {
 //
 // headerbar fill
 //
@@ -404,7 +409,7 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
 // $hc: top highlight color
 //
   background-color: $dark_bg_color;
-  //box-shadow: inset 0 1px $hc; // top highlight
+  box-shadow: inset 0 1px $hc; // top highlight
 }
 
 @mixin overshoot($p, $t:normal, $c:$fg_color) {
