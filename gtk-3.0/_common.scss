@@ -463,7 +463,7 @@ button {
     min-height: 20px;
     min-width: 16px;
     padding: 4px 4px;
-    border: 1px solid;
+    border: 0px solid;
     border-radius: $br_b;
 
     @include button(normal);
