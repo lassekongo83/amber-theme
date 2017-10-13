@@ -1402,6 +1402,7 @@ headerbar {
   }
   .suggested-action {
     &:disabled { @include button(undecorated-disabled); }
+    &:backdrop:not(:disabled) { color: $selected_fg_color; }
   }
 
   // Linked headerbar buttons
@@ -3218,7 +3219,12 @@ $_placesidebar_icons_opacity: 0.7;
 row image.sidebar-icon { opacity: $_placesidebar_icons_opacity; } // dim the sidebar icons
 
 placessidebar {
-  > viewport.frame { border-style: none; }
+  > viewport.frame { 
+    border-style: none;
+    border-right: 1px solid transparentize(black, 0.8);
+    box-shadow: inset -2px 0 transparentize(black, 0.94), 
+                inset -1px 0 transparentize(black, 0.92);
+  }
 
   row {
     // Needs overriding of the GtkListBoxRow padding
