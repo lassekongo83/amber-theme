@@ -548,7 +548,7 @@ searchbar, .location-bar { border-width: 0 0 1px; padding: 3px; }
 
 .default-decoration.titlebar:not(headerbar) button.titlebutton, headerbar.default-decoration button.titlebutton { min-height: 24px; min-width: 24px; margin: 0; padding: 0; }
 
-.titlebar:not(headerbar) separator, headerbar separator { background-color: transparent; }
+.titlebar:not(headerbar) separator, headerbar separator { background-color: #474642; }
 
 headerbar { color: #f2f1f0; }
 
@@ -598,7 +598,7 @@ window.tiled headerbar, window.tiled headerbar:first-child, window.tiled headerb
 
 window.csd > .titlebar:not(headerbar) { padding: 0; background-color: transparent; background-image: none; border-style: none; border-color: transparent; box-shadow: none; }
 
-.titlebar:not(headerbar) > separator { background-color: #8c8984; }
+.titlebar:not(headerbar) > separator { background-color: #474642; box-shadow: inset 0 1px rgba(255, 255, 255, 0.08); }
 
 /************ Pathbars * */
 .path-bar button.text-button, .path-bar button.image-button, .path-bar button { padding-left: 4px; padding-right: 4px; }
