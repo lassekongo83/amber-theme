@@ -3323,7 +3323,8 @@ paned {
     border-style: none; // just to be sure
     background-color: transparent;
     // workaround, using background istead of a border since the border will get rendered twice (?)
-    background-image: image(mix($bg_color, $base_color, 50%));
+    // Styles the sidebar handle in gedit
+    background-image: image($borders_color), image($borders_color);
     background-size: 1px 1px;
 
     &:selected { background-image: image($selected_bg_color); } // FIXME is this needed?
