@@ -732,7 +732,7 @@ StScrollBar {
 /* TOP BAR */
 
 #panel {
-  background-color: $bg_color;
+  background-color: darken($bg_color, 5%); // slightly darkened to make it work better with maximized windows
   font-weight: bold;
   height: 1.86em;
   box-shadow: none;

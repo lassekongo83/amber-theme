@@ -2364,12 +2364,12 @@ radio {
   border: 0px solid;
   -gtk-icon-source: none;
 
-  @include button(normal-alt);
+  @include button(check-normal);
 
-  &:hover { @include button(hover-alt); }
-  &:active { @include button(normal-alt); }
-  &:checked { @include button(normal-alt); }
-  &:checked:hover { @include button(hover-alt); }
+  &:hover { @include button(check-hover); }
+  &:active { @include button(check-checked); }
+  &:checked { @include button(check-checked); }
+  &:checked:hover { @include button(check-checked); }
   &:disabled { @include button(insensitive); }
 
   @if $variant == 'light' {

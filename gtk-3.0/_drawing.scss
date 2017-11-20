@@ -118,7 +118,7 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   $sc: transparentize(black, 0.88); // main shadow
   $scb: transparentize(black, 0.8); // bottom shadow (should be a little bit more intense)
   $sch: transparentize(white, 0.88); // top hilight
-  $scf: if($variant == 'light', transparentize($selected_bg_color, 0.0), transparentize($selected_bg_color, 0.0)); // focus shadow
+  $scf: $selected_bg_color; // focus shadow
 
   @if $state == normal {
     box-shadow: 1px 0 $sc,
@@ -282,6 +282,23 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
     background-color: transparent;
   }
 
+  // check and radio buttons
+  @if $t==check-normal {
+    color: $tc;
+    background-color: $base_color;
+    @include btn-shadow(normal);
+  }
+  @if $t==check-checked {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+    @include btn-shadow(focus);
+  }
+  @else if $t==check-hover {
+    color: $tc;
+    @include btn-shadow(focus);
+  }
+
+  // osd buttons
   @else if $t==osd {
   // normal osd button
     $_bg: if($c!=$bg_color, transparentize($c, 0.5),
