@@ -540,15 +540,15 @@ searchbar, .location-bar { border-width: 0 0 1px; padding: 3px; }
 
 headerbar { color: #f2f1f0; }
 
-headerbar button { color: #f2f1f0; color: #f2f1f0; outline-color: rgba(76, 76, 76, 0.3); border-color: #8c8984; background-color: #4d4d4d; box-shadow: 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px rgba(0, 0, 0, 0.12), -1px 0 rgba(0, 0, 0, 0.12), 0 -1px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.12); }
+headerbar button { color: #f2f1f0; color: #f2f1f0; outline-color: rgba(76, 76, 76, 0.3); border-color: #0d0d0d; background-color: #4d4d4d; box-shadow: 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px rgba(0, 0, 0, 0.12), -1px 0 rgba(0, 0, 0, 0.12), 0 -1px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.12); }
 
 headerbar button:hover { color: #f2f1f0; border-color: #f07746; background-color: #575757; }
 
 headerbar button:focus { color: #f2f1f0; border-color: #f07746; box-shadow: 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px rgba(0, 0, 0, 0.12), -1px 0 rgba(0, 0, 0, 0.12), 0 -1px rgba(0, 0, 0, 0.12), inset 0 0 0 1px #f07746; }
 
-headerbar button:checked, headerbar button:active { color: #f2f1f0; border-color: #65635e; background-color: #1f1f1f; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2); }
+headerbar button:checked, headerbar button:active { color: #f2f1f0; border-color: black; background-color: #1f1f1f; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2); }
 
-headerbar button:checked:hover, headerbar button:active:hover { color: #f2f1f0; border-color: #65635e; background-color: #141414; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2); }
+headerbar button:checked:hover, headerbar button:active:hover { color: #f2f1f0; border-color: black; background-color: #141414; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2); }
 
 headerbar button:disabled { border-color: transparent; background-color: transparent; background-image: none; box-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); text-shadow: none; -gtk-icon-shadow: none; color: #979695; }
 
@@ -727,25 +727,25 @@ notebook > header tabs { margin: 0px; }
 
 notebook > header.top > tabs > tab:hover { box-shadow: inset 0 -3px #bfbab4; }
 
-notebook > header.top > tabs > tab:checked, notebook > header.top > tabs > tab:checked:hover { background-color: #E2E0DD; border-width: 0; box-shadow: none; }
+notebook > header.top > tabs > tab:checked, notebook > header.top > tabs > tab:checked:hover { background-color: #E2E0DD; border-width: 0; box-shadow: inset 0 -3px #f07746; }
 
 notebook > header.top > tabs > arrow { border-top-style: none; }
 
 notebook > header.right > tabs > tab:hover { box-shadow: inset 3px 0 #bfbab4; }
 
-notebook > header.right > tabs > tab:checked, notebook > header.right > tabs > tab:checked:hover { background-color: #E2E0DD; border-width: 0; box-shadow: none; }
+notebook > header.right > tabs > tab:checked, notebook > header.right > tabs > tab:checked:hover { background-color: #E2E0DD; border-width: 0; box-shadow: inset 3px 0 #f07746; }
 
 notebook > header.right > tabs > arrow { border-right-style: none; }
 
 notebook > header.bottom > tabs > tab:hover { box-shadow: inset 0 3px #bfbab4; }
 
-notebook > header.bottom > tabs > tab:checked, notebook > header.bottom > tabs > tab:checked:hover { background-color: #E2E0DD; border-width: 0; box-shadow: none; }
+notebook > header.bottom > tabs > tab:checked, notebook > header.bottom > tabs > tab:checked:hover { background-color: #E2E0DD; border-width: 0; box-shadow: inset 0 3px #f07746; }
 
 notebook > header.bottom > tabs > arrow { border-bottom-style: none; }
 
 notebook > header.left > tabs > tab:hover { box-shadow: inset -3px 0 #bfbab4; }
 
-notebook > header.left > tabs > tab:checked, notebook > header.left > tabs > tab:checked:hover { background-color: #E2E0DD; border-width: 0; box-shadow: none; }
+notebook > header.left > tabs > tab:checked, notebook > header.left > tabs > tab:checked:hover { background-color: #E2E0DD; border-width: 0; box-shadow: inset -3px 0 #f07746; }
 
 notebook > header.left > tabs > arrow { border-left-style: none; }
 
@@ -920,21 +920,19 @@ checkbutton.text-button label:not(:only-child):first-child, radiobutton.text-but
 
 checkbutton.text-button label:not(:only-child):last-child, radiobutton.text-button label:not(:only-child):last-child { margin-right: 4px; }
 
-check, radio { margin: 0 4px; min-height: 14px; min-width: 14px; border: 0px solid; -gtk-icon-source: none; color: #4c4c4c; background-color: #FFFFFF; box-shadow: 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px rgba(0, 0, 0, 0.12), -1px 0 rgba(0, 0, 0, 0.12), 0 -1px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.12); }
+check, radio { margin: 0 4px; min-height: 14px; min-width: 14px; border: 0px solid; -gtk-icon-source: none; color: #4c4c4c; background-color: #FFFFFF; border: 1px solid #bfbab4; box-shadow: none; }
 
 check:only-child, radio:only-child { margin: 0; }
 
-check:hover, radio:hover { color: #4c4c4c; box-shadow: 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px rgba(0, 0, 0, 0.12), -1px 0 rgba(0, 0, 0, 0.12), 0 -1px rgba(0, 0, 0, 0.12), inset 0 0 0 1px #f07746; }
+check:hover, radio:hover { color: #4c4c4c; border: 1px solid #f07746; }
 
-check:active, radio:active { color: #ffffff; background-color: #f07746; box-shadow: 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px rgba(0, 0, 0, 0.12), -1px 0 rgba(0, 0, 0, 0.12), 0 -1px rgba(0, 0, 0, 0.12), inset 0 0 0 1px #f07746; }
+check:active, radio:active { color: #ffffff; background-color: #f07746; border: 1px solid #c04310; }
 
-check:checked, radio:checked { color: #ffffff; background-color: #f07746; box-shadow: 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px rgba(0, 0, 0, 0.12), -1px 0 rgba(0, 0, 0, 0.12), 0 -1px rgba(0, 0, 0, 0.12), inset 0 0 0 1px #f07746; }
+check:checked, radio:checked { color: #ffffff; background-color: #f07746; border: 1px solid #c04310; }
 
-check:checked:hover, radio:checked:hover { color: #ffffff; background-color: #f07746; box-shadow: 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px rgba(0, 0, 0, 0.12), -1px 0 rgba(0, 0, 0, 0.12), 0 -1px rgba(0, 0, 0, 0.12), inset 0 0 0 1px #f07746; }
+check:checked:hover, radio:checked:hover { color: #ffffff; background-color: #f07746; border: 1px solid #c04310; }
 
-check:disabled, radio:disabled { color: #979695; border-color: #a39c93; background-color: #eeeceb; text-shadow: none; -gtk-icon-shadow: none; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1); }
-
-check:disabled > .label, radio:disabled > .label { color: inherit; }
+check:disabled, radio:disabled { color: #979695; border-color: #a39c93; background-color: #eeeceb; }
 
 row:selected check, row:selected radio { border-color: #c04310; }
 

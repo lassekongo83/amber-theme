@@ -282,22 +282,6 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
     background-color: transparent;
   }
 
-  // check and radio buttons
-  @if $t==check-normal {
-    color: $tc;
-    background-color: $base_color;
-    @include btn-shadow(normal);
-  }
-  @if $t==check-checked {
-    color: $selected_fg_color;
-    background-color: $selected_bg_color;
-    @include btn-shadow(focus);
-  }
-  @else if $t==check-hover {
-    color: $tc;
-    @include btn-shadow(focus);
-  }
-
   // osd buttons
   @else if $t==osd {
   // normal osd button
@@ -370,6 +354,32 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   }
 }
 
+// check and radio buttons
+@mixin check($t, $c:$bg_color, $tc:$fg_color, $dc: $dark_bg_color, $dfc: $dark_fg_color) {
+  @if $t==normal {
+    color: $tc;
+    background-color: $base_color;
+    border: 1px solid $borders_color;
+    box-shadow: none;
+  }
+  @else if $t==hover {
+    color: $tc;
+    border: 1px solid $selected_bg_color;
+  }
+  @else if $t==checked {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+    border: 1px solid $selected_borders_color;
+  }
+  @else if $t==insensitive {
+    $_bg: if($c!=$bg_color, mix($c, $base_color, 85%), $insensitive_bg_color);
+    color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color);
+    border-color: if($c!=$bg_color, _border_color($c), darken($borders_color, 12%));
+    background-color: $_bg;
+  }
+}
+
+// trough
 @mixin trough($flat:false, $c:$bg_color, $tc:$fg_color, $noedge:false) {
   color: mix($tc, $bg_color, 80%);
   @if $flat { background-color: lighten($c, 10%); }

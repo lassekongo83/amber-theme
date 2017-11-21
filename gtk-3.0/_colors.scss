@@ -4,15 +4,15 @@
 // When we want to use the dark colors in the light theme
 $dark_bg_color: #333; //#474642;
 $dark_fg_color: #f2f1f0;
-$dark_borders_color: #8c8984; //darken($dark_bg_color,15%);
+$dark_borders_color: darken($dark_bg_color,15%);
 
-$base_color: if($variant == 'light', #FFFFFF, #33322e);
+$base_color: if($variant == 'light', #FFFFFF, #111);
 $text_color: if($variant == 'light', #3C3C3C, white);
 $bg_color: if($variant == 'light', #E2E0DD, $dark_bg_color);
 $fg_color: if($variant == 'light', #4c4c4c, $dark_fg_color);
 
 $selected_fg_color: #ffffff;
-$selected_bg_color: #f07746;
+$selected_bg_color: if($variant == 'light', #f07746, darken(#f07746, 20%));
 $selected_borders_color: darken($selected_bg_color, 20%);
 $borders_color: if($variant == 'light', darken($bg_color,15%), $dark_borders_color);
 $borders_edge: if($variant == 'light', white, transparentize($fg_color, 0.9));

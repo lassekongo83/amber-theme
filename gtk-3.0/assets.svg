@@ -14,7 +14,7 @@
    viewBox="0 0 92.604162 44.979168"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.1 r"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="assets.svg">
   <defs
      id="defs2" />
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="4"
-     inkscape:cx="206.33391"
+     inkscape:cx="97.193316"
      inkscape:cy="118.40608"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -146,7 +146,7 @@
     </g>
     <g
        id="titlebutton-close-backdrop"
-       inkscape:label="#g4848">
+       inkscape:label="#g1041">
       <rect
          ry="2.645834"
          y="252.54997"
@@ -154,12 +154,12 @@
          height="5.2916679"
          width="5.2916679"
          id="rect7134"
-         style="opacity:1;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#666666;fill-opacity:0;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <path
          inkscape:connector-curvature="0"
          id="path6167"
          d="m 31.220834,254.13743 v 0.35278 l 0.705556,0.70556 -0.705556,0.70556 v 0.35277 h 0.352777 l 0.705556,-0.70555 0.705556,0.70555 H 33.3375 v -0.35277 l -0.705556,-0.70556 0.705556,-0.70556 v -0.35278 h -0.352777 l -0.705556,0.70556 -0.705556,-0.70556 z"
-         style="fill:#ffffff;fill-opacity:0.627451;stroke:none;stroke-width:0.26458332" />
+         style="fill:#ffffff;fill-opacity:0.62745098;stroke:none;stroke-width:0.26458332" />
     </g>
     <g
        id="titlebutton-minimize-backdrop"
@@ -199,9 +199,9 @@
     </g>
     <g
        id="titlebutton-close"
-       inkscape:label="#g4824">
+       inkscape:label="#g1035">
       <rect
-         style="opacity:1;fill:#f07746;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#f07746;fill-opacity:0;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect7456"
          width="5.2916679"
          height="5.2916679"
