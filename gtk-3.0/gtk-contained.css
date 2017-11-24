@@ -550,9 +550,7 @@ headerbar button:checked, headerbar button:active { color: #f2f1f0; border-color
 
 headerbar button:checked:hover, headerbar button:active:hover { color: #f2f1f0; border-color: black; background-color: #141414; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2); }
 
-headerbar button:disabled { border-color: transparent; background-color: transparent; background-image: none; box-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); text-shadow: none; -gtk-icon-shadow: none; color: #979695; }
-
-headerbar button:disabled > .label { color: inherit; }
+headerbar button:disabled { background-color: #262626; color: #979695; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1); }
 
 headerbar button:backdrop { color: #979695; }
 
@@ -1282,7 +1280,7 @@ stacksidebar row.needs-attention > label { background-size: 6px 6px, 0 0; }
 /**************** File chooser * */
 row image.sidebar-icon { opacity: 0.7; }
 
-placessidebar > viewport.frame { border-style: none; border-right: 1px solid rgba(0, 0, 0, 0.2); box-shadow: inset -2px 0 rgba(0, 0, 0, 0.06), inset -1px 0 rgba(0, 0, 0, 0.08); }
+placessidebar > viewport.frame { border-style: none; border-right: #bfbab4; box-shadow: inset -2px 0 rgba(0, 0, 0, 0.02), inset -1px 0 rgba(0, 0, 0, 0.06); }
 
 placessidebar row { min-height: 36px; padding: 0px; }
 

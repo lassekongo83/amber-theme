@@ -1396,7 +1396,7 @@ headerbar {
     &:focus { @include button(headerbutton-focus); }
     &:checked, &:active { @include button(headerbutton-active); }
     &:checked:hover, &:active:hover { @include button(headerbutton-hoveractive); }
-    &:disabled { @include button(undecorated-disabled); }
+    &:disabled { @include button(headerbutton-disabled); }
     &:backdrop { color: $backdrop_fg_color; }
   }
   .suggested-action {
@@ -3218,11 +3218,11 @@ $_placesidebar_icons_opacity: 0.7;
 row image.sidebar-icon { opacity: $_placesidebar_icons_opacity; } // dim the sidebar icons
 
 placessidebar {
-  > viewport.frame { 
+  > viewport.frame {
     border-style: none;
-    border-right: 1px solid transparentize(black, 0.8);
-    box-shadow: inset -2px 0 transparentize(black, 0.94), 
-                inset -1px 0 transparentize(black, 0.92);
+    border-right: $borders_color;
+    box-shadow: inset -2px 0 transparentize(black, 0.98), 
+                inset -1px 0 transparentize(black, 0.94);
   }
 
   row {
