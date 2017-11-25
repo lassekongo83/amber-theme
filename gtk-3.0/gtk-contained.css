@@ -20,7 +20,7 @@
 
 .view, iconview, .nemo-window notebook, .view text, iconview text, .nemo-window notebook text, textview text, .nautilus-window notebook, .nautilus-window notebook > stack:not(:only-child) searchbar { color: #3C3C3C; background-color: #FFFFFF; }
 
-.view:hover, iconview:hover, .nemo-window notebook:hover, .view text:hover, iconview text:hover, .nemo-window notebook text:hover, textview text:hover, .nautilus-window notebook:hover, .nautilus-window notebook > stack:not(:only-child) searchbar:hover { background-color: #fafafa; }
+.view:hover, iconview:hover, .nemo-window notebook:hover, .view text:hover, iconview text:hover, .nemo-window notebook text:hover, textview text:hover, .nautilus-window notebook:hover, .nautilus-window notebook > stack:not(:only-child) searchbar:hover { background-color: #f2f2f2; }
 
 .view:selected, iconview:selected, .nemo-window notebook:selected, .view text:selected, iconview text:selected, .nemo-window notebook text:selected, textview text:selected, .nautilus-window notebook:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:selected { border-radius: 0; }
 
@@ -918,17 +918,17 @@ checkbutton.text-button label:not(:only-child):first-child, radiobutton.text-but
 
 checkbutton.text-button label:not(:only-child):last-child, radiobutton.text-button label:not(:only-child):last-child { margin-right: 4px; }
 
-check, radio { margin: 0 4px; min-height: 14px; min-width: 14px; border: 0px solid; -gtk-icon-source: none; color: #4c4c4c; background-color: #FFFFFF; border: 1px solid #bfbab4; box-shadow: none; }
+check, radio { margin: 0 4px; min-height: 14px; min-width: 14px; border: 0px solid; -gtk-icon-source: none; color: #4c4c4c; background-color: #FFFFFF; border: 2px solid #bfbab4; box-shadow: none; }
 
 check:only-child, radio:only-child { margin: 0; }
 
-check:hover, radio:hover { color: #4c4c4c; border: 1px solid #f07746; }
+check:hover, radio:hover { color: #4c4c4c; border: 2px solid #f07746; }
 
-check:active, radio:active { color: #ffffff; background-color: #f07746; border: 1px solid #c04310; }
+check:active, radio:active { color: #ffffff; background-color: #f07746; border: 2px solid #c04310; }
 
-check:checked, radio:checked { color: #ffffff; background-color: #f07746; border: 1px solid #c04310; }
+check:checked, radio:checked { color: #ffffff; background-color: #f07746; border: 2px solid #c04310; }
 
-check:checked:hover, radio:checked:hover { color: #ffffff; background-color: #f07746; border: 1px solid #c04310; }
+check:checked:hover, radio:checked:hover { color: #ffffff; background-color: #f07746; border: 2px solid #c04310; }
 
 check:disabled, radio:disabled { color: #979695; border-color: #a39c93; background-color: #eeeceb; }
 
