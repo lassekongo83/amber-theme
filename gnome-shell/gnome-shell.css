@@ -530,6 +530,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .aggregate-menu .popup-menu-icon { padding: 0 4px; }
 
+.aggregate-menu .popup-sub-menu .popup-menu-item :first-child:ltr { padding-left: 12px; margin-left: 1.09em; }
+
+.aggregate-menu .popup-sub-menu .popup-menu-item :first-child:rtl { padding-right: 12px; margin-right: 1.09em; }
+
 .system-menu-action { color: #f2f1f0; border-radius: 32px; /* wish we could do 50% */ padding: 13px; border: 1px solid rgba(20, 20, 20, 0.8); }
 
 .system-menu-action:hover, .system-menu-action:focus { background-color: #f07746; color: #f2f1f0; border: none; padding: 14px; }
