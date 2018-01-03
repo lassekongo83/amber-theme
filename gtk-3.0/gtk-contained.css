@@ -1216,13 +1216,13 @@ row.activatable:selected.has-open-popup, row.activatable:selected:hover { backgr
 .app-notification border, .app-notification.frame border { border: none; }
 
 /************* Expanders * */
-expander arrow { min-width: 16px; min-height: 16px; -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+expander title > arrow { min-width: 16px; min-height: 16px; -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
-expander arrow:dir(rtl) { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
+expander title > arrow:dir(rtl) { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
 
-expander arrow:hover { color: #999999; }
+expander title > arrow:hover { color: #999999; }
 
-expander arrow:checked { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+expander title > arrow:checked { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
 /************ Calendar * */
 calendar { color: #3C3C3C; border: 1px solid #bfbab4; }
