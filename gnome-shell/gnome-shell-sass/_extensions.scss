@@ -17,7 +17,7 @@ $_panel_right: inset -3px 0 $_panel_shade;
   background-gradient-end: transparent;
 }
 
-/* Dash to Panel extension styling */
+// Dash to Panel extension styling
 
 #panel.dashtopanelMainPanel {
   @extend %panel_bg;
@@ -76,50 +76,80 @@ $_panel_right: inset -3px 0 $_panel_shade;
   .showdesktop-button { padding-right: 8px; }
 }
 
-/* Dash to dock extension styling */
-
-#dashtodockContainer.extended {
-  border: 0;
-  border-radius: 0;
-  &.bottom #dash { box-shadow: $_panel_bottom; }
-  &.left #dash { box-shadow: $_panel_left; }
-  &.right #dash { box-shadow: $_panel_right; }
-}
+// Dash to dock extension styling
 
 #dashtodockContainer {
+  background-color: transparentize(black, 0.7);
+  box-shadow: inset -1px 0 transparentize(black, 0.9);
+  border-radius: 0;
+  
+  @each $_pos in (left), (right), (bottom), (top) {
+    &.#{$_pos}.extended {
+      border-color: transparentize(white, 0.9);
+      border-style: solid;
+      @if $_pos==left { border-right-width: 1px; }
+      @else if $_pos==right { border-left-width: 1px; }
+      @else if $_pos==bottom { border-top-width: 1px; }
+      @else if $_pos==top { border-bottom-width: 1px; }
+    }
+  }
+
+  &.shrink #dash,
+  &.dashtodock #dash {
+    border: 0px;
+    padding: 0px;
+  }
+
+  &.extended {
+    border: 0;
+    border-radius: 0;
+  }
+
   &.bottom #dash .app-well-app-running-dot {
     width: 44px;
     height: 2px;
     background-color: $_hover_color;
     margin-bottom: 0;
   }
+
+  &.running-dots .dash-item-container > StButton,
+  &.dashtodock .dash-item-container > StButton {
+    background-size: contain;
+  }
+
+  &.shrink .dash-item-container > StButton,
+  &.dashtodock .dash-item-container > StButton {
+    padding: 2px 4px !important; // 1px 2px;
+  }
 }
 
-// hover effect
 #dashtodockContainer {
-  border-radius: 0;
-  &.bottom #dash .app-well-app {
-    &:hover .overview-icon,
-    &:focus .overview-icon,
-    &:selected .overview-icon {
-      box-shadow: $_hover_effect_bottom;
-      background-color: transparent;
-    }
-  }
-  &.left #dash .app-well-app {
-    &:hover .overview-icon,
-    &:focus .overview-icon,
-    &:selected .overview-icon {
-      box-shadow: $_hover_effect_left;
-      background-color: transparent;
-    }
-  }
-  &.right #dash .app-well-app {
-    &:hover .overview-icon,
-    &:focus .overview-icon,
-    &:selected .overview-icon {
-      box-shadow: $_hover_effect_right;
-      background-color: transparent;
+  @each $_pos in (left), (right), (bottom), (top) {
+    &.#{$_pos} #dash
+    .app-well-app {
+      padding: 0;
+      border: none;
+
+      &:hover {
+        background-color: transparentize($selected_bg_color, 0.5);
+        // Box shadows will not work if the bg color is fully transparent
+        @if $_pos==left { box-shadow: $_hover_effect_left; }
+        @else if $_pos==right { box-shadow: $_hover_effect_right;  }
+        @else if $_pos==bottom { box-shadow: $_hover_effect_bottom;  }
+        @else if $_pos==top { box-shadow: $_hover_effect_top;  }
+      }
+      &:hover .overview-icon { 
+        background: none;
+      }
+
+      &:active .overview-icon,
+      &:checked .overview-icon,
+      &:focus .overview-icon,
+      &:selected .overview-icon {
+        background-color: $selected_bg_color;
+        box-shadow: none;
+        border: 1px solid transparent;
+      }
     }
   }
 }
