@@ -533,3 +533,92 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   border: none;
   box-shadow: none;
 }
+
+@mixin tabhead {
+  @each $po in (top), (right), (bottom), (left) {
+    $_tabbar: null;
+    @if $po == top {
+      $_tabbar: inset 0 -1px $borders_color,
+                inset 0 2px transparentize(black, 0.98),
+                inset 0 1px transparentize(black, 0.96);
+    }
+    @else if $po == left {
+      $_tabbar: inset -1px 0 $borders_color,
+                inset 2px 0 transparentize(black, 0.98),
+                inset 1px 0 transparentize(black, 0.96);
+    }
+    @else if $po == right {
+      $_tabbar: inset 1px 0 $borders_color,
+                inset -2px 0 transparentize(black, 0.98),
+                inset -1px 0 transparentize(black, 0.96);
+    }
+    @else if $po == bottom {
+      $_tabbar: inset 0 1px $borders_color,
+                inset 0 -2px transparentize(black, 0.98),
+                inset 0 -1px transparentize(black, 0.96);
+    }
+    
+    &.#{$po} { box-shadow: $_tabbar; }
+  }
+}
+
+@mixin tabs {
+  //
+  // Tabs
+  //
+  // $po = position
+  // $_bs_hover/active = hovered and active tab box shadow
+  //
+
+  @each $po in (top), (right), (bottom), (left) {
+    $_bs_hover: null;
+    $_bs_active: null;
+    @if $po == top {
+      $_tabbar: inset 0 -1px $borders_color,
+                inset 0 2px transparentize(black, 0.98),
+                inset 0 1px transparentize(black, 0.96);
+      $_bs_hover: inset 0 -3px $borders_color;
+      $_bs_active: inset 0 -3px $selected_bg_color;
+    }
+    @else if $po == left {
+      $_tabbar: inset -1px 0 $borders_color,
+                inset 2px 0 transparentize(black, 0.98),
+                inset 1px 0 transparentize(black, 0.96);
+      $_bs_hover: inset -3px 0 $borders_color;
+      $_bs_active: inset -3px 0 $selected_bg_color;
+    }
+    @else if $po == right {
+      $_tabbar: inset 1px 0 $borders_color,
+                inset -2px 0 transparentize(black, 0.98),
+                inset -1px 0 transparentize(black, 0.96);
+      $_bs_hover: inset 3px 0 $borders_color;
+      $_bs_active: inset 3px 0 $selected_bg_color;
+    }
+    @else if $po == bottom {
+      $_tabbar: inset 0 1px $borders_color,
+                inset 0 -2px transparentize(black, 0.98),
+                inset 0 -1px transparentize(black, 0.96);
+      $_bs_hover: inset 0 3px $borders_color;
+      $_bs_active: inset 0 3px $selected_bg_color;
+    }
+
+    &.#{$po} {
+      > tabs {
+        > tab {
+          &:hover { box-shadow: $_bs_hover; }
+          &:checked, &:checked:hover {
+            background-color: $bg_color;
+            border-width: 0;
+            box-shadow: $_bs_active;
+          }
+        }
+      }
+    }
+
+    &.#{$po} > tabs > arrow {
+      border-style: none;
+      @if ($po == top) or ($po == bottom) { @extend %notebook_vert_arrows; }
+      @if ($po == left) or ($po == right) { @extend %notebook_horz_arrows; }
+    }
+  }
+}

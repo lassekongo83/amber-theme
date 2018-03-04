@@ -1897,58 +1897,15 @@ notebook {
     border-width: 0;
     background-color: darken($bg_color, 5%);
     
-    // FIXME: Make it work for bottom, left, right tabs as well.
-    box-shadow: inset 0 -1px $borders_color,
-                inset 0 2px transparentize(black, 0.98),
-                inset 0 1px transparentize(black, 0.96);
+    // Tab header bar box shadows
+    @include tabhead;
 
     &.top, &.bottom { padding-left: 0; padding-right: 0; }
     &.left, &.right { padding-top: 0; padding-bottom: 0; }
 
     tabs { margin: 0px; }
 
-    @each $_pos in (top), (right), (bottom), (left) {
-
-      &.#{$_pos} {
-        > tabs {
-          > tab {
-            &:hover {
-              @if $_pos==top { box-shadow: inset 0 -3px $borders_color; }
-              @else if $_pos==bottom { box-shadow: inset 0 3px $borders_color; }
-              @else if $_pos==left { box-shadow: inset -3px 0 $borders_color; }
-              @else if $_pos==right { box-shadow: inset 3px 0 $borders_color; }         
-            }
-            &:checked, &:checked:hover {
-              background-color: $bg_color;
-              border-width: 0;
-              @if $_pos==top { box-shadow: inset 0 -3px $selected_bg_color; }
-              @else if $_pos==bottom { box-shadow: inset 0 3px $selected_bg_color; }
-              @else if $_pos==left { box-shadow: inset -3px 0 $selected_bg_color; }
-              @else if $_pos==right { box-shadow: inset 3px 0 $selected_bg_color; }
-            }
-          }
-        }
-      }
-
-      &.#{$_pos} > tabs > arrow {
-        @if $_pos==top { 
-          @extend %notebook_vert_arrows;
-          border-top-style: none;
-        }
-        @else if $_pos==bottom {
-          @extend %notebook_vert_arrows;
-          border-bottom-style: none;      
-        }
-        @else if $_pos==left {
-          @extend %notebook_horz_arrows;
-          border-left-style: none;
-        }
-        @else if $_pos==right {
-          @extend %notebook_horz_arrows;
-          border-right-style: none;
-        }
-      }
-    }
+    @include tabs;
 
     @at-root %notebook_vert_arrows {
       margin-left: -5px;

@@ -707,7 +707,15 @@ popover.background list separator { margin: 0px; }
 /***************** Notebooks and * Tabs          * */
 notebook { padding: 0; }
 
-notebook > header { padding: 0; border-color: #101010; border-width: 0; background-color: #292929; box-shadow: inset 0 -1px #101010, inset 0 2px rgba(0, 0, 0, 0.02), inset 0 1px rgba(0, 0, 0, 0.04); }
+notebook > header { padding: 0; border-color: #101010; border-width: 0; background-color: #292929; }
+
+notebook > header.top { box-shadow: inset 0 -1px #101010, inset 0 2px rgba(0, 0, 0, 0.02), inset 0 1px rgba(0, 0, 0, 0.04); }
+
+notebook > header.right { box-shadow: inset 1px 0 #101010, inset -2px 0 rgba(0, 0, 0, 0.02), inset -1px 0 rgba(0, 0, 0, 0.04); }
+
+notebook > header.bottom { box-shadow: inset 0 1px #101010, inset 0 -2px rgba(0, 0, 0, 0.02), inset 0 -1px rgba(0, 0, 0, 0.04); }
+
+notebook > header.left { box-shadow: inset -1px 0 #101010, inset 2px 0 rgba(0, 0, 0, 0.02), inset 1px 0 rgba(0, 0, 0, 0.04); }
 
 notebook > header.top, notebook > header.bottom { padding-left: 0; padding-right: 0; }
 
@@ -719,25 +727,25 @@ notebook > header.top > tabs > tab:hover { box-shadow: inset 0 -3px #101010; }
 
 notebook > header.top > tabs > tab:checked, notebook > header.top > tabs > tab:checked:hover { background-color: #363636; border-width: 0; box-shadow: inset 0 -3px #c04310; }
 
-notebook > header.top > tabs > arrow { border-top-style: none; }
+notebook > header.top > tabs > arrow { border-style: none; }
 
 notebook > header.right > tabs > tab:hover { box-shadow: inset 3px 0 #101010; }
 
 notebook > header.right > tabs > tab:checked, notebook > header.right > tabs > tab:checked:hover { background-color: #363636; border-width: 0; box-shadow: inset 3px 0 #c04310; }
 
-notebook > header.right > tabs > arrow { border-right-style: none; }
+notebook > header.right > tabs > arrow { border-style: none; }
 
 notebook > header.bottom > tabs > tab:hover { box-shadow: inset 0 3px #101010; }
 
 notebook > header.bottom > tabs > tab:checked, notebook > header.bottom > tabs > tab:checked:hover { background-color: #363636; border-width: 0; box-shadow: inset 0 3px #c04310; }
 
-notebook > header.bottom > tabs > arrow { border-bottom-style: none; }
+notebook > header.bottom > tabs > arrow { border-style: none; }
 
 notebook > header.left > tabs > tab:hover { box-shadow: inset -3px 0 #101010; }
 
 notebook > header.left > tabs > tab:checked, notebook > header.left > tabs > tab:checked:hover { background-color: #363636; border-width: 0; box-shadow: inset -3px 0 #c04310; }
 
-notebook > header.left > tabs > arrow { border-left-style: none; }
+notebook > header.left > tabs > arrow { border-style: none; }
 
 notebook > header.top > tabs > arrow, notebook > header.bottom > tabs > arrow { margin-left: -5px; margin-right: -5px; padding-left: 4px; padding-right: 4px; }
 
