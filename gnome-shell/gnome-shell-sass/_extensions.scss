@@ -10,7 +10,7 @@ $_panel_bottom: inset 0 -3px $_panel_shade;
 $_panel_left: inset 3px 0 $_panel_shade;
 $_panel_right: inset -3px 0 $_panel_shade;
 
-// gradient needed for box-shadow to work in panel
+// Workaround gradient needed for box-shadow to work in panels
 %panel_bg {
   background-gradient-direction: vertical;
   background-gradient-start: transparent;
@@ -78,67 +78,80 @@ $_panel_right: inset -3px 0 $_panel_shade;
 
 // Dash to dock extension styling
 
-#dashtodockContainer {
-  background-color: transparentize(black, 0.7);
-  box-shadow: inset -1px 0 transparentize(black, 0.9);
-  border-radius: 0;
-  
-  @each $_pos in (left), (right), (bottom), (top) {
-    &.#{$_pos}.extended {
+@each $p in (left), (right), (bottom), (top) {
+  #dashtodockContainer {
+    background-color: transparentize(black, 0.5);
+    border-radius: 0;
+
+    &.#{$p}.extended {
       border-color: transparentize(white, 0.9);
       border-style: solid;
-      @if $_pos==left { border-right-width: 1px; }
-      @else if $_pos==right { border-left-width: 1px; }
-      @else if $_pos==bottom { border-top-width: 1px; }
-      @else if $_pos==top { border-bottom-width: 1px; }
+      @if $p==left {
+        border-right-width: 1px;
+        box-shadow: $_panel_left;
+      }
+      @else if $p==right {
+        border-left-width: 1px;
+        box-shadow: $_panel_right;
+      }
+      @else if $p==bottom {
+        border-top-width: 1px;
+        box-shadow: $_panel_bottom;
+      }
+      @else if $p==top {
+        border-bottom-width: 1px;
+        box-shadow: $_panel_top;
+      }
     }
-  }
 
-  &.shrink #dash,
-  &.dashtodock #dash {
-    border: 0px;
-    padding: 0px;
-  }
+    &.shrink #dash,
+    &.dashtodock #dash {
+      border: none !important;
+      padding: 0px;
+    
+      // don't let the first icon be too close to the shadow + panel
+      &.left #dash { padding-top: 2px; }
+      &.right #dash { padding-top: 2px; }
+    }
 
-  &.extended {
-    border: 0;
-    border-radius: 0;
-  }
+    &.extended {
+      border: 0;
+      border-radius: 0;
+    }
 
-  &.bottom #dash .app-well-app-running-dot {
-    width: 44px;
-    height: 2px;
-    background-color: $_hover_color;
-    margin-bottom: 0;
-  }
+    &.bottom #dash .app-well-app-running-dot {
+      width: 44px;
+      height: 2px;
+      margin-bottom: 0;
+    }
 
-  &.running-dots .dash-item-container > StButton,
-  &.dashtodock .dash-item-container > StButton {
-    background-size: contain;
-  }
+    #dash .app-well-app-running-dot {
+      background-color: white;
+    }
 
-  &.shrink .dash-item-container > StButton,
-  &.dashtodock .dash-item-container > StButton {
-    padding: 2px 4px !important; // 1px 2px;
-  }
-}
+    &.running-dots .dash-item-container > StButton,
+    &.dashtodock .dash-item-container > StButton {
+      background-size: contain;
+    }
 
-#dashtodockContainer {
-  @each $_pos in (left), (right), (bottom), (top) {
-    &.#{$_pos} #dash
+    &.shrink .dash-item-container > StButton,
+    &.dashtodock .dash-item-container > StButton {
+      padding: 2px 4px !important; // 1px 2px;
+    }
+
+    &.#{$p} #dash
     .app-well-app {
       padding: 0;
       border: none;
 
       &:hover {
-        background-color: transparentize($selected_bg_color, 0.5);
-        // Box shadows will not work if the bg color is fully transparent
-        @if $_pos==left { box-shadow: $_hover_effect_left; }
-        @else if $_pos==right { box-shadow: $_hover_effect_right;  }
-        @else if $_pos==bottom { box-shadow: $_hover_effect_bottom;  }
-        @else if $_pos==top { box-shadow: $_hover_effect_top;  }
+        @extend %panel_bg;
+        @if $p==left { box-shadow: $_hover_effect_left; }
+        @else if $p==right { box-shadow: $_hover_effect_right; }
+        @else if $p==bottom { box-shadow: $_hover_effect_bottom; }
+        @else if $p==top { box-shadow: $_hover_effect_top; }
       }
-      &:hover .overview-icon { 
+      &:hover .overview-icon {
         background: none;
       }
 
@@ -146,10 +159,21 @@ $_panel_right: inset -3px 0 $_panel_shade;
       &:checked .overview-icon,
       &:focus .overview-icon,
       &:selected .overview-icon {
-        background-color: $selected_bg_color;
+        background: none;
         box-shadow: none;
-        border: 1px solid transparent;
       }
     }
   }
+}
+
+.bottom #dashtodockDashScrollview,
+.top #dashtodockDashScrollview {
+  // Scrollview style -vertical
+  -st-hfade-offset: 24px;
+}
+
+.left #dashtodockDashScrollview,
+.right #dashtodockDashScrollview {
+  // Scrollview style -horizontal
+  -st-vfade-offset: 24px;
 }

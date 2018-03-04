@@ -352,7 +352,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .tile-preview-left.tile-preview-right.on-primary { border-radius: 0px 0px 0 0; }
 
 /* TOP BAR */
-#panel { background-color: black; font-weight: bold; height: 1.86em; box-shadow: none; border-width: 0px; }
+#panel { background-color: rgba(0, 0, 0, 0.8); font-weight: bold; height: 1.86em; box-shadow: 0 1px rgba(255, 255, 255, 0.1); border-width: 0px; }
 
 #panel.unlock-screen, #panel.login-screen, #panel.lock-screen { background-color: transparent; }
 
@@ -990,7 +990,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #LookingGlassPropertyInspector { background: rgba(0, 0, 0, 0.8); border: 2px solid grey; border-radius: 0; padding: 6px; }
 
-#panel.dashtopanelMainPanel, #panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
+#panel.dashtopanelMainPanel, #panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon, #dashtodockContainer.left #dash .app-well-app:hover, #dashtodockContainer.right #dash .app-well-app:hover, #dashtodockContainer.bottom #dash .app-well-app:hover, #dashtodockContainer.top #dash .app-well-app:hover { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
 
 #panel.dashtopanelMainPanel.dashtopanelBottom { box-shadow: inset 0 -3px rgba(0, 0, 0, 0.4); }
 
@@ -1036,21 +1036,21 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel.dashtopanelMainPanel .showdesktop-button { padding-right: 8px; }
 
-#dashtodockContainer { background-color: rgba(0, 0, 0, 0.3); box-shadow: inset -1px 0 rgba(0, 0, 0, 0.1); border-radius: 0; }
+#dashtodockContainer { background-color: rgba(0, 0, 0, 0.5); border-radius: 0; }
 
-#dashtodockContainer.left.extended { border-color: rgba(255, 255, 255, 0.1); border-style: solid; border-right-width: 1px; }
+#dashtodockContainer.left.extended { border-color: rgba(255, 255, 255, 0.1); border-style: solid; border-right-width: 1px; box-shadow: inset 3px 0 rgba(0, 0, 0, 0.4); }
 
-#dashtodockContainer.right.extended { border-color: rgba(255, 255, 255, 0.1); border-style: solid; border-left-width: 1px; }
+#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: none !important; padding: 0px; }
 
-#dashtodockContainer.bottom.extended { border-color: rgba(255, 255, 255, 0.1); border-style: solid; border-top-width: 1px; }
+#dashtodockContainer.shrink #dash.left #dash, #dashtodockContainer.dashtodock #dash.left #dash { padding-top: 2px; }
 
-#dashtodockContainer.top.extended { border-color: rgba(255, 255, 255, 0.1); border-style: solid; border-bottom-width: 1px; }
-
-#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: 0px; padding: 0px; }
+#dashtodockContainer.shrink #dash.right #dash, #dashtodockContainer.dashtodock #dash.right #dash { padding-top: 2px; }
 
 #dashtodockContainer.extended { border: 0; border-radius: 0; }
 
-#dashtodockContainer.bottom #dash .app-well-app-running-dot { width: 44px; height: 2px; background-color: rgba(255, 255, 255, 0.6); margin-bottom: 0; }
+#dashtodockContainer.bottom #dash .app-well-app-running-dot { width: 44px; height: 2px; margin-bottom: 0; }
+
+#dashtodockContainer #dash .app-well-app-running-dot { background-color: white; }
 
 #dashtodockContainer.running-dots .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { background-size: contain; }
 
@@ -1058,35 +1058,99 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.left #dash .app-well-app { padding: 0; border: none; }
 
-#dashtodockContainer.left #dash .app-well-app:hover { background-color: rgba(33, 93, 156, 0.5); box-shadow: inset 3px 0 rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.left #dash .app-well-app:hover { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.6); }
 
 #dashtodockContainer.left #dash .app-well-app:hover .overview-icon { background: none; }
 
-#dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:checked .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon { background-color: #215d9c; box-shadow: none; border: 1px solid transparent; }
+#dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:checked .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
+
+#dashtodockContainer { background-color: rgba(0, 0, 0, 0.5); border-radius: 0; }
+
+#dashtodockContainer.right.extended { border-color: rgba(255, 255, 255, 0.1); border-style: solid; border-left-width: 1px; box-shadow: inset -3px 0 rgba(0, 0, 0, 0.4); }
+
+#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: none !important; padding: 0px; }
+
+#dashtodockContainer.shrink #dash.left #dash, #dashtodockContainer.dashtodock #dash.left #dash { padding-top: 2px; }
+
+#dashtodockContainer.shrink #dash.right #dash, #dashtodockContainer.dashtodock #dash.right #dash { padding-top: 2px; }
+
+#dashtodockContainer.extended { border: 0; border-radius: 0; }
+
+#dashtodockContainer.bottom #dash .app-well-app-running-dot { width: 44px; height: 2px; margin-bottom: 0; }
+
+#dashtodockContainer #dash .app-well-app-running-dot { background-color: white; }
+
+#dashtodockContainer.running-dots .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { background-size: contain; }
+
+#dashtodockContainer.shrink .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { padding: 2px 4px !important; }
 
 #dashtodockContainer.right #dash .app-well-app { padding: 0; border: none; }
 
-#dashtodockContainer.right #dash .app-well-app:hover { background-color: rgba(33, 93, 156, 0.5); box-shadow: inset -3px 0 rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.right #dash .app-well-app:hover { box-shadow: inset -3px 0 rgba(255, 255, 255, 0.6); }
 
 #dashtodockContainer.right #dash .app-well-app:hover .overview-icon { background: none; }
 
-#dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:checked .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon { background-color: #215d9c; box-shadow: none; border: 1px solid transparent; }
+#dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:checked .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
+
+#dashtodockContainer { background-color: rgba(0, 0, 0, 0.5); border-radius: 0; }
+
+#dashtodockContainer.bottom.extended { border-color: rgba(255, 255, 255, 0.1); border-style: solid; border-top-width: 1px; box-shadow: inset 0 -3px rgba(0, 0, 0, 0.4); }
+
+#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: none !important; padding: 0px; }
+
+#dashtodockContainer.shrink #dash.left #dash, #dashtodockContainer.dashtodock #dash.left #dash { padding-top: 2px; }
+
+#dashtodockContainer.shrink #dash.right #dash, #dashtodockContainer.dashtodock #dash.right #dash { padding-top: 2px; }
+
+#dashtodockContainer.extended { border: 0; border-radius: 0; }
+
+#dashtodockContainer.bottom #dash .app-well-app-running-dot { width: 44px; height: 2px; margin-bottom: 0; }
+
+#dashtodockContainer #dash .app-well-app-running-dot { background-color: white; }
+
+#dashtodockContainer.running-dots .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { background-size: contain; }
+
+#dashtodockContainer.shrink .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { padding: 2px 4px !important; }
 
 #dashtodockContainer.bottom #dash .app-well-app { padding: 0; border: none; }
 
-#dashtodockContainer.bottom #dash .app-well-app:hover { background-color: rgba(33, 93, 156, 0.5); box-shadow: inset 0 -3px rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.bottom #dash .app-well-app:hover { box-shadow: inset 0 -3px rgba(255, 255, 255, 0.6); }
 
 #dashtodockContainer.bottom #dash .app-well-app:hover .overview-icon { background: none; }
 
-#dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:checked .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon { background-color: #215d9c; box-shadow: none; border: 1px solid transparent; }
+#dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:checked .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
+
+#dashtodockContainer { background-color: rgba(0, 0, 0, 0.5); border-radius: 0; }
+
+#dashtodockContainer.top.extended { border-color: rgba(255, 255, 255, 0.1); border-style: solid; border-bottom-width: 1px; box-shadow: inset 0 3px rgba(0, 0, 0, 0.4); }
+
+#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: none !important; padding: 0px; }
+
+#dashtodockContainer.shrink #dash.left #dash, #dashtodockContainer.dashtodock #dash.left #dash { padding-top: 2px; }
+
+#dashtodockContainer.shrink #dash.right #dash, #dashtodockContainer.dashtodock #dash.right #dash { padding-top: 2px; }
+
+#dashtodockContainer.extended { border: 0; border-radius: 0; }
+
+#dashtodockContainer.bottom #dash .app-well-app-running-dot { width: 44px; height: 2px; margin-bottom: 0; }
+
+#dashtodockContainer #dash .app-well-app-running-dot { background-color: white; }
+
+#dashtodockContainer.running-dots .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { background-size: contain; }
+
+#dashtodockContainer.shrink .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { padding: 2px 4px !important; }
 
 #dashtodockContainer.top #dash .app-well-app { padding: 0; border: none; }
 
-#dashtodockContainer.top #dash .app-well-app:hover { background-color: rgba(33, 93, 156, 0.5); box-shadow: inset 0 3px rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.top #dash .app-well-app:hover { box-shadow: inset 0 3px rgba(255, 255, 255, 0.6); }
 
 #dashtodockContainer.top #dash .app-well-app:hover .overview-icon { background: none; }
 
-#dashtodockContainer.top #dash .app-well-app:active .overview-icon, #dashtodockContainer.top #dash .app-well-app:checked .overview-icon, #dashtodockContainer.top #dash .app-well-app:focus .overview-icon, #dashtodockContainer.top #dash .app-well-app:selected .overview-icon { background-color: #215d9c; box-shadow: none; border: 1px solid transparent; }
+#dashtodockContainer.top #dash .app-well-app:active .overview-icon, #dashtodockContainer.top #dash .app-well-app:checked .overview-icon, #dashtodockContainer.top #dash .app-well-app:focus .overview-icon, #dashtodockContainer.top #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
+
+.bottom #dashtodockDashScrollview, .top #dashtodockDashScrollview { -st-hfade-offset: 24px; }
+
+.left #dashtodockDashScrollview, .right #dashtodockDashScrollview { -st-vfade-offset: 24px; }
 
 stage { -st-icon-style: symbolic; }
 
