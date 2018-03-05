@@ -715,21 +715,9 @@ popover.background list separator { margin: 0px; }
 /***************** Notebooks and * Tabs          * */
 notebook { padding: 0; }
 
-notebook > header { padding: 0; border-color: #c5c0c0; border-width: 0; background-color: #dedbdb; }
+notebook > header { padding: 0; border-color: #c5c0c0; border-width: 0; background-color: #dedbdb; padding: 0; border-color: #c5c0c0; border-width: 0; background-color: #dedbdb; padding: 0; border-color: #c5c0c0; border-width: 0; background-color: #dedbdb; padding: 0; border-color: #c5c0c0; border-width: 0; background-color: #dedbdb; }
 
 notebook > header.top { box-shadow: inset 0 -1px #c5c0c0, inset 0 2px rgba(0, 0, 0, 0.02), inset 0 1px rgba(0, 0, 0, 0.04); }
-
-notebook > header.right { box-shadow: inset 1px 0 #c5c0c0, inset -2px 0 rgba(0, 0, 0, 0.02), inset -1px 0 rgba(0, 0, 0, 0.04); }
-
-notebook > header.bottom { box-shadow: inset 0 1px #c5c0c0, inset 0 -2px rgba(0, 0, 0, 0.02), inset 0 -1px rgba(0, 0, 0, 0.04); }
-
-notebook > header.left { box-shadow: inset -1px 0 #c5c0c0, inset 2px 0 rgba(0, 0, 0, 0.02), inset 1px 0 rgba(0, 0, 0, 0.04); }
-
-notebook > header.top, notebook > header.bottom { padding-left: 0; padding-right: 0; }
-
-notebook > header.left, notebook > header.right { padding-top: 0; padding-bottom: 0; }
-
-notebook > header tabs { margin: 0px; }
 
 notebook > header.top > tabs > tab:hover { box-shadow: inset 0 -3px #c5c0c0; }
 
@@ -737,11 +725,19 @@ notebook > header.top > tabs > tab:checked, notebook > header.top > tabs > tab:c
 
 notebook > header.top > tabs > arrow { border-style: none; }
 
+notebook > header.top { padding-left: 0; padding-right: 0; }
+
+notebook > header.right { box-shadow: inset 1px 0 #c5c0c0, inset -2px 0 rgba(0, 0, 0, 0.02), inset -1px 0 rgba(0, 0, 0, 0.04); }
+
 notebook > header.right > tabs > tab:hover { box-shadow: inset 3px 0 #c5c0c0; }
 
 notebook > header.right > tabs > tab:checked, notebook > header.right > tabs > tab:checked:hover { background-color: #eae8e8; border-width: 0; box-shadow: inset 3px 0 #f07746; }
 
 notebook > header.right > tabs > arrow { border-style: none; }
+
+notebook > header.right { padding-top: 0; padding-bottom: 0; }
+
+notebook > header.bottom { box-shadow: inset 0 1px #c5c0c0, inset 0 -2px rgba(0, 0, 0, 0.02), inset 0 -1px rgba(0, 0, 0, 0.04); }
 
 notebook > header.bottom > tabs > tab:hover { box-shadow: inset 0 3px #c5c0c0; }
 
@@ -749,11 +745,19 @@ notebook > header.bottom > tabs > tab:checked, notebook > header.bottom > tabs >
 
 notebook > header.bottom > tabs > arrow { border-style: none; }
 
+notebook > header.bottom { padding-left: 0; padding-right: 0; }
+
+notebook > header.left { box-shadow: inset -1px 0 #c5c0c0, inset 2px 0 rgba(0, 0, 0, 0.02), inset 1px 0 rgba(0, 0, 0, 0.04); }
+
 notebook > header.left > tabs > tab:hover { box-shadow: inset -3px 0 #c5c0c0; }
 
 notebook > header.left > tabs > tab:checked, notebook > header.left > tabs > tab:checked:hover { background-color: #eae8e8; border-width: 0; box-shadow: inset -3px 0 #f07746; }
 
 notebook > header.left > tabs > arrow { border-style: none; }
+
+notebook > header.left { padding-top: 0; padding-bottom: 0; }
+
+notebook > header tabs { margin: 0px; }
 
 notebook > header.top > tabs > arrow, notebook > header.bottom > tabs > arrow { margin-left: -5px; margin-right: -5px; padding-left: 4px; padding-right: 4px; }
 
