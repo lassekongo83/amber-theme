@@ -547,6 +547,11 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   // $sb = header small inner shadow
   //
 
+  padding: 0;
+  border-color: $borders_color;
+  border-width: 0;
+  background-color: darken($bg_color, 5%);
+
   @each $po in (top), (right), (bottom), (left) {
     @if $po == top {
       $th: inset 0 -1px $borders_color,
@@ -576,11 +581,6 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
       $bh: inset 0 3px $borders_color;
       $ba: inset 0 3px $selected_bg_color;
     }
-
-    padding: 0;
-    border-color: $borders_color;
-    border-width: 0;
-    background-color: darken($bg_color, 5%);
 
     &.#{$po} {
        box-shadow: $th;
