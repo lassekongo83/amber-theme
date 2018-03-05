@@ -798,6 +798,7 @@ toolbar.inline-toolbar toolbutton {
 %linked_middle {
   border-radius: 0;
   border-right-style: none;
+  border-left-style: none;
 }
 
 %linked {
@@ -807,6 +808,7 @@ toolbar.inline-toolbar toolbutton {
     border-top-left-radius: $br_b;
     border-bottom-left-radius: $br_b;
     border-right-style: none;
+    border-left-style: solid;
   }
 
   &:last-child {
