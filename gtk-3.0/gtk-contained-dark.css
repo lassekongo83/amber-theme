@@ -534,9 +534,9 @@ headerbar { color: #f2f1f0; }
 
 headerbar button { color: #f2f1f0; color: #f2f1f0; outline-color: rgba(242, 241, 240, 0.3); border-color: #101010; background-color: #505050; box-shadow: 1px 0 rgba(0, 0, 0, 0.06), 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px rgba(0, 0, 0, 0.06), -1px 0 rgba(0, 0, 0, 0.06), 0 -1px rgba(0, 0, 0, 0.06), inset 0 1px rgba(255, 255, 255, 0.06); border-width: 1px; }
 
-headerbar button:hover { color: #f2f1f0; border-color: #c04310; background-color: #5a5a5a; }
+headerbar button:hover { color: #f2f1f0; border-color: #101010; background-color: #5a5a5a; box-shadow: 1px 0 rgba(0, 0, 0, 0.06), 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px rgba(0, 0, 0, 0.06), -1px 0 rgba(0, 0, 0, 0.06), 0 -1px rgba(0, 0, 0, 0.06), inset 0 0 0 1px #c04310; }
 
-headerbar button:focus { color: #f2f1f0; border-color: #c04310; box-shadow: 1px 0 rgba(0, 0, 0, 0.06), 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px rgba(0, 0, 0, 0.06), -1px 0 rgba(0, 0, 0, 0.06), 0 -1px rgba(0, 0, 0, 0.06), inset 0 0 0 1px #c04310; }
+headerbar button:focus { color: #f2f1f0; border-color: #101010; box-shadow: 1px 0 rgba(0, 0, 0, 0.06), 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px rgba(0, 0, 0, 0.06), -1px 0 rgba(0, 0, 0, 0.06), 0 -1px rgba(0, 0, 0, 0.06), inset 0 0 0 1px #c04310; }
 
 headerbar button:checked, headerbar button:active { color: #f2f1f0; border-color: black; background-color: #222222; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1); }
 
