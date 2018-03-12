@@ -8,8 +8,8 @@ $backdrop_transition: 200ms ease-out;
 $button_transition: all 200ms $ease-out-quad;
 
 // Button and window border-radius
-$br_b: 1px; // Default button and entry radius
-$br_w: 2px; // Rounded corners on decorations
+$br_b: 3px; // Default button and entry radius
+$br_w: 4px; // Rounded corners on decorations
 
 * {
   padding: 0;
