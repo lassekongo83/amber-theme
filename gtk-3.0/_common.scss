@@ -1391,14 +1391,14 @@ headerbar {
 }
 
 // Headerbar widgets
-// These needs to be dark. Would be better if I could find a way to swap variant to dark locally instead.
 // buttons, entries, checkboxes, and what else can we find in a headerbar?
 %header_widgets {
-  color: $dark_fg_color;
+  color: if($darker=='true', $dark_fg_color, $fg_color);
   // Normal headerbar buttons
   button {
-    color: $dark_fg_color;
-    border-width: 0;
+    color: if($darker=='true', $dark_fg_color, $fg_color);
+    border-width: if($darker=='true' or $variant=='dark', 0, 1px);
+    border-radius: if($darker=='true' or $variant=='dark', $br_b - 1px, $br_b); // Use 1px smaller border-radius for the dark variants
     @include button(headerbutton-normal);
     &:hover { @include button(headerbutton-hover); }
     &:focus { @include button(headerbutton-focus); }
@@ -1406,6 +1406,11 @@ headerbar {
     &:checked:hover, &:active:hover { @include button(headerbutton-hoveractive); }
     &:disabled { @include button(headerbutton-disabled); }
     &:backdrop { color: $backdrop_fg_color; }
+  }
+  entry {
+    @include entry(normal-header);
+    &:focus { @include entry(focus); }
+    &:disabled { @include entry(insensitive-header); }
   }
   .suggested-action {
     &:disabled { @include button(undecorated-disabled); }

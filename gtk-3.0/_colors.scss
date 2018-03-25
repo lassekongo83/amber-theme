@@ -5,8 +5,9 @@
 $dark_bg_color: #363636; //#474642;
 $dark_fg_color: #f2f1f0;
 $dark_borders_color: darken($dark_bg_color,15%);
+$dark_base_color: #111;
 
-$base_color: if($variant == 'light', #FFFFFF, #111);
+$base_color: if($variant == 'light', #FFFFFF, $dark_base_color);
 $text_color: if($variant == 'light', #3C3C3C, white);
 $bg_color: if($variant == 'light', #eae8e8, $dark_bg_color);
 $fg_color: if($variant == 'light', #4c4c4c, $dark_fg_color);
@@ -47,6 +48,9 @@ $tooltip_borders_color: transparentize(white, 0.9);
 $shadow_color: transparentize(black, 0.9);
 
 $drop_target_color: #4e9a06;
+
+// Headerbar color
+$header_bg: if($darker == 'true', $dark_bg_color, $bg_color);
 
 //insensitive state derived colors
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
