@@ -10,7 +10,7 @@ $_panel_bottom: inset 0 -3px $_panel_shade;
 $_panel_left: inset 3px 0 $_panel_shade;
 $_panel_right: inset -3px 0 $_panel_shade;
 
-// Workaround gradient needed for box-shadow to work in panels
+// Trick due to St limitations. It needs a background to draw a box-shadow
 %panel_bg {
   background-gradient-direction: vertical;
   background-gradient-start: transparent;

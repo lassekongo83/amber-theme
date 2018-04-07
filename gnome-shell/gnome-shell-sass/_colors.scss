@@ -3,10 +3,10 @@
 
 $dark_bg_color: #363636;
 $dark_fg_color: #f2f1f0;
-$dark_borders_color: #8c8984; //darken($dark_bg_color,15%);
+$dark_borders_color: darken($dark_bg_color,15%);
 
-$base_color: if($variant == 'light', #FFFFFF, #33322e);
-$bg_color: if($variant == 'light', #eae9e7, $dark_bg_color);
+$base_color: if($variant == 'light', #FFFFFF, #111);
+$bg_color: if($variant == 'light', #eae8e8, $dark_bg_color);
 $fg_color: if($variant == 'light', #4c4c4c, $dark_fg_color);
 
 $selected_fg_color: #ffffff;
