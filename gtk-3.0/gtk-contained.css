@@ -94,19 +94,19 @@ spinbutton:not(.vertical) undershoot.right, entry undershoot.right { background-
 
 spinbutton.flat:focus:not(.vertical), spinbutton.flat:backdrop:not(.vertical), spinbutton.flat:disabled:not(.vertical), spinbutton.flat:backdrop:disabled:not(.vertical), spinbutton.flat:not(.vertical), entry.flat:focus, entry.flat:backdrop, entry.flat:disabled, entry.flat:backdrop:disabled, entry.flat { min-height: 0; padding: 2px; background-image: none; border-color: transparent; border-radius: 0; }
 
-spinbutton:focus:not(.vertical), entry:focus { border-color: #f07746; }
+spinbutton:focus:not(.vertical), entry:focus { border-color: #f07746; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(240, 119, 70, 0.3), 0 0 0 2px rgba(240, 119, 70, 0.1); }
 
 spinbutton:disabled:not(.vertical), entry:disabled { color: #9b9a9a; background-color: #dad8d8; border-color: transparent; box-shadow: none; }
 
 spinbutton.error:not(.vertical), entry.error { color: #e53935; border-color: #e53935; }
 
-spinbutton.error:focus:not(.vertical), entry.error:focus { border-color: #f07746; }
+spinbutton.error:focus:not(.vertical), entry.error:focus { border-color: #f07746; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(240, 119, 70, 0.3), 0 0 0 2px rgba(240, 119, 70, 0.1); }
 
 spinbutton.error:not(.vertical) selection, entry.error selection { background-color: #e53935; }
 
 spinbutton.warning:not(.vertical), entry.warning { color: #ffca28; border-color: #ffca28; }
 
-spinbutton.warning:focus:not(.vertical), entry.warning:focus { border-color: #f07746; }
+spinbutton.warning:focus:not(.vertical), entry.warning:focus { border-color: #f07746; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(240, 119, 70, 0.3), 0 0 0 2px rgba(240, 119, 70, 0.1); }
 
 spinbutton.warning:not(.vertical) selection, entry.warning selection { background-color: #ffca28; }
 
@@ -176,11 +176,11 @@ notebook > header > tabs > arrow, button { min-height: 20px; min-width: 16px; pa
 
 notebook > header > tabs > arrow, button.sidebar-button, button.flat { border-color: transparent; background-color: transparent; background-image: none; box-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); text-shadow: none; -gtk-icon-shadow: none; transition: none; }
 
-notebook > header > tabs > arrow.default, button.default { color: #4c4c4c; border-color: #f07746; }
+notebook > header > tabs > arrow.default, button.default { color: #4c4c4c; border-color: #f07746; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(240, 119, 70, 0.3), 0 0 0 2px rgba(240, 119, 70, 0.1); }
 
 notebook > header > tabs > arrow:hover, button:hover { color: #4c4c4c; background-color: white; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.22); -gtk-icon-effect: highlight; }
 
-notebook > header > tabs > arrow:focus, button:focus { color: #4c4c4c; border-color: #f07746; }
+notebook > header > tabs > arrow:focus, button:focus { color: #4c4c4c; border-color: #f07746; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(240, 119, 70, 0.3), 0 0 0 2px rgba(240, 119, 70, 0.1); }
 
 notebook > header > tabs > arrow:active:hover, notebook > header > tabs > arrow:checked:hover, button:active:hover, button:checked:hover { color: #4c4c4c; background-color: #cdc8c8; }
 
@@ -558,7 +558,7 @@ headerbar button:backdrop { color: #9b9a9a; }
 
 headerbar entry { color: #f2f1f0; background-color: #111; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.22), 0 1px 1px rgba(0, 0, 0, 0.06); border-color: transparent; }
 
-headerbar entry:focus { border-color: #f07746; }
+headerbar entry:focus { border-color: #f07746; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(240, 119, 70, 0.3), 0 0 0 2px rgba(240, 119, 70, 0.1); }
 
 headerbar entry:disabled { color: #f2f1f0; background-color: #2b2b2b; box-shadow: none; border-color: transparent; }
 
@@ -1677,7 +1677,7 @@ XfceHeading, .XfceHeading { margin: 0; padding: 0; border-width: 0; background-i
 
 .xfce4-panel menu button:active:hover, .xfce4-panel menu button:checked:hover { color: #4c4c4c; background-color: #cdc8c8; }
 
-.xfce4-panel menu button.default { color: #4c4c4c; border-color: #f07746; }
+.xfce4-panel menu button.default { color: #4c4c4c; border-color: #f07746; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(240, 119, 70, 0.3), 0 0 0 2px rgba(240, 119, 70, 0.1); }
 
 .xfce4-panel menu button:disabled { color: #9b9a9a; background-color: #dad8d8; text-shadow: none; -gtk-icon-shadow: none; box-shadow: none; border-color: transparent; }
 
@@ -1722,7 +1722,7 @@ menu .separator:not(label), .csd menu .separator:not(label), .menu .separator:no
 
 .nemo-window .nemo-places-sidebar.frame { border-width: 0; }
 
-.nemo-window .nemo-window-pane widget.entry { border: 1px solid; border-radius: 3px; border-color: #f07746; }
+.nemo-window .nemo-window-pane widget.entry { border: 1px solid; border-radius: 3px; border-color: #f07746; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(240, 119, 70, 0.3), 0 0 0 2px rgba(240, 119, 70, 0.1); }
 
 .places-treeview { -NemoPlacesTreeView-disk-full-bg-color: #FFFFFF; -NemoPlacesTreeView-disk-full-fg-color: #f07746; -NemoPlacesTreeView-disk-full-bar-width: 2px; -NemoPlacesTreeView-disk-full-bar-radius: 1px; -NemoPlacesTreeView-disk-full-bottom-padding: 1px; -NemoPlacesTreeView-disk-full-max-length: 70px; }
 
