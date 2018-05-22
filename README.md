@@ -1,10 +1,10 @@
-# amber-theme
-A theme inspired by Ubuntu's Ambiance theme.
+# Amber Theme
+A theme that's a little bit inspired by Ubuntu's Ambiance theme.
 
-This is just an early "alpha" version.
+This theme is not finished yet.
 
 TODO:
 
-* Create a gtk2 theme.
+* Create a GTK+2 theme.
 * Finish the gnome-shell theme.
 * Polish everything.
