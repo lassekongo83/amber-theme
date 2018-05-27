@@ -1243,7 +1243,7 @@ StScrollBar {
   .search-entry {
     width: 320px;
     padding: 7px 9px;
-    border-radius: 0;
+    border-radius: 66px;
     border-color: transparent;
     color: $_bubble_fg_color;
     background-color: white;
@@ -1257,7 +1257,11 @@ StScrollBar {
       @include entry(focus);
     }
 
-    .search-entry-icon { icon-size: 1em; padding: 0 4px; color: $_bubble_fg_color; }
+    .search-entry-icon { 
+      icon-size: 1em;
+      padding: 0 4px;
+      color: $_bubble_fg_color;
+    }
 
     &:hover, &:focus {
       .search-entry-icon { color: $_bubble_fg_color; }

@@ -1795,7 +1795,7 @@ menu,
 .context-menu {
   margin: 4px; // see https://bugzilla.gnome.org/show_bug.cgi?id=591258
   padding: 2px 0px;
-  background-color: $dark_bg_color;
+  background-color: $base_color;
   border: 1px solid $borders_color; // adds borders in a non composited env
 
   .csd & { border: none; }  // axes borders in a composited env
@@ -1807,7 +1807,7 @@ menu,
     min-width: 40px;
     padding: 4px 6px;
     text-shadow: none;
-    color: $selected_fg_color;
+    color: $fg_color;
 
     &:hover {
       color: $selected_fg_color;
@@ -1944,7 +1944,7 @@ notebook {
     // Style common tabs in _drawing.scss
     @include tabs;
 
-    tabs { margin: 0px; }
+    tabs { margin: -1px; }
 
     @at-root %notebook_vert_arrows {
       margin-left: -5px;
@@ -2359,7 +2359,7 @@ radio {
 
   min-height: 14px;
   min-width: 14px;
-  border: 0px solid;
+  border: 1px solid;
   -gtk-icon-source: none;
 
   @include check(normal);
@@ -2404,7 +2404,7 @@ radio {
 
 %check,
 check {
-  border-radius: $br_b;
+  border-radius: 1px;
 
   &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/check-symbolic.svg")),
                                       -gtk-recolor(url("assets/check-symbolic.symbolic.png"))); }
