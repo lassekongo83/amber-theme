@@ -548,7 +548,7 @@ headerbar button { color: #f2f1f0; border-width: 0; border-radius: 2px; color: #
 
 headerbar button:hover { color: #f2f1f0; background-color: #646464; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0 0 0 1px rgba(255, 255, 255, 0.04); }
 
-headerbar button:focus { color: #f2f1f0; border-color: #f07746; }
+headerbar button:focus, headerbar button.default { color: #f2f1f0; background-color: #f07746; border-color: #f07746; box-shadow: none; }
 
 headerbar button:checked, headerbar button:active { color: #f2f1f0; background-color: #222222; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08), inset 0 2px rgba(0, 0, 0, 0.04), inset 0 -3px #f07746; border-color: transparent; }
 

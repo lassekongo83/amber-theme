@@ -1430,7 +1430,7 @@ headerbar {
     border-radius: if($darker=='true' or $variant=='dark', $br_b - 1px, $br_b); // Use 1px smaller border-radius for the dark variants
     @include button(headerbutton-normal);
     &:hover { @include button(headerbutton-hover); }
-    &:focus { @include button(headerbutton-focus); }
+    &:focus, &.default { @include button(headerbutton-focus); }
     &:checked, &:active { @include button(headerbutton-active); }
     &:checked:hover, &:active:hover { @include button(headerbutton-hoveractive); }
     &:disabled { @include button(headerbutton-disabled); }
