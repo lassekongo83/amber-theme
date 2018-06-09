@@ -3665,7 +3665,7 @@ decoration {
 
 .ssd .titlebar {
     border-width: 0; // No line below the title bar
-    @include headerbar_fill;
+    @include ssd_fill;
     padding: 2px 4px;
 }
 
@@ -3698,7 +3698,7 @@ headerbar,
     }
     
     // Load png assets for each button
-    @each $k in ('close','maximize', 'minimize') {
+    @each $k in ('close', 'maximize', 'minimize') {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
 
         &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
@@ -3706,22 +3706,6 @@ headerbar,
       }
     }
   }
-
-// FIXME: Different maximize button depending on left or right or maximized or unmaximized. Very messy...
-// Need to set left and right classes and more before this can be used.
-//  @each $p in ('right'), ('left') {
-//    @each $k in ('close','maximize', 'minimize') {
-//      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
-//        &.#{$p} button.titlebutton.#{$k} {
-//          @if $p==left and $k==maximize { background-image: -gtk-scaled(url('assets/titlebutton-maximize-left#{$m}.png'),
-//                                                                        url('assets/titlebutton-maximize-left#{$m}@2.png')); }
-//          @else { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
-//                                                url('assets/titlebutton-#{$k}#{$m}@2.png')); }
-//        }
-//      }
-//    }
-//  }
-
 }
 
 // catch all extend :)
