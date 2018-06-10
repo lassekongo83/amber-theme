@@ -84,22 +84,22 @@ $_panel_right: inset -3px 0 $_panel_shade;
     border-radius: 0;
 
     &.#{$p}.extended {
-      border-color: transparentize(white, 0.9);
-      border-style: solid;
+      //border-color: transparentize(white, 0.9);
+      //border-style: solid;
       @if $p==left {
-        border-right-width: 1px;
+        //border-right-width: 1px;
         box-shadow: $_panel_left;
       }
       @else if $p==right {
-        border-left-width: 1px;
+        //border-left-width: 1px;
         box-shadow: $_panel_right;
       }
       @else if $p==bottom {
-        border-top-width: 1px;
+        //border-top-width: 1px;
         box-shadow: $_panel_bottom;
       }
       @else if $p==top {
-        border-bottom-width: 1px;
+        //border-bottom-width: 1px;
         box-shadow: $_panel_top;
       }
     }
@@ -110,8 +110,8 @@ $_panel_right: inset -3px 0 $_panel_shade;
       padding: 0px;
     
       // don't let the first icon be too close to the shadow + panel
-      &.left #dash { padding-top: 2px; }
-      &.right #dash { padding-top: 2px; }
+      //&.left #dash { padding-top: 2px; }
+      //&.right #dash { padding-top: 2px; }
     }
 
     &.extended {

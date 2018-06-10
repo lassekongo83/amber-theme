@@ -735,7 +735,7 @@ StScrollBar {
   background-color: transparentize(black, 0.2);
   font-weight: bold;
   height: 1.86em;
-  box-shadow: 0 1px transparentize(white, 0.9);
+  //box-shadow: 0 1px transparentize(white, 0.9);
   border-width: 0px;
 
   &.unlock-screen,

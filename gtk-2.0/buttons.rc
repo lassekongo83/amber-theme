@@ -1,56 +1,16 @@
 style "button"
 {
+    bg[NORMAL]        = shade (1.1, @bg_color)
+    bg[PRELIGHT]      = shade (1.2, @bg_color)
+    bg[SELECTED]      = @selected_bg_color
+    bg[INSENSITIVE]   = @bg_color
+    bg[ACTIVE]        = shade (0.9, @bg_color)
+
     xthickness = 3
     ythickness = 3
 
-    engine "pixmap" 
-    {
-    image
-        {
-            function    = BOX
-            state       = NORMAL
-            file        = "assets/btn.png"
-            border      = { 1, 1, 1, 1 }
-            stretch     = TRUE
-        }
-    image
-        {
-            function    = BOX
-            recolorable = TRUE
-            shadow      = OUT
-            state       = PRELIGHT
-            file        = "assets/btn-hover.png"
-            border      = { 1, 1, 1, 1 }
-            stretch     = TRUE
-        }
-    image
-        {
-            function    = BOX
-            recolorable = TRUE
-            shadow      = IN
-            state       = PRELIGHT
-            file        = "assets/btn-active-hover.png"
-            border      = { 3, 3, 3, 3 }
-            stretch     = TRUE
-        }
-    image
-        {
-            function    = BOX
-            recolorable = TRUE
-            shadow      = IN
-            state       = ACTIVE
-            file        = "assets/btn-active.png"
-            border      = { 3, 3, 3, 3 }
-            stretch     = TRUE
-        }    
-    image 
-        {
-            function    = BOX
-            state       = INSENSITIVE
-            file        = "assets/btn-insensitive.png"
-            border      = { 1, 1, 1, 1 }
-            stretch     = TRUE
-        }
+    engine "murrine" {
+        roundness = 2
     }
 }
 
@@ -59,33 +19,10 @@ style "treeview-header"
     xthickness = 2
     ythickness = 0
 
-    bg[NORMAL] = shade (1.0, @base_color) # Color for treeview headers.
+    bg[NORMAL] = @base_color
 
-    engine "pixmap" {
-    image 
-        {
-            function = BOX
-            state    = NORMAL
-            file     = "assets/column-header.png"
-            border   = { 0, 0, 0, 1 }
-            stretch  = TRUE
-        }
-    image 
-        {
-            function = BOX
-            state    = PRELIGHT
-            file     = "assets/column-header-hover.png"
-            border   = { 0, 0, 0, 2 }
-            stretch  = TRUE
-        }
-    image 
-        {
-            function = BOX
-            state    = ACTIVE
-            file     = "assets/column-header-hover.png"
-            border   = { 0, 0, 0, 2 }
-            stretch  = TRUE
-        }
+    engine "murrine" {
+        listviewheaderstyle = 1
     }
 }
 

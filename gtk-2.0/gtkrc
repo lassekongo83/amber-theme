@@ -3,15 +3,15 @@
 # based on "Greybird" by Simon Steinbeiß
 # Description: As is the original theme, this theme is 100% free and open source.
 
-gtk-color-scheme   = "bg_color:#ebeced\nselected_bg_color:#4a90d9\nbase_color:#ffffff" # Background, base.
+gtk-color-scheme   = "bg_color:#e3dedb\nselected_bg_color:#fb6155\nbase_color:#ffffff" # Background, base.
 gtk-color-scheme   = "fg_color:#2c2c2c\nselected_fg_color:#ffffff\ntext_color:#000000" # Foreground, text.
 gtk-color-scheme   = "tooltip_bg_color:#000000\ntooltip_fg_color:#FFFFFF" # Tooltips.
 gtk-color-scheme   = "link_color:#2d71b8" # Hyperlinks
-gtk-color-scheme   = "panel_bg_color:#33393b" # Panel bg color
+gtk-color-scheme   = "panel_bg_color:#4d4d4d" # Panel bg color
 gtk-color-scheme   = "panel_fg_color:#FFFFFF" # Panel fg color
 gtk-color-scheme   = "fm_color:#F7F7F7" # Color used in Thunar.
-gtk-color-scheme   = "bg_color_dark:#33393b\ntext_color_dark:#FFF"
-gtk-color-scheme   = "titlebar_color:#e3e4e6"
+gtk-color-scheme   = "bg_color_dark:#4d4d4d\ntext_color_dark:#FFF"
+gtk-color-scheme   = "titlebar_color:#4d4d4d"
 
 gtk-icon-sizes     = "panel-applications-menu=24,24:panel-menu=24,24:panel=16,16:gtk-button=16,16"
 gtk-button-images  = 1 # Disables icons for buttons with text
@@ -297,37 +297,29 @@ style "menu"
 
 style "menubar"
 {
+    ythickness   = 4
     GtkMenuBar :: shadow-type = GTK_SHADOW_NONE
 
-    ythickness   = 4
     bg[NORMAL]   = @titlebar_color
-    fg[NORMAL]   = @fg_color
-    fg[PRELIGHT] = @fg_color
-    fg[SELECTED] = @fg_color
+    fg[NORMAL]   = @selected_fg_color
+    fg[PRELIGHT] = @selected_fg_color
+    fg[SELECTED] = @selected_fg_color
 }
 
 style "menubar-menuitem" {
     xthickness     = 3
 
-    bg[PRELIGHT]   = @base_color
-    bg[SELECTED]   = @base_color
+    bg[PRELIGHT]   = @selected_bg_color
+    bg[SELECTED]   = @selected_bg_color
     fg[NORMAL]     = @fg_color
-    fg[PRELIGHT]   = @fg_color
-    fg[SELECTED]   = @fg_color
+    fg[PRELIGHT]   = @selected_fg_color
+    fg[SELECTED]   = @selected_fg_color
     text[NORMAL]   = @fg_color
-    text[PRELIGHT] = @fg_color
-    text[SELECTED] = @fg_color
+    text[PRELIGHT] = @selected_fg_color
+    text[SELECTED] = @selected_fg_color
 
-    engine "pixmap" {
-        image
-        {
-            function    = BOX
-            recolorable = TRUE
-            state       = PRELIGHT
-            file        = "assets/menubar-menuitem.png"
-            border      = { 0, 0, 0, 3 }
-            stretch     = TRUE
-        }
+	engine "murrine" {
+		  lightborder_shade = 1.0
     }
 }
 

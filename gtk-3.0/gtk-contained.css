@@ -946,11 +946,11 @@ check:only-child, radio:only-child { margin: 0; }
 
 check:hover, radio:hover { color: #4c4c4c; border: 1px solid #fb6155; }
 
-check:active, radio:active { color: #ffffff; background-color: #fb6155; border: 1px solid #e51605; }
+check:active, radio:active { color: #ffffff; background-color: #fb6155; border: 1px solid #fb6155; }
 
-check:checked, radio:checked { color: #ffffff; background-color: #fb6155; border: 1px solid #e51605; }
+check:checked, radio:checked { color: #ffffff; background-color: #fb6155; border: 1px solid #fb6155; }
 
-check:checked:hover, radio:checked:hover { color: #ffffff; background-color: #fb6155; border: 1px solid #e51605; }
+check:checked:hover, radio:checked:hover { color: #ffffff; background-color: #fb6155; border: 1px solid #fb6155; }
 
 check:disabled, radio:disabled { color: #989594; border-color: #a7978e; background-color: #d4cfcd; }
 
@@ -968,7 +968,7 @@ menu menuitem check, menu menuitem radio { margin: 0; border: 1px solid; box-sha
 
 menu menuitem check, menu menuitem check:hover, menu menuitem check:disabled, menu menuitem check:checked, menu menuitem radio, menu menuitem radio:hover, menu menuitem radio:disabled, menu menuitem radio:checked { min-height: 14px; min-width: 14px; background-image: none; background-color: transparent; box-shadow: none; -gtk-icon-shadow: none; color: inherit; border-color: #c2b7b0; }
 
-check { border-radius: 1px; }
+check { border-radius: 2px; }
 
 check:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/check-symbolic.svg")), -gtk-recolor(url("assets/check-symbolic.symbolic.png"))); }
 
