@@ -6,7 +6,7 @@ $dark_fg_color: #f2f1f0;
 $dark_borders_color: darken($dark_bg_color,15%);
 
 $base_color: if($variant == 'light', #FFFFFF, #111);
-$bg_color: if($variant == 'light', #eae8e8, $dark_bg_color);
+$bg_color: if($variant == 'light', #e2e2e0, $dark_bg_color);
 $fg_color: if($variant == 'light', #4c4c4c, $dark_fg_color);
 
 $selected_fg_color: #ffffff;

@@ -8,7 +8,7 @@ $backdrop_transition: 200ms ease-out;
 $button_transition: all 200ms $ease-out-quad;
 
 // Button and window border-radius
-$br_b: 3px; // Default button and entry radius
+$br_b: 2px; // Default button and entry radius
 $br_w: 2px; // Rounded corners on decorations
 
 * {
@@ -1449,6 +1449,9 @@ headerbar {
   // Linked headerbar buttons
   .linked:not(entry) {
     button:not(:last-child):not(:only-child) { border-right-style: solid; }
+    button:not(:only-child) { 
+      border-radius: 0;
+    }
   }
 }
 

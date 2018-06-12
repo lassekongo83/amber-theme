@@ -71,7 +71,7 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   @if $t==normal-header {
     @if($darker=='true' or $variant=='dark') {
       color: $dfc;
-      background-color: $dark_base_color;
+      background-color: lighten($dc, 15%); //$dark_base_color;
       @include edges(normal-dark);
     }
     @else { @include entry(normal); }
@@ -143,9 +143,9 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   $bsw: transparentize(white, 0.96);
 
   @if $s == normal {
-    box-shadow: 0 1px 2px $bs1, 0 1px 1px $bs2;
-    border-color: $b;
-    border-bottom-color: darken($b, 15%);
+    box-shadow: 0 1px 2px $bs1, 0 1px 1px $bs2, 0 1px transparentize($b, 0.9);
+    border-color: transparent; //$b;
+    border-bottom-color: transparent; //darken($b, 15%);
   }
   @else if $s == normal-dark {
     box-shadow: 0 1px 2px $bs1, 0 1px 1px $bs2;
@@ -206,7 +206,7 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   // normal button
     color: $tc;
     outline-color: transparentize($tc, 0.7);
-    background-color: lighten($c, 10%);
+    background-color: lighten($c, 9%);
     @include edges(normal);
   }
   @if $t==normal-alt {
@@ -216,7 +216,7 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   @else if $t==hover {
   // hovered button
     color: $tc;
-    background-color: if($variant == 'light', lighten($c, 15%), lighten($c, 18%));
+    background-color: lighten($c, 12%);
     @include edges(hover);
   }
   @else if $t==hover-alt {
@@ -274,8 +274,8 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
     @if($darker=='true' or $variant=='dark') {
       color: $dfc;
       outline-color: transparentize($tc, 0.7);
-      background-color: lighten($dc, 15%);
-      @include edges(normal-dark);
+      background-color: transparent;
+      @include edges(disabled);
     }
     @else { @include button(normal); }
   }
@@ -318,7 +318,7 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   @else if $t==headerbutton-disabled {
   // disabled header button
     @if($darker=='true' or $variant=='dark') {
-      background-color: lighten($dc, 5%);
+      background-color: transparent;
       color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color);
       @include edges(disabled);
     }
@@ -517,15 +517,6 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
     $_small_gradient_color: darken($borders_color, 10%);
     $_big_gradient_color: $fg_color;
   }
-
-  // FIXME: Shouldn't have to use gtk-gradient for this to look right.
-  //$_small_gradient: radial-gradient(farthest-side at $p,
-  //                                  $_small_gradient_color 85%,
-  //                                  transparentize($_small_gradient_color, 1));
-
-  //$_big_gradient: radial-gradient(farthest-side at $p,
-  //                                $_big_gradient_color,
-  //                                transparentize($_big_gradient_color, 1));
 
   $_small_gradient: -gtk-gradient(radial,
                                   $_position, 0,
