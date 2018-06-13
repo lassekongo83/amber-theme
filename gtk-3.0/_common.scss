@@ -1416,7 +1416,7 @@ headerbar {
     }
   }
 
-  separator { background-color: $dark_bg_color; }
+  separator, separator:backdrop { background-color: $dark_bg_color; }
 }
 
 // Headerbar widgets
@@ -3604,8 +3604,8 @@ decoration {
   $_wm_border: if($variant=='light', transparentize(black, 0.77), transparentize($borders_color, 0.1));
   $_wm_border_backdrop: if($variant=='light', transparentize(black, 0.82), transparentize($borders_color, 0.1));
 
-  box-shadow: 0 1px 4px 1px transparentize(black, 0.5),
-              0 0 0 1px $_wm_border; //doing borders with box-shadow
+  box-shadow: 0 1px 4px 1px transparentize(black, 0.5);
+              //0 0 0 0px $_wm_border; //doing borders with box-shadow
 
   // FIXME rationalize shadows
 
@@ -3618,8 +3618,8 @@ decoration {
     // The biggest shadow should be in the same order then in the active state
     // or the jumping will happen during the transition.
     box-shadow: 0 1px 4px 1px transparent,
-                0 1px 2px 1px transparentize(black, 0.8),
-                0 0 0 1px $_wm_border_backdrop;
+                0 1px 2px 1px transparentize(black, 0.8);
+                //0 0 0 1px $_wm_border_backdrop;
   }
 
   .maximized &,
@@ -3635,7 +3635,7 @@ decoration {
   // server-side decorations as used by mutter
   .ssd {
     border-radius: $br_w $br_w 0 0;
-    box-shadow: 0 0 0 1px $_wm_border; //just doing borders, wm draws actual shadows
+    //box-shadow: 0 0 0 1px $_wm_border; //just doing borders, wm draws actual shadows
     &.maximized { border-radius: 0; }
     border: none;
   }
@@ -3654,7 +3654,7 @@ decoration {
   messagedialog.csd & {
     border-radius: $br_w;
     box-shadow: 0 1px 2px transparentize(black, 0.8),
-                  0 0 0 1px transparentize($_wm_border, 0.1);
+                0 0 0 1px transparentize($_wm_border, 0.1);
   }
 
   .solid-csd & {
@@ -3680,6 +3680,10 @@ headerbar,
     min-height: 24px;
     margin: 0;
   }
+  
+  // separator for the titlebutton area
+  .right.horizontal { border-left: 1px solid if($darker=='true', transparentize(black, 0.8), $borders_color); }
+  .left.horizontal { border-right: 1px solid if($darker=='true', transparentize(black, 0.8), $borders_color); }
 
   button.titlebutton {
     padding: 0;
