@@ -1427,7 +1427,7 @@ headerbar {
   button {
     color: if($darker=='true', $dark_fg_color, $fg_color);
     border-width: if($darker=='true' or $variant=='dark', 0, 1px);
-    border-radius: if($darker=='true' or $variant=='dark', $br_b - 1px, $br_b); // Use 1px smaller border-radius for the dark variants
+    border-radius: $br_b;
     @include button(headerbutton-normal);
     &:hover { @include button(headerbutton-hover); }
     &:focus, &.default { @include button(headerbutton-focus); }
@@ -1449,9 +1449,7 @@ headerbar {
   // Linked headerbar buttons
   .linked:not(entry) {
     button:not(:last-child):not(:only-child) { border-right-style: solid; }
-    button:not(:only-child) { 
-      border-radius: 0;
-    }
+    button:not(:only-child) { border-radius: 0; }
   }
 }
 

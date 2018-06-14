@@ -442,22 +442,21 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
   @else { box-shadow: none; }
 }
 
-@mixin headerbar_fill($c:$header_bg, $hc:transparentize(white, 0.92), $bs1:transparentize(black, 0.8), $bs2:transparentize(black, 0.94), $bo:transparentize(black, 0.85)) {
+@mixin headerbar_fill($c:$header_bg, $hc:transparentize(white, 0.92), $s1:transparentize(black, 0.8), $s2:transparentize(black, 0.85)) {
 //
 // headerbar fill
 //
 // $c:  bg color
 // $hc: top highlight color
-// $bs1: bottom inner shadow 1
-// $bs2: bottom inner shadow 2
-// $bo: bottom outer shadow
+// $s1: shadow1
+// $s2: shadow2
 //
   background-color: $c;
   box-shadow: 
     inset 0 1px $hc,
-    inset 0 -1px $bs1,
-    inset 0 -2px $bs2,
-    0 1px $bo;
+    inset 0 -1px $s1,
+    0 1px $s1,
+    0 2px $s2;
 }
 
 @mixin ssd_fill($c:$header_bg, $hc:transparentize(white, 0.92)) {
@@ -584,7 +583,12 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
 }
 
 // Tabs
-@mixin tabs($th: null, $bh: null, $ba: null, $sa: transparentize(black, 0.98), $sb: transparentize(black, 0.96)) {
+@mixin tabs(
+  $th: null,
+  $bh: null,
+  $ba: null,
+  $sa: transparentize(black, 0.98),
+  $sb: transparentize(black, 0.96)) {
   //
   // Tabs
   //
@@ -605,40 +609,40 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
     @if $po == top {
       padding-top: 1px;
       $th: inset 0 -1px $borders_color,
-                inset 0 2px $sa,
-                inset 0 1px $sb;
+           inset 0 2px $sa,
+           inset 0 1px $sb;
       $bh: inset 0 -3px $borders_color;
-      $ba: inset 0 1px $borders_color,
+      $ba: inset 0 2px $selected_bg_color,
            inset 1px 0 $borders_color,
            inset -1px 0 $borders_color;
     }
     @else if $po == left {
       padding-left: 1px;
       $th: inset -1px 0 $borders_color,
-                inset 2px 0 $sa,
-                inset 1px 0 $sb;
+           inset 2px 0 $sa,
+           inset 1px 0 $sb;
       $bh: inset -3px 0 $borders_color;
       $ba: inset 0 1px $borders_color,
            inset 0 -1px $borders_color,
-           inset 1px 0 $borders_color;
+           inset 2px 0 $selected_bg_color;
     }
     @else if $po == right {
       padding-right: 1px;
       $th: inset 1px 0 $borders_color,
-                inset -2px 0 $sa,
-                inset -1px 0 $sb;
+           inset -2px 0 $sa,
+           inset -1px 0 $sb;
       $bh: inset 3px 0 $borders_color;
       $ba: inset 0 1px $borders_color,
            inset 0 -1px $borders_color,
-           inset -1px 0 $borders_color;
+           inset -2px 0 $selected_bg_color;
     }
     @else if $po == bottom {
       padding-bottom: 1px;
       $th: inset 0 1px $borders_color,
-                inset 0 -2px $sa,
-                inset 0 -1px $sb;
+           inset 0 -2px $sa,
+           inset 0 -1px $sb;
       $bh: inset 0 3px $borders_color;
-      $ba: inset 0 -1px $borders_color,
+      $ba: inset 0 -2px $selected_bg_color,
            inset 1px 0 $borders_color,
            inset -1px 0 $borders_color;
     }
