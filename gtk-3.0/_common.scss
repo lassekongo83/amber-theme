@@ -1420,7 +1420,7 @@ headerbar {
 }
 
 // Headerbar widgets
-// buttons, entries, checkboxes, and what else can we find in a headerbar?
+// Things that can be found in a headerbar
 %header_widgets {
   color: if($darker=='true', $dark_fg_color, $fg_color);
   // Normal headerbar buttons
@@ -1449,7 +1449,7 @@ headerbar {
   // Linked headerbar buttons
   .linked:not(entry) {
     button:not(:last-child):not(:only-child) { border-right-style: solid; }
-    button:not(:only-child) { border-radius: 0; }
+    button:not(:only-child) { border-radius: $br_b; }
   }
 }
 
@@ -3678,7 +3678,7 @@ headerbar,
     min-height: 24px;
     margin: 0;
   }
-  
+
   // separator for the titlebutton area
   .right.horizontal { border-left: 1px solid if($darker=='true', transparentize(black, 0.8), $borders_color); }
   .left.horizontal { border-right: 1px solid if($darker=='true', transparentize(black, 0.8), $borders_color); }
@@ -3701,7 +3701,7 @@ headerbar,
 
       &:backdrop { opacity: 1; }
     }
-    
+
     // Load png assets for each button
     @each $k in ('close', 'maximize', 'minimize') {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
