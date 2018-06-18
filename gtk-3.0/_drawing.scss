@@ -132,44 +132,44 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
 }
 
 // Buttons borders and shadows
-@mixin edges($s: normal, $c:$bg_color) {
-  $b: if($c!=$bg_color, _border_color($c), darken($borders_color, 8%));
-  $bs1: transparentize(black, 0.78);
-  $bs2: transparentize(black, 0.94);
-  $bsh1: transparentize(black, 0.75);
-  $bsh2: transparentize(black, 0.78);
-  $bsa1: transparentize(black, 0.92);
-  $bsa2: transparentize(black, 0.96);
-  $bsw: transparentize(white, 0.96);
-
+@mixin edges(
+    $s: normal, 
+    $c: $bg_color,
+    $b: if($c!=$bg_color, _border_color($c), darken($borders_color, 8%)),
+    $sc_strong: transparentize(black, 0.78),
+    $sc_stronger: transparentize(black, 0.75),
+    $sc_weak: transparentize(black, 0.92),
+    $sc_weaker: transparentize(black, 0.94),
+    $sc_weakest: transparentize(black, 0.96)
+  ) {
   @if $s == normal {
-    box-shadow: 0 1px 2px $bs1, 0 1px 1px $bs2, 0 1px transparentize($b, 0.9);
-    border-color: transparent; //$b;
-    border-bottom-color: transparent; //darken($b, 15%);
+    box-shadow: 0 1px 2px $sc_strong, 0 1px 1px $sc_weaker, 0 1px transparentize($b, 0.9);
+    border-color: transparent;
+    border-bottom-color: transparent;
   }
   @else if $s == normal-dark {
-    box-shadow: 0 1px 2px $bs1, 0 1px 1px $bs2;
+    box-shadow: 0 1px 2px $sc_strong, 0 1px 1px $sc_weaker;
     border-color: transparent;
   }
   @else if $s == hover {
-    box-shadow: 0 1px 2px $bsh1, 0 2px 3px $bsh2;
+    box-shadow: 0 1px 2px $sc_stronger, 0 2px 3px $sc_strong;
   }
   @else if $s == hover-dark {
-    box-shadow: 0 1px 2px $bsh1, 0 2px 3px $bsh2, inset 0 0 0 1px $bsw;
+    box-shadow: 0 1px 2px $sc_stronger, 0 2px 3px $sc_strong;
   }
   @else if $s == active {
-    box-shadow: inset 0 0 0 1px $bsa1, inset 0 2px $bsa2;
+    box-shadow: inset 0 0 0 1px $sc_weak, inset 0 2px $sc_weakest;
     border-color: $b;
     border-bottom-color: $b;
-    border-top-color: darken($b, 15%);
+    border-top-color: darken($b, 10%);
   }
   @else if $s == active-dark {
-    box-shadow: inset 0 0 0 1px $bsa1, inset 0 2px $bsa2;
+    box-shadow: inset 0 0 0 1px $sc_weak, inset 0 2px $sc_weakest;
     border-color: transparent;
   }
   @else if $s == focus {
     border-color: $selected_bg_color;
-    box-shadow: 0 1px 2px $bsh1, 0 2px 3px $bsh2, 0 0 0 1px transparentize($selected_bg_color, 0.7), 0 0 0 2px transparentize($selected_bg_color, 0.9);
+    box-shadow: 0 1px 2px $sc_stronger, 0 2px 3px $sc_strong, 0 0 0 1px transparentize($selected_bg_color, 0.7), 0 0 0 2px transparentize($selected_bg_color, 0.9);
   }
   @else if $s == focus-dark {
     border-color: $selected_bg_color;

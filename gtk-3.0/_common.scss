@@ -2265,7 +2265,56 @@ treeview ~ scrollbar.vertical {
  * Switch *
  **********/
 
+// Originally from materia-theme by nana-4
+// radius
+$circular_radius: 99px;
+
+// duration
+$longer_duration: 250ms;
+
+// timing function
+$deceleration_curve: cubic-bezier(0.0, 0.0, 0.2, 1);
+
+// shadow
+$shadow_1: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
 switch {
+  transition: background-color 100ms $deceleration_curve, opacity $longer_duration $deceleration_curve;
+  margin: 6px 0;
+  padding: 0 2px;
+  border: 5px solid transparent;
+  border-radius: $circular_radius;
+  background-color: $dark_fill;
+  background-clip: padding-box;
+  font-size: 0;
+
+  &:checked { background-color: transparentize($selected_bg_color, 0.5); }
+
+  &:disabled { opacity: 0.5; }
+
+  slider {
+    transition: all 100ms $deceleration_curve, box-shadow $longer_duration $deceleration_curve;
+    min-width: 20px;
+    min-height: 20px;
+    margin: -3px -2px;
+    border-radius: $circular_radius;
+    box-shadow: 0 0 0 6px transparent, $shadow_1;
+    background-color: $base_color;
+    color: $fg_color;
+  }
+
+  &:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.7), $shadow_1; }
+  &:focus slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.6), $shadow_1; }
+  &:focus:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.5), $shadow_1; }
+  &:checked slider {
+    background-color: $selected_bg_color;
+    color: $fg_color;
+  }
+
+  row:selected & {
+  }
+
+/*switch {
   font-weight: bold;
   font-size: smaller;
   outline-offset: -4px;
@@ -2290,8 +2339,8 @@ switch {
 
   slider {
     margin: -1px;
-    min-width: 36px;
-    min-height: 20px;
+    min-width: 34px;
+    min-height: 18px;
     border: 1px solid;
     border-radius: 99px;
 
@@ -2316,7 +2365,7 @@ switch {
 
       &.slider { &:checked, & { border-color: $selected_borders_color; } }
     }
-  }
+  }*/
 }
 
 /*************************
