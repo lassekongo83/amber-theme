@@ -1,0 +1,19 @@
+// radius
+$br_b: 2px; // Default button and entry radius
+$br_w: 2px; // Rounded corners on decorations
+$circular_radius: 99px;
+
+// duration
+$longer_duration: 250ms;
+
+// timing function
+$deceleration_curve: cubic-bezier(0.0, 0.0, 0.2, 1);
+
+// button shadows
+$shadow_normal: 0 1px 2px transparentize(black, 0.78), 0 1px 1px transparentize(black, 0.94);
+$shadow_hover: 0 1px 2px transparentize(black, 0.75), 0 2px 3px transparentize(black, 0.78);
+$shadow_active: inset 0 0 0 1px transparentize(black, 0.92), inset 0 2px transparentize(black, 0.96);
+$shadow_focus: 0 1px 2px transparentize(black, 0.75),
+               0 2px 3px transparentize(black, 0.78),
+               0 0 0 1px transparentize($selected_bg_color, 0.7),
+               0 0 0 2px transparentize($selected_bg_color, 0.9);

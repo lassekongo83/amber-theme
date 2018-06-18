@@ -2,14 +2,7 @@
   @return unquote("alpha(#{$c},#{$a})");
 }
 
-$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $asset_suffix: if($variant=='dark', '-dark', '');
-$backdrop_transition: 200ms ease-out;
-$button_transition: all 200ms $ease-out-quad;
-
-// Button and window border-radius
-$br_b: 2px; // Default button and entry radius
-$br_w: 2px; // Rounded corners on decorations
 
 * {
   padding: 0;
@@ -2266,18 +2259,6 @@ treeview ~ scrollbar.vertical {
  **********/
 
 // Originally from materia-theme by nana-4
-// radius
-$circular_radius: 99px;
-
-// duration
-$longer_duration: 250ms;
-
-// timing function
-$deceleration_curve: cubic-bezier(0.0, 0.0, 0.2, 1);
-
-// shadow
-$shadow_1: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
 switch {
   transition: background-color 100ms $deceleration_curve, opacity $longer_duration $deceleration_curve;
   margin: 6px 0;
@@ -2298,14 +2279,14 @@ switch {
     min-height: 20px;
     margin: -3px -2px;
     border-radius: $circular_radius;
-    box-shadow: 0 0 0 6px transparent, $shadow_1;
+    box-shadow: 0 0 0 6px transparent, $shadow_normal;
     background-color: $base_color;
     color: $fg_color;
   }
 
-  &:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.7), $shadow_1; }
-  &:focus slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.6), $shadow_1; }
-  &:focus:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.5), $shadow_1; }
+  &:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.7), $shadow_hover; }
+  &:focus slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.6), $shadow_normal; }
+  &:focus:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.5), $shadow_hover; }
   &:checked slider {
     background-color: $selected_bg_color;
     color: $fg_color;
@@ -2313,59 +2294,6 @@ switch {
 
   row:selected & {
   }
-
-/*switch {
-  font-weight: bold;
-  font-size: smaller;
-  outline-offset: -4px;
-
-  // similar to the .scale
-  border: 1px solid $borders_color;
-  border-radius: 99px;
-  color: $fg_color;
-  background-color: $dark_fill;
-
-  &:checked {
-    color: $selected_fg_color;
-    border-color: $selected_borders_color;
-    background-color: $selected_bg_color;
-  }
-
-  &:disabled {
-    color: $insensitive_fg_color;
-    border-color: $borders_color;
-    background-color: $insensitive_bg_color;
-  }
-
-  slider {
-    margin: -1px;
-    min-width: 34px;
-    min-height: 18px;
-    border: 1px solid;
-    border-radius: 99px;
-
-    @include button(normal-alt, $edge: $shadow_color);
-  }
-
-  &:hover slider { @include button(hover-alt, $edge: $shadow_color); }
-
-  &:checked slider { border: 1px solid $selected_borders_color; }
-
-  &:disabled slider { @include button(insensitive); }
-
-  row:selected & {
-    @if $variant == 'light' {
-      box-shadow: none;
-      border-color: $selected_borders_color;
-
-      &:backdrop { border-color: $selected_borders_color; }
-
-      slider:dir(rtl) { border-left-color: $borders_color; }
-      slider:dir(ltr) { border-right-color: $borders_color; }
-
-      &.slider { &:checked, & { border-color: $selected_borders_color; } }
-    }
-  }*/
 }
 
 /*************************
@@ -2550,11 +2478,11 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
 
 scale {
   // sizing
-  $_marks_length: 3px; // 6
-  $_marks_distance: 1px; // 6
+  $_marks_length: 3px;
+  $_marks_distance: 1px;
 
-  min-height: 10px;
-  min-width: 10px;
+  min-height: 14px;
+  min-width: 14px;
   padding: 12px;
 
   // those are inside the trough node, I need them to show their own border over the trough one, so negative margin
@@ -2627,13 +2555,11 @@ scale {
   }
 
   slider {
-    @include button(normal-alt, $edge: $shadow_color);
+    @include button(normal);
 
-    border: 1px solid darken($borders_color, 10%);
     border-radius: 100%;
-    box-shadow: none;
 
-    &:hover { @include button(hover-alt, $edge: $shadow_color); }
+    &:hover { @include button(hover); }
 
     &:active { border-color: $selected_borders_color; }
 
