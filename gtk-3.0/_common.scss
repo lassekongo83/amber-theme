@@ -1550,6 +1550,13 @@ filechooser .path-bar.linked > button {
   @extend %linked_flippable;
 }
 
+filechooser {
+  #pathbarbox { 
+    background-color: $bg_color;
+    border-bottom: 1px solid $borders_color;
+  }
+}
+
 .path-bar button {
   &.text-button, &.image-button, & {
     padding-left: 4px;
@@ -3679,10 +3686,51 @@ headerbar,
 
     // Load png assets for each button
     @each $k in ('close', 'maximize', 'minimize') {
-      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
-
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
+      {
         &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
                                                      url('assets/titlebutton-#{$k}#{$m}@2.png')); }
+      }
+    }
+  }
+}
+
+// Unmaximize
+headerbar,
+.titlebar {
+  .maximized & {
+    button.titlebutton {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
+      {
+      &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}.png'),
+                                                      url('assets/titlebutton-unmaximize#{$m}@2.png')); }
+      }
+    }
+  }
+}
+
+// Left maximize
+headerbar,
+.titlebar {
+  .left {
+    button.titlebutton {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
+      {
+      &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-maximize#{$m}-left.png'),
+                                                      url('assets/titlebutton-maximize#{$m}-left@2.png')); }
+      }
+    }
+  }
+}
+
+// Left unmaximize
+headerbar,
+.titlebar {
+  .maximized & {
+    .left button.titlebutton {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
+      &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}-left.png'),
+                                                      url('assets/titlebutton-unmaximize#{$m}-left@2.png')); }
       }
     }
   }

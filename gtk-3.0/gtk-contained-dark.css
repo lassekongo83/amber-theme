@@ -589,6 +589,8 @@ window.csd > .titlebar:not(headerbar) { padding: 0; background-color: transparen
 .titlebar:not(headerbar) > separator { background-color: #4d4d4d; box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), inset 0 -1px transparent, 0 1px transparent, 0 2px transparent; }
 
 /************ Pathbars * */
+filechooser #pathbarbox { background-color: #4d4d4d; border-bottom: 1px solid #272727; }
+
 .path-bar button.text-button, .path-bar button.image-button, .path-bar button { padding-left: 4px; padding-right: 4px; }
 
 .path-bar button.text-button.image-button label { padding-left: 0; padding-right: 0; }
@@ -1505,6 +1507,30 @@ headerbar button.titlebutton.minimize:backdrop, .titlebar button.titlebutton.min
 headerbar button.titlebutton.minimize:hover, .titlebar button.titlebutton.minimize:hover { background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover.png"), url("assets/titlebutton-minimize-hover@2.png")); }
 
 headerbar button.titlebutton.minimize:active, .titlebar button.titlebutton.minimize:active { background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover.png"), url("assets/titlebutton-minimize-hover@2.png")); }
+
+.maximized headerbar button.titlebutton.maximize, .maximized .titlebar button.titlebutton.maximize { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize.png"), url("assets/titlebutton-unmaximize@2.png")); }
+
+.maximized headerbar button.titlebutton.maximize:backdrop, .maximized .titlebar button.titlebutton.maximize:backdrop { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-backdrop.png"), url("assets/titlebutton-unmaximize-backdrop@2.png")); }
+
+.maximized headerbar button.titlebutton.maximize:hover, .maximized .titlebar button.titlebutton.maximize:hover { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-hover.png"), url("assets/titlebutton-unmaximize-hover@2.png")); }
+
+.maximized headerbar button.titlebutton.maximize:active, .maximized .titlebar button.titlebutton.maximize:active { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-hover.png"), url("assets/titlebutton-unmaximize-hover@2.png")); }
+
+headerbar .left button.titlebutton.maximize, .titlebar .left button.titlebutton.maximize { background-image: -gtk-scaled(url("assets/titlebutton-maximize-left.png"), url("assets/titlebutton-maximize-left@2.png")); }
+
+headerbar .left button.titlebutton.maximize:backdrop, .titlebar .left button.titlebutton.maximize:backdrop { background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-left.png"), url("assets/titlebutton-maximize-backdrop-left@2.png")); }
+
+headerbar .left button.titlebutton.maximize:hover, .titlebar .left button.titlebutton.maximize:hover { background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-left.png"), url("assets/titlebutton-maximize-hover-left@2.png")); }
+
+headerbar .left button.titlebutton.maximize:active, .titlebar .left button.titlebutton.maximize:active { background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-left.png"), url("assets/titlebutton-maximize-hover-left@2.png")); }
+
+.maximized headerbar .left button.titlebutton.maximize, .maximized .titlebar .left button.titlebutton.maximize { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-left.png"), url("assets/titlebutton-unmaximize-left@2.png")); }
+
+.maximized headerbar .left button.titlebutton.maximize:backdrop, .maximized .titlebar .left button.titlebutton.maximize:backdrop { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-backdrop-left.png"), url("assets/titlebutton-unmaximize-backdrop-left@2.png")); }
+
+.maximized headerbar .left button.titlebutton.maximize:hover, .maximized .titlebar .left button.titlebutton.maximize:hover { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-hover-left.png"), url("assets/titlebutton-unmaximize-hover-left@2.png")); }
+
+.maximized headerbar .left button.titlebutton.maximize:active, .maximized .titlebar .left button.titlebutton.maximize:active { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-hover-left.png"), url("assets/titlebutton-unmaximize-hover-left@2.png")); }
 
 .view:selected, iconview:selected, .view text:selected, iconview text:selected, textview text:selected, .nautilus-window notebook:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection, textview text selection:focus, textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, entry selection, modelbutton.flat:selected, popover.background checkbutton:selected, popover.background radiobutton:selected, .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected { background-color: #fb6f55; }
 
