@@ -3709,6 +3709,7 @@ headerbar,
   }
 }
 
+// FIXME: Doesn't work on ssd
 // Left maximize
 headerbar,
 .titlebar {
@@ -3728,7 +3729,8 @@ headerbar,
 .titlebar {
   .maximized & {
     .left button.titlebutton {
-      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
+      {
       &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}-left.png'),
                                                       url('assets/titlebutton-unmaximize#{$m}-left@2.png')); }
       }
