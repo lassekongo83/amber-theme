@@ -106,7 +106,7 @@ textview {
   }
 }
 
-textview border { background-color: mix($bg_color, $base_color, 50%); }
+textview border { background-color: $secondary_bg_color; }
 
 iconview { @extend .view; }
 
@@ -1551,8 +1551,9 @@ filechooser .path-bar.linked > button {
 }
 
 filechooser {
-  #pathbarbox { 
-    background-color: $bg_color;
+  #pathbarbox {
+    // Same color as the sidebar
+    background-color: $secondary_bg_color;
     border-bottom: 1px solid $borders_color;
   }
 }
@@ -2091,7 +2092,7 @@ notebook {
   }
 
   > stack:not(:only-child) { // the :not(:only-child) is for "hidden" notebooks
-    background-color: $base_color;
+    background-color: $secondary_bg_color;
   }
 }
 
@@ -2291,9 +2292,9 @@ switch {
     color: $fg_color;
   }
 
-  &:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.7), $shadow_hover; }
-  &:focus slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.6), $shadow_normal; }
-  &:focus:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.5), $shadow_hover; }
+  &:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.7); }
+  &:focus slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.6); }
+  &:focus:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.5); }
   &:checked slider {
     background-color: $selected_bg_color;
     color: $fg_color;
@@ -2980,7 +2981,7 @@ separator {
  *********/
 list {
   color: $text_color;
-  background-color: $base_color;
+  background-color: $secondary_bg_color;
   border-color: $borders_color;
 
   row { padding: 2px; }
@@ -3143,7 +3144,7 @@ filechooserbutton:drop(active) {
 
 .sidebar {
   border-style: none;
-  background-color: mix($bg_color, $base_color, 50%);
+  background-color: $secondary_bg_color;
 
   @at-root %sidebar_left,
   &:dir(ltr),
