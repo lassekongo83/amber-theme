@@ -11,10 +11,16 @@ $_panel_left: inset 3px 0 $_panel_shade;
 $_panel_right: inset -3px 0 $_panel_shade;
 
 // Trick due to St limitations. It needs a background to draw a box-shadow
-%panel_bg {
+%panel_fix {
   background-gradient-direction: vertical;
   background-gradient-start: transparent;
   background-gradient-end: transparent;
+}
+
+%panel_bg {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparentize(black, 0.5);
+  background-gradient-end: transparentize(black, 0.5);
 }
 
 // Dash to Panel extension styling
@@ -26,18 +32,18 @@ $_panel_right: inset -3px 0 $_panel_shade;
     box-shadow: $_panel_bottom;
 
     .app-well-app:hover .overview-icon {
+      @extend %panel_fix;
       box-shadow: $_hover_effect_bottom;
-      @extend %panel_bg;
     }
-    // .app-well-app.focused .overview-icon {} // Let the extension settings handle this one
+    //.app-well-app.focused .overview-icon {} // Let the extension settings handle this one
   }
 
   &.dashtopanelTop {
     box-shadow: $_panel_top;
 
     .app-well-app:hover .overview-icon {
+      @extend %panel_fix;
       box-shadow: $_hover_effect_top;
-      @extend %panel_bg;
     }
   }
 
@@ -50,27 +56,30 @@ $_panel_right: inset -3px 0 $_panel_shade;
   .dash-item-container > * { padding: 0 4px; }
 
   // panel dash icon
-  @each $d in hover, checked, overview, focus, active, selected {
+  @each $d in hover, focus, active, overview {
     .show-apps .overview-icon {
       background-image: url("d2p-activities.svg");
       background-position: center top;
-      background-color: transparent;
       border: none;
       color: transparent;
+      border-radius: 0;
+      margin: 0;
     }
 
+    // FIXME: The icon in the overview is still showing
     .show-apps:#{$d} .overview-icon {
       background-image: url("d2p-activities-active.svg");
+      background-color: transparentize(black, 0.5);
       background-position: center top;
+      color: transparent;
     }
   }
 
   // clock and system menu area
   & > #panelRight {
-    background-color: transparentize(black, 0.3);
-    border-radius: 2px;
-    margin: 6px;
-    //box-shadow: 0 2px 2px $_panel_shade;
+    box-shadow: inset 1px 0 transparentize(black, 0.5);
+    background-color: transparentize(black, 0.5);
+    .panel-button:hover { box-shadow: none; }
   }
   
   .showdesktop-button { padding-right: 8px; }
@@ -84,34 +93,16 @@ $_panel_right: inset -3px 0 $_panel_shade;
     border-radius: 0;
 
     &.#{$p}.extended {
-      //border-color: transparentize(white, 0.9);
-      //border-style: solid;
-      @if $p==left {
-        //border-right-width: 1px;
-        box-shadow: $_panel_left;
-      }
-      @else if $p==right {
-        //border-left-width: 1px;
-        box-shadow: $_panel_right;
-      }
-      @else if $p==bottom {
-        //border-top-width: 1px;
-        box-shadow: $_panel_bottom;
-      }
-      @else if $p==top {
-        //border-bottom-width: 1px;
-        box-shadow: $_panel_top;
-      }
+      @if $p==left { box-shadow: $_panel_left; }
+      @else if $p==right { box-shadow: $_panel_right; }
+      @else if $p==bottom { box-shadow: $_panel_bottom; }
+      @else if $p==top { box-shadow: $_panel_top; }
     }
 
     &.shrink #dash,
     &.dashtodock #dash {
       border: none !important;
       padding: 0px;
-    
-      // don't let the first icon be too close to the shadow + panel
-      //&.left #dash { padding-top: 2px; }
-      //&.right #dash { padding-top: 2px; }
     }
 
     &.extended {
@@ -136,24 +127,27 @@ $_panel_right: inset -3px 0 $_panel_shade;
 
     &.shrink .dash-item-container > StButton,
     &.dashtodock .dash-item-container > StButton {
-      padding: 2px 4px !important; // 1px 2px;
+      padding: 2px 4px !important;
     }
 
     &.#{$p} #dash
     .app-well-app {
       padding: 0;
       border: none;
+      
+      &.focused {
+        box-shadow: $_hover_effect_left;
+        @extend %panel_fix;
+      }
 
       &:hover {
-        @extend %panel_bg;
+        @extend %panel_fix;
         @if $p==left { box-shadow: $_hover_effect_left; }
         @else if $p==right { box-shadow: $_hover_effect_right; }
         @else if $p==bottom { box-shadow: $_hover_effect_bottom; }
         @else if $p==top { box-shadow: $_hover_effect_top; }
       }
-      &:hover .overview-icon {
-        background: none;
-      }
+      &:hover .overview-icon { background: none; }
 
       &:active .overview-icon,
       &:checked .overview-icon,

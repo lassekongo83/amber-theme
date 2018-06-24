@@ -1428,6 +1428,7 @@ headerbar {
     &:checked:hover, &:active:hover { @include button(headerbutton-hoveractive); }
     &:disabled { @include button(headerbutton-disabled); }
     &:backdrop { color: $backdrop_fg_color; }
+    &:backdrop:hover { color: $selected_fg_color; }
   }
   entry {
     @include entry(normal-header);
@@ -2298,7 +2299,9 @@ switch {
   &:checked slider {
     background-color: $selected_bg_color;
     color: $fg_color;
+    box-shadow: none;
   }
+  &:checked:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.7); }
 
   row:selected & {
   }
@@ -2563,11 +2566,15 @@ scale {
   }
 
   slider {
+    transition: all 100ms $deceleration_curve, box-shadow $shorter_duration $deceleration_curve;
     @include button(normal);
 
     border-radius: 100%;
 
-    &:hover { @include button(hover); }
+    &:hover { 
+      @include button(hover);
+      box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.7); 
+    }
 
     &:active { border-color: $selected_borders_color; }
 
