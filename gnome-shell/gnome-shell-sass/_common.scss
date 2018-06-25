@@ -1069,7 +1069,7 @@ StScrollBar {
   > * {
     background-image: url("activities.svg");
     background-position: center top;
-    width: 24px;
+    width: 39px;
     height: 24px;
     background-color: transparent !important;
     background-gradient-direction: none !important;
@@ -1303,7 +1303,7 @@ StScrollBar {
     color: $_bubble_fg_color;
     background-color: transparent;
     padding: 4px 0;
-    border: 0px solid rgba(128, 128, 128, 0.0);
+    border: 0px solid transparent;
     border-left: 0px;
     border-radius: 0px;
 
@@ -1331,7 +1331,7 @@ StScrollBar {
     border-radius: 0px;
     padding: 4px 12px;
     color: $osd_fg_color;
-    background-color: transparentize($osd_bg_color,0.3);
+    background-color: transparentize(black ,0.3);
     text-align: center;
     -x-offset: 8px;
   }
@@ -1407,14 +1407,14 @@ StScrollBar {
   .app-well-app-running-dot { //running apps indicator
     width: 10px;
     height: 3px;
-    background-color: $selected_bg_color;
+    background-color: white;
     margin-bottom: 2px;
   }
 
   %icon_tile {
     color: $osd_fg_color;
-    border-radius: 0;
-    padding: 6px;
+    border-radius: 2px;
+    padding: 4px;
     border: 1px solid transparent;
     transition-duration: 100ms;
     text-align: center;

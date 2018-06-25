@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="24"
+   width="39"
    height="24"
-   viewBox="0 0 22.5 22.5"
+   viewBox="0 0 36.5625 22.5"
    id="svg4366"
    version="1.1"
-   inkscape:version="0.92.0 r"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="activities-active.svg">
   <defs
      id="defs4368" />
@@ -25,17 +25,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="-13.911809"
-     inkscape:cy="9.0121496"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="19.381611"
+     inkscape:cy="-0.82323103"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1549"
-     inkscape:window-height="843"
-     inkscape:window-x="51"
-     inkscape:window-y="25"
+     inkscape:window-width="1857"
+     inkscape:window-height="926"
+     inkscape:window-x="63"
+     inkscape:window-y="27"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata4371">
@@ -55,7 +55,8 @@
      id="layer1"
      transform="translate(0,-1029.8622)">
     <g
-       id="g5101">
+       id="g5101"
+       transform="translate(7.5)">
       <circle
          r="1.875"
          cy="1041.1122"

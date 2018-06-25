@@ -512,7 +512,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .media-message-cover-icon.fallback { color: #676767; background-color: #4d4d4d; border: 2px solid #4d4d4d; border-radius: 0; icon-size: 16px; padding: 8px; }
 
-#panel #panelActivities.panel-button > * { background-image: url("activities.svg"); background-position: center top; width: 24px; height: 24px; background-color: transparent !important; background-gradient-direction: none !important; border: 0 solid transparent !important; text-shadow: 0 0 transparent !important; transition-duration: 0ms !important; box-shadow: none !important; color: transparent; }
+#panel #panelActivities.panel-button > * { background-image: url("activities.svg"); background-position: center top; width: 39px; height: 24px; background-color: transparent !important; background-gradient-direction: none !important; border: 0 solid transparent !important; text-shadow: 0 0 transparent !important; transition-duration: 0ms !important; box-shadow: none !important; color: transparent; }
 
 #panel #panelActivities.panel-button:active, #panel #panelActivities.panel-button:overview, #panel #panelActivities.panel-button:focus, #panel #panelActivities.panel-button:checked { background-color: transparent; box-shadow: none; border-bottom-width: 1px; border-color: transparent; }
 
@@ -635,7 +635,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .search-provider-icon { padding: 15px; }
 
 /* DASHBOARD */
-#dash { font-size: 9pt; color: #f2f1f0; background-color: transparent; padding: 4px 0; border: 0px solid rgba(128, 128, 128, 0); border-left: 0px; border-radius: 0px; }
+#dash { font-size: 9pt; color: #f2f1f0; background-color: transparent; padding: 4px 0; border: 0px solid transparent; border-left: 0px; border-radius: 0px; }
 
 #dash:rtl { border-radius: 0; }
 
@@ -645,7 +645,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .dash-item-container > StWidget { padding: 4px 8px; }
 
-.dash-label { border-radius: 0px; padding: 4px 12px; color: #f2f1f0; background-color: rgba(77, 77, 77, 0.7); text-align: center; -x-offset: 8px; }
+.dash-label { border-radius: 0px; padding: 4px 12px; color: #f2f1f0; background-color: rgba(0, 0, 0, 0.7); text-align: center; -x-offset: 8px; }
 
 /* App Vault/Grid */
 .icon-grid { spacing: 30px; -shell-grid-horizontal-item-size: 136px; -shell-grid-vertical-item-size: 136px; }
@@ -676,9 +676,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .app-well-app:hover .overview-icon, .app-well-app:focus .overview-icon, .app-well-app:selected .overview-icon, .app-well-app.app-folder:hover .overview-icon, .app-well-app.app-folder:focus .overview-icon, .app-well-app.app-folder:selected .overview-icon, .show-apps:hover .overview-icon, .show-apps:focus .overview-icon, .show-apps:selected .overview-icon, .grid-search-result:hover .overview-icon, .grid-search-result:focus .overview-icon, .grid-search-result:selected .overview-icon { background-color: rgba(242, 241, 240, 0.1); transition-duration: 0ms; border-image: none; background-image: none; }
 
-.app-well-app-running-dot { width: 10px; height: 3px; background-color: #fb6f55; margin-bottom: 2px; }
+.app-well-app-running-dot { width: 10px; height: 3px; background-color: white; margin-bottom: 2px; }
 
-.search-provider-icon, .list-search-result, .app-well-app .overview-icon, .app-well-app.app-folder .overview-icon, .show-apps .overview-icon, .grid-search-result .overview-icon { color: #f2f1f0; border-radius: 0; padding: 6px; border: 1px solid transparent; transition-duration: 100ms; text-align: center; }
+.search-provider-icon, .list-search-result, .app-well-app .overview-icon, .app-well-app.app-folder .overview-icon, .show-apps .overview-icon, .grid-search-result .overview-icon { color: #f2f1f0; border-radius: 2px; padding: 4px; border: 1px solid transparent; transition-duration: 100ms; text-align: center; }
 
 .app-well-app.app-folder > .overview-icon { background-color: rgba(77, 77, 77, 0.4); }
 
@@ -990,7 +990,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #LookingGlassPropertyInspector { background: rgba(0, 0, 0, 0.8); border: 2px solid grey; border-radius: 0; padding: 6px; }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon, #dashtodockContainer.left #dash .app-well-app.focused, #dashtodockContainer.left #dash .app-well-app:hover, #dashtodockContainer.right #dash .app-well-app.focused, #dashtodockContainer.right #dash .app-well-app:hover, #dashtodockContainer.bottom #dash .app-well-app.focused, #dashtodockContainer.bottom #dash .app-well-app:hover, #dashtodockContainer.top #dash .app-well-app.focused, #dashtodockContainer.top #dash .app-well-app:hover { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon, #dashtodockContainer.left #dash .app-well-app.focused, #dashtodockContainer.left #dash .app-well-app:hover, #dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:checked .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon, #dashtodockContainer.right #dash .app-well-app.focused, #dashtodockContainer.right #dash .app-well-app:hover, #dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:checked .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon, #dashtodockContainer.bottom #dash .app-well-app.focused, #dashtodockContainer.bottom #dash .app-well-app:hover, #dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:checked .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon, #dashtodockContainer.top #dash .app-well-app.focused, #dashtodockContainer.top #dash .app-well-app:hover, #dashtodockContainer.top #dash .app-well-app:active .overview-icon, #dashtodockContainer.top #dash .app-well-app:checked .overview-icon, #dashtodockContainer.top #dash .app-well-app:focus .overview-icon, #dashtodockContainer.top #dash .app-well-app:selected .overview-icon { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
 
 #panel.dashtopanelMainPanel { background-gradient-direction: vertical; background-gradient-start: rgba(0, 0, 0, 0.5); background-gradient-end: rgba(0, 0, 0, 0.5); }
 
@@ -1050,11 +1050,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.left #dash .app-well-app { padding: 0; border: none; }
 
-#dashtodockContainer.left #dash .app-well-app.focused { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.left #dash .app-well-app .overview-icon { margin: 0; }
 
-#dashtodockContainer.left #dash .app-well-app:hover { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.left #dash .app-well-app.focused .overview-icon { background-gradient-direction: horizontal; background-gradient-start: transparent; background-gradient-end: transparent; background: none; }
 
 #dashtodockContainer.left #dash .app-well-app:hover .overview-icon { background: none; }
+
+#dashtodockContainer.left #dash .app-well-app.focused { box-shadow: inset 3px 0 #fb6f55; }
+
+#dashtodockContainer.left #dash .app-well-app:hover { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.6); }
 
 #dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:checked .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
 
@@ -1076,11 +1080,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.right #dash .app-well-app { padding: 0; border: none; }
 
-#dashtodockContainer.right #dash .app-well-app.focused { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.right #dash .app-well-app .overview-icon { margin: 0; }
 
-#dashtodockContainer.right #dash .app-well-app:hover { box-shadow: inset -3px 0 rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.right #dash .app-well-app.focused .overview-icon { background-gradient-direction: horizontal; background-gradient-start: transparent; background-gradient-end: transparent; background: none; }
 
 #dashtodockContainer.right #dash .app-well-app:hover .overview-icon { background: none; }
+
+#dashtodockContainer.right #dash .app-well-app.focused { box-shadow: inset -3px 0 #fb6f55; }
+
+#dashtodockContainer.right #dash .app-well-app:hover { box-shadow: inset -3px 0 rgba(255, 255, 255, 0.6); }
 
 #dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:checked .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
 
@@ -1102,11 +1110,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.bottom #dash .app-well-app { padding: 0; border: none; }
 
-#dashtodockContainer.bottom #dash .app-well-app.focused { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.bottom #dash .app-well-app .overview-icon { margin: 0; }
 
-#dashtodockContainer.bottom #dash .app-well-app:hover { box-shadow: inset 0 -3px rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.bottom #dash .app-well-app.focused .overview-icon { background-gradient-direction: horizontal; background-gradient-start: transparent; background-gradient-end: transparent; background: none; }
 
 #dashtodockContainer.bottom #dash .app-well-app:hover .overview-icon { background: none; }
+
+#dashtodockContainer.bottom #dash .app-well-app.focused { box-shadow: inset 0 -3px #fb6f55; }
+
+#dashtodockContainer.bottom #dash .app-well-app:hover { box-shadow: inset 0 -3px rgba(255, 255, 255, 0.6); }
 
 #dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:checked .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
 
@@ -1128,11 +1140,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.top #dash .app-well-app { padding: 0; border: none; }
 
-#dashtodockContainer.top #dash .app-well-app.focused { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.top #dash .app-well-app .overview-icon { margin: 0; }
 
-#dashtodockContainer.top #dash .app-well-app:hover { box-shadow: inset 0 3px rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.top #dash .app-well-app.focused .overview-icon { background-gradient-direction: horizontal; background-gradient-start: transparent; background-gradient-end: transparent; background: none; }
 
 #dashtodockContainer.top #dash .app-well-app:hover .overview-icon { background: none; }
+
+#dashtodockContainer.top #dash .app-well-app.focused { box-shadow: inset 0 3px #fb6f55; }
+
+#dashtodockContainer.top #dash .app-well-app:hover { box-shadow: inset 0 3px rgba(255, 255, 255, 0.6); }
 
 #dashtodockContainer.top #dash .app-well-app:active .overview-icon, #dashtodockContainer.top #dash .app-well-app:checked .overview-icon, #dashtodockContainer.top #dash .app-well-app:focus .overview-icon, #dashtodockContainer.top #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
 
