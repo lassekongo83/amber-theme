@@ -1,4 +1,10 @@
-$_hover_color: transparentize(white,0.4);
+$_running_color: transparentize(white,0.4);
+$_running_top: inset 0 3px $_running_color;
+$_running_bottom: inset 0 -3px $_running_color;
+$_running_left: inset 3px 0 $_running_color;
+$_running_right: inset -3px 0 $_running_color;
+
+$_hover_color: transparentize(white,0.2);
 $_hover_effect_top: inset 0 3px $_hover_color;
 $_hover_effect_bottom: inset 0 -3px $_hover_color;
 $_hover_effect_left: inset 3px 0 $_hover_color;
@@ -119,12 +125,12 @@ $panel_color: transparentize(black, 0.5);
 
     &.bottom #dash .app-well-app-running-dot {
       width: 44px;
-      height: 2px;
+      height: 3px;
       margin-bottom: 0;
     }
 
     #dash .app-well-app-running-dot {
-      background-color: white;
+      background-color: transparent;
     }
 
     &.running-dots .dash-item-container > StButton,
@@ -137,18 +143,40 @@ $panel_color: transparentize(black, 0.5);
       padding: 2px 4px !important;
     }
 
-    &.#{$p} #dash
-    .app-well-app {
-      padding: 0;
-      border: none;
+    // FIXME: Figure out a way to make this looks better when two or more applications run
+    &.#{$p} #dash .running1 {
+      @extend %panel_fix;
+      @if $p==left { box-shadow: $_running_left; }
+      @else if $p==right { box-shadow: $_running_right; }
+      @else if $p==bottom { box-shadow: $_running_bottom; }
+      @else if $p==top { box-shadow: $_running_top; }
+      
+      &:hover {
+        @if $p==left { box-shadow: $_hover_effect_left; }
+        @else if $p==right { box-shadow: $_hover_effect_right; }
+        @else if $p==bottom { box-shadow: $_hover_effect_bottom; }
+        @else if $p==top { box-shadow: $_hover_effect_top; }        
+      }
+    }
+
+    &.#{$p} #dash .app-well-app {
+      padding: 0px;
+      border: 2px solid transparent;
+      @if $p==left or $p==right {
+        border-left: 0;
+        border-right: 0;
+      }
+      @else if $p==bottom or $p==top {
+        border-top: 0;
+        border-bottom: 0;
+      }
 
       & .overview-icon { margin: 0; }
 
       &.focused .overview-icon {
-        //box-shadow: inset 0 0 0 1px transparentize(white, 0.9);
-        
-        // FIXME: The background on this one is a stubborn one
-        background-gradient-direction: horizontal;
+        // FIXME: The bg on this one is a stubborn one when showing dots is activated
+        @if $p==left or $p==right { background-gradient-direction: horizontal; }
+        @else if $p==bottom or $p==top { background-gradient-direction: vertical; }
         background-gradient-start: transparent;
         background-gradient-end: transparent;
         background: none;
