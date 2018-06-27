@@ -990,7 +990,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #LookingGlassPropertyInspector { background: rgba(0, 0, 0, 0.8); border: 2px solid grey; border-radius: 0; padding: 6px; }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon, #dashtodockContainer.left #dash .running1, #dashtodockContainer.left #dash .app-well-app.focused, #dashtodockContainer.left #dash .app-well-app:hover, #dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:checked .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon, #dashtodockContainer.right #dash .running1, #dashtodockContainer.right #dash .app-well-app.focused, #dashtodockContainer.right #dash .app-well-app:hover, #dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:checked .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon, #dashtodockContainer.bottom #dash .running1, #dashtodockContainer.bottom #dash .app-well-app.focused, #dashtodockContainer.bottom #dash .app-well-app:hover, #dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:checked .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon, #dashtodockContainer.top #dash .running1, #dashtodockContainer.top #dash .app-well-app.focused, #dashtodockContainer.top #dash .app-well-app:hover, #dashtodockContainer.top #dash .app-well-app:active .overview-icon, #dashtodockContainer.top #dash .app-well-app:checked .overview-icon, #dashtodockContainer.top #dash .app-well-app:focus .overview-icon, #dashtodockContainer.top #dash .app-well-app:selected .overview-icon { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon, #dashtodockContainer.left #dash .running1, #dashtodockContainer.left #dash .app-well-app.focused, #dashtodockContainer.left #dash .app-well-app:hover, #dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon, #dashtodockContainer.right #dash .running1, #dashtodockContainer.right #dash .app-well-app.focused, #dashtodockContainer.right #dash .app-well-app:hover, #dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon, #dashtodockContainer.bottom #dash .running1, #dashtodockContainer.bottom #dash .app-well-app.focused, #dashtodockContainer.bottom #dash .app-well-app:hover, #dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon, #dashtodockContainer.top #dash .running1, #dashtodockContainer.top #dash .app-well-app.focused, #dashtodockContainer.top #dash .app-well-app:hover, #dashtodockContainer.top #dash .app-well-app:active .overview-icon, #dashtodockContainer.top #dash .app-well-app:focus .overview-icon, #dashtodockContainer.top #dash .app-well-app:selected .overview-icon { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
 
 #panel.dashtopanelMainPanel { background-gradient-direction: vertical; background-gradient-start: rgba(0, 0, 0, 0.5); background-gradient-end: rgba(0, 0, 0, 0.5); }
 
@@ -1006,7 +1006,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel.dashtopanelMainPanel .panel-button:hover { background-color: rgba(255, 255, 255, 0.1); }
 
-#panel.dashtopanelMainPanel .panel-button:active, #panel.dashtopanelMainPanel .panel-button:overview, #panel.dashtopanelMainPanel .panel-button:focus, #panel.dashtopanelMainPanel .panel-button:checked { background-color: #fb6f55; }
+#panel.dashtopanelMainPanel .panel-button:active, #panel.dashtopanelMainPanel .panel-button:overview, #panel.dashtopanelMainPanel .panel-button:focus { background-color: #fb6f55; }
 
 #panel.dashtopanelMainPanel .dash-item-container > * { padding: 0 4px; }
 
@@ -1026,7 +1026,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel.dashtopanelMainPanel .show-apps:overview .overview-icon { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.5); background-position: center top; color: transparent; }
 
-#panel.dashtopanelMainPanel > #panelRight { box-shadow: inset 1px 0 rgba(0, 0, 0, 0.5); background-color: rgba(0, 0, 0, 0.5); }
+#panel.dashtopanelMainPanel > #panelRight { box-shadow: inset 1px 0 rgba(0, 0, 0, 0.5); }
 
 #panel.dashtopanelMainPanel > #panelRight .panel-button:hover { box-shadow: none; }
 
@@ -1064,7 +1064,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.left #dash .app-well-app:hover { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.8); }
 
-#dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:checked .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
+#dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
 
 #dashtodockContainer { background-color: rgba(0, 0, 0, 0.5); border-radius: 0; }
 
@@ -1098,7 +1098,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.right #dash .app-well-app:hover { box-shadow: inset -3px 0 rgba(255, 255, 255, 0.8); }
 
-#dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:checked .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
+#dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
 
 #dashtodockContainer { background-color: rgba(0, 0, 0, 0.5); border-radius: 0; }
 
@@ -1132,7 +1132,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.bottom #dash .app-well-app:hover { box-shadow: inset 0 -3px rgba(255, 255, 255, 0.8); }
 
-#dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:checked .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
+#dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
 
 #dashtodockContainer { background-color: rgba(0, 0, 0, 0.5); border-radius: 0; }
 
@@ -1166,7 +1166,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.top #dash .app-well-app:hover { box-shadow: inset 0 3px rgba(255, 255, 255, 0.8); }
 
-#dashtodockContainer.top #dash .app-well-app:active .overview-icon, #dashtodockContainer.top #dash .app-well-app:checked .overview-icon, #dashtodockContainer.top #dash .app-well-app:focus .overview-icon, #dashtodockContainer.top #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
+#dashtodockContainer.top #dash .app-well-app:active .overview-icon, #dashtodockContainer.top #dash .app-well-app:focus .overview-icon, #dashtodockContainer.top #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
 
 .bottom #dashtodockDashScrollview, .top #dashtodockDashScrollview { -st-hfade-offset: 24px; }
 
