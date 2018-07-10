@@ -19,7 +19,7 @@
    enable-background="new 0 0 16 16"
    xml:space="preserve"
    sodipodi:version="0.32"
-   inkscape:version="0.92.1 r"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="close-window-hover.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"><metadata
      id="metadata2399"><rdf:RDF><cc:Work
@@ -39,8 +39,8 @@
        inkscape:vp_z="16 : 8 : 1"
        inkscape:persp3d-origin="8 : 5.3333333 : 1"
        id="perspective2401" /></defs><sodipodi:namedview
-     inkscape:window-height="821"
-     inkscape:window-width="1463"
+     inkscape:window-height="926"
+     inkscape:window-width="1857"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      guidetolerance="10.0"
@@ -54,14 +54,14 @@
      inkscape:zoom="4"
      inkscape:cx="-45.358399"
      inkscape:cy="16.790798"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-x="63"
+     inkscape:window-y="27"
      inkscape:current-layer="Foreground"
      showguides="true"
      inkscape:guide-bbox="true"
      borderlayer="true"
      inkscape:showpageshadow="false"
-     inkscape:window-maximized="0"><inkscape:grid
+     inkscape:window-maximized="1"><inkscape:grid
        type="xygrid"
        id="grid11246"
        empspacing="5"
@@ -69,7 +69,7 @@
        enabled="true"
        snapvisiblegridlinesonly="true" /></sodipodi:namedview><g
      id="g2272"><rect
-       style="opacity:1;fill:#c83737;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#d35f5f;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect7274"
        width="17.454544"
        height="17.454544"
