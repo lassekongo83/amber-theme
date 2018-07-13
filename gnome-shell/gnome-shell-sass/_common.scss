@@ -45,7 +45,7 @@ stage {
 
 /* Buttons */
 .button {
-  border-radius: 0px;
+  border-radius: 0;
   border-width: 1px;
   padding: 4px 32px;
   @include button(normal);
@@ -57,7 +57,7 @@ stage {
 }
 
 .modal-dialog-linked-button {
-  border-width: 0px;
+  border-width: 0;
   box-shadow: none !important;
   @include button(normal);
   &:hover { @include button(hover); }
@@ -82,7 +82,7 @@ stage {
 
 /* Entries */
 StEntry {
-  border-radius: 0px;
+  border-radius: 0;
   padding: 4px;
   border-width: 0px;
   color: $_bubble_fg_color;
@@ -331,7 +331,7 @@ StScrollBar {
     }
 
     .message-dialog-title:rtl {
-      padding-left: 0px;
+      padding-left: 0;
       padding-right: 17px;
     }
 
@@ -341,7 +341,7 @@ StScrollBar {
     }
 
     .message-dialog-body:rtl {
-      padding-left: 0px;
+      padding-left: 0;
       padding-right: 17px;
     }
   }
@@ -423,7 +423,7 @@ StScrollBar {
   padding-left: 10px;
   spacing: 10px;
   &:rtl {
-    padding-left: 0px;
+    padding-left: 0;
     padding-right: 10px;
   }
 }
@@ -681,9 +681,9 @@ StScrollBar {
 
   .workspace-switcher {
     background: transparent;
-    border: 0px;
-    border-radius: 0px;
-    padding: 0px;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
     spacing: 8px;
   }
 
@@ -735,8 +735,8 @@ StScrollBar {
   background-color: transparentize(black, 0.2);
   font-weight: bold;
   height: 1.86em;
-  //box-shadow: 0 1px transparentize(white, 0.9);
-  border-width: 0px;
+  border-width: 0;
+  font-feature-settings: "tnum";
 
   &.unlock-screen,
   &.login-screen,
@@ -923,6 +923,7 @@ StScrollBar {
       padding: 0.1em;
       margin: 2px;
       border-radius: 2px;
+      font-feature-settings: "tnum";
       &:hover,&:focus { background-color: lighten($bg_color, 5%); }
       &:active,&:selected {
         color: lighten($selected_fg_color, 5%);
@@ -1858,6 +1859,7 @@ StScrollBar {
 .screen-shield-clock-time {
   font-size: 72pt;
   text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
+  font-feature-settings: "tnum";
 }
 
 .screen-shield-clock-date { font-size: 28pt; }

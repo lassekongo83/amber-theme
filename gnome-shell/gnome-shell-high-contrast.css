@@ -5,7 +5,7 @@ stage { font-family: Ubuntu, Sans-Serif; font-size: 11pt; color: #fff; }
 
 /* WIDGETS */
 /* Buttons */
-.button { border-radius: 0px; border-width: 1px; padding: 4px 32px; color: #eeeeec; background-color: #3c4447; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); border-color: rgba(0, 0, 0, 0.1); text-shadow: 0 1px black; icon-shadow: 0 1px black; }
+.button { border-radius: 0; border-width: 1px; padding: 4px 32px; color: #eeeeec; background-color: #3c4447; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); border-color: rgba(0, 0, 0, 0.1); text-shadow: 0 1px black; icon-shadow: 0 1px black; }
 
 .button:hover { color: white; border-color: rgba(0, 0, 0, 0.1); background-color: #454f52; text-shadow: 0 1px black; icon-shadow: 0 1px black; }
 
@@ -17,7 +17,7 @@ stage { font-family: Ubuntu, Sans-Serif; font-size: 11pt; color: #fff; }
 
 .button:active { color: white; background-color: rgba(0, 0, 0, 0.4); box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1); text-shadow: none; icon-shadow: none; }
 
-.modal-dialog-linked-button { border-width: 0px; box-shadow: none !important; color: #eeeeec; background-color: #3c4447; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); border-color: rgba(0, 0, 0, 0.1); text-shadow: 0 1px black; icon-shadow: 0 1px black; padding: 12px; }
+.modal-dialog-linked-button { border-width: 0; box-shadow: none !important; color: #eeeeec; background-color: #3c4447; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); border-color: rgba(0, 0, 0, 0.1); text-shadow: 0 1px black; icon-shadow: 0 1px black; padding: 12px; }
 
 .modal-dialog-linked-button:hover { color: white; border-color: rgba(0, 0, 0, 0.1); background-color: #454f52; text-shadow: 0 1px black; icon-shadow: 0 1px black; }
 
@@ -36,7 +36,7 @@ stage { font-family: Ubuntu, Sans-Serif; font-size: 11pt; color: #fff; }
 .modal-dialog-linked-button:first-child:last-child { border-right-width: 0; border-radius: 0; }
 
 /* Entries */
-StEntry { border-radius: 0px; padding: 4px; border-width: 0px; color: #eeeeec; background-color: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.4); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2); selection-background-color: #215d9c; selected-color: #ffffff; }
+StEntry { border-radius: 0; padding: 4px; border-width: 0px; color: #eeeeec; background-color: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.4); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2); selection-background-color: #215d9c; selected-color: #ffffff; }
 
 StEntry:hover { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
 
@@ -163,11 +163,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .mount-dialog .message-dialog-title { padding-top: 10px; padding-left: 17px; padding-bottom: 6px; max-width: 34em; }
 
-.mount-dialog .message-dialog-title:rtl { padding-left: 0px; padding-right: 17px; }
+.mount-dialog .message-dialog-title:rtl { padding-left: 0; padding-right: 17px; }
 
 .mount-dialog .message-dialog-body { padding-left: 17px; width: 28em; }
 
-.mount-dialog .message-dialog-body:rtl { padding-left: 0px; padding-right: 17px; }
+.mount-dialog .message-dialog-body:rtl { padding-left: 0; padding-right: 17px; }
 
 .mount-dialog-app-list { max-height: 200px; padding-top: 24px; padding-left: 49px; padding-right: 32px; }
 
@@ -211,7 +211,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 /* Polkit Dialog */
 .polkit-dialog-user-layout { padding-left: 10px; spacing: 10px; }
 
-.polkit-dialog-user-layout:rtl { padding-left: 0px; padding-right: 10px; }
+.polkit-dialog-user-layout:rtl { padding-left: 0; padding-right: 10px; }
 
 .polkit-dialog-user-root-label { color: #f57900; }
 
@@ -334,7 +334,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 /* Workspace Switcher */
 .workspace-switcher-group { padding: 12px; }
 
-.workspace-switcher { background: transparent; border: 0px; border-radius: 0px; padding: 0px; spacing: 8px; }
+.workspace-switcher { background: transparent; border: 0; border-radius: 0; padding: 0; spacing: 8px; }
 
 .ws-switcher-active-up, .ws-switcher-active-down { height: 50px; background-color: #215d9c; color: #ffffff; background-size: 32px; border-radius: 0; }
 
@@ -352,7 +352,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .tile-preview-left.tile-preview-right.on-primary { border-radius: 0px 0px 0 0; }
 
 /* TOP BAR */
-#panel { background-color: rgba(0, 0, 0, 0.8); font-weight: bold; height: 1.86em; border-width: 0px; }
+#panel { background-color: rgba(0, 0, 0, 0.8); font-weight: bold; height: 1.86em; border-width: 0; font-feature-settings: "tnum"; }
 
 #panel.unlock-screen, #panel.login-screen, #panel.lock-screen { background-color: transparent; }
 
@@ -438,7 +438,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .calendar-change-month-forward:rtl { background-image: url("calendar-arrow-left.svg"); }
 
-.calendar-day-base { font-size: 80%; text-align: center; width: 2.4em; height: 2.4em; padding: 0.1em; margin: 2px; border-radius: 2px; }
+.calendar-day-base { font-size: 80%; text-align: center; width: 2.4em; height: 2.4em; padding: 0.1em; margin: 2px; border-radius: 2px; font-feature-settings: "tnum"; }
 
 .calendar-day-base:hover, .calendar-day-base:focus { background-color: #0d0d0d; }
 
@@ -920,7 +920,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .screen-shield-clock { color: white; text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6); font-weight: bold; text-align: center; padding-bottom: 1.5em; }
 
-.screen-shield-clock-time { font-size: 72pt; text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); }
+.screen-shield-clock-time { font-size: 72pt; text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); font-feature-settings: "tnum"; }
 
 .screen-shield-clock-date { font-size: 28pt; }
 
