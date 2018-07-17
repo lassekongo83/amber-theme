@@ -211,9 +211,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="112.56811"
-     inkscape:cy="118.61366"
+     inkscape:zoom="1"
+     inkscape:cx="128.22638"
+     inkscape:cy="131.54233"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -697,15 +697,7 @@
        id="btn"
        inkscape:label="#g2951">
       <rect
-         ry="3"
-         y="915.36218"
-         x="100.00002"
-         height="15.999999"
-         width="15.999999"
-         id="rect1643"
-         style="fill:url(#linearGradient1647);fill-opacity:1;stroke:none;stroke-width:0.56770289" />
-      <rect
-         ry="3.9999774"
+         ry="2.9999774"
          y="914.36218"
          x="99"
          height="18"
@@ -713,15 +705,23 @@
          id="rect1633"
          style="fill:url(#linearGradient1635);fill-opacity:1;stroke:none;stroke-width:0.6386658" />
       <rect
+         ry="1.9999774"
+         y="915.36218"
+         x="100.00002"
+         height="15.999999"
+         width="15.999999"
+         id="rect1643"
+         style="fill:url(#linearGradient1647);fill-opacity:1;stroke:none;stroke-width:0.56770289" />
+      <rect
          style="fill:url(#linearGradient1631);fill-opacity:1;stroke:none;stroke-width:0.56770289"
          id="rect1623"
          width="15.999999"
          height="15.999999"
          x="100.00002"
          y="915.36218"
-         ry="3" />
+         ry="1.9999774" />
       <rect
-         ry="2.0000134"
+         ry="0.99997741"
          y="916.36218"
          x="100.99997"
          height="14"
@@ -739,7 +739,7 @@
          height="18"
          x="121"
          y="914.36218"
-         ry="3.9999774" />
+         ry="2.9999774" />
       <rect
          style="fill:url(#linearGradient1747);fill-opacity:1;stroke:none;stroke-width:0.56770289"
          id="rect1739"
@@ -747,9 +747,9 @@
          height="15.999999"
          x="122.00002"
          y="915.36218"
-         ry="3" />
+         ry="1.9999774" />
       <rect
-         ry="2.9999774"
+         ry="1.9999774"
          y="915.36218"
          x="122.00003"
          height="15.999999"
@@ -763,7 +763,7 @@
          height="14"
          x="122.99997"
          y="916.36218"
-         ry="2.0000134" />
+         ry="0.99997741" />
     </g>
     <rect
        transform="scale(1,-1)"
