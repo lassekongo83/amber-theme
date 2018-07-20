@@ -990,7 +990,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #LookingGlassPropertyInspector { background: rgba(0, 0, 0, 0.8); border: 2px solid grey; border-radius: 0; padding: 6px; }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon, #dashtodockContainer.left #dash .running1, #dashtodockContainer.left #dash .app-well-app.focused, #dashtodockContainer.left #dash .app-well-app:hover, #dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon, #dashtodockContainer.right #dash .running1, #dashtodockContainer.right #dash .app-well-app.focused, #dashtodockContainer.right #dash .app-well-app:hover, #dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon, #dashtodockContainer.bottom #dash .running1, #dashtodockContainer.bottom #dash .app-well-app.focused, #dashtodockContainer.bottom #dash .app-well-app:hover, #dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon, #dashtodockContainer.top #dash .running1, #dashtodockContainer.top #dash .app-well-app.focused, #dashtodockContainer.top #dash .app-well-app:hover, #dashtodockContainer.top #dash .app-well-app:active .overview-icon, #dashtodockContainer.top #dash .app-well-app:focus .overview-icon, #dashtodockContainer.top #dash .app-well-app:selected .overview-icon { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon, #dashtodockContainer.left #dash .app-well-app:hover, #dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon, #dashtodockContainer.right #dash .app-well-app:hover, #dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:hover, #dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon, #dashtodockContainer.top #dash .app-well-app:hover, #dashtodockContainer.top #dash .app-well-app:active .overview-icon, #dashtodockContainer.top #dash .app-well-app:focus .overview-icon, #dashtodockContainer.top #dash .app-well-app:selected .overview-icon { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
 
 #panel.dashtopanelMainPanel { background-gradient-direction: vertical; background-gradient-start: rgba(0, 0, 0, 0.5); background-gradient-end: rgba(0, 0, 0, 0.5); }
 
@@ -1048,19 +1048,37 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.shrink .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { padding: 2px 4px !important; }
 
-#dashtodockContainer.left #dash .running1 { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.left #dash .running1 { border-image: url("running1-vl-inactive.svg") 3 0 3 0; }
+
+#dashtodockContainer.left #dash .running1.focused { border-image: url("running1-vl-active.svg") 3 0 3 0; }
 
 #dashtodockContainer.left #dash .running1:hover { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.8); }
 
-#dashtodockContainer.left #dash .app-well-app { padding: 0px; border: 2px solid transparent; border-left: 0; border-right: 0; }
+#dashtodockContainer.left #dash .running2 { border-image: url("running2-vl-inactive.svg") 3 0 3 0; }
+
+#dashtodockContainer.left #dash .running2.focused { border-image: url("running2-vl-active.svg") 3 0 3 0; }
+
+#dashtodockContainer.left #dash .running2:hover { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.8); }
+
+#dashtodockContainer.left #dash .running3 { border-image: url("running2-vl-inactive.svg") 3 0 3 0; }
+
+#dashtodockContainer.left #dash .running3.focused { border-image: url("running2-vl-active.svg") 3 0 3 0; }
+
+#dashtodockContainer.left #dash .running3:hover { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.8); }
+
+#dashtodockContainer.left #dash .running4 { border-image: url("running2-vl-inactive.svg") 3 0 3 0; }
+
+#dashtodockContainer.left #dash .running4.focused { border-image: url("running2-vl-active.svg") 3 0 3 0; }
+
+#dashtodockContainer.left #dash .running4:hover { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.8); }
+
+#dashtodockContainer.left #dash .app-well-app { padding: 0px; border: 0px solid transparent; border-left: 0; border-right: 0; }
 
 #dashtodockContainer.left #dash .app-well-app .overview-icon { margin: 0; }
 
 #dashtodockContainer.left #dash .app-well-app.focused .overview-icon { background-gradient-direction: horizontal; background-gradient-start: transparent; background-gradient-end: transparent; background: none; }
 
 #dashtodockContainer.left #dash .app-well-app:hover .overview-icon { background: none; }
-
-#dashtodockContainer.left #dash .app-well-app.focused { box-shadow: inset 3px 0 #215d9c; }
 
 #dashtodockContainer.left #dash .app-well-app:hover { box-shadow: inset 3px 0 rgba(255, 255, 255, 0.8); }
 
@@ -1082,19 +1100,37 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.shrink .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { padding: 2px 4px !important; }
 
-#dashtodockContainer.right #dash .running1 { box-shadow: inset -3px 0 rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.right #dash .running1 { border-image: url("running1-vr-inactive.svg") 0 3 3 0; }
+
+#dashtodockContainer.right #dash .running1.focused { border-image: url("running1-vr-active.svg") 0 3 3 0; }
 
 #dashtodockContainer.right #dash .running1:hover { box-shadow: inset -3px 0 rgba(255, 255, 255, 0.8); }
 
-#dashtodockContainer.right #dash .app-well-app { padding: 0px; border: 2px solid transparent; border-left: 0; border-right: 0; }
+#dashtodockContainer.right #dash .running2 { border-image: url("running2-vr-inactive.svg") 0 3 3 0; }
+
+#dashtodockContainer.right #dash .running2.focused { border-image: url("running2-vr-active.svg") 0 3 3 0; }
+
+#dashtodockContainer.right #dash .running2:hover { box-shadow: inset -3px 0 rgba(255, 255, 255, 0.8); }
+
+#dashtodockContainer.right #dash .running3 { border-image: url("running2-vr-inactive.svg") 0 3 3 0; }
+
+#dashtodockContainer.right #dash .running3.focused { border-image: url("running2-vr-active.svg") 0 3 3 0; }
+
+#dashtodockContainer.right #dash .running3:hover { box-shadow: inset -3px 0 rgba(255, 255, 255, 0.8); }
+
+#dashtodockContainer.right #dash .running4 { border-image: url("running2-vr-inactive.svg") 0 3 3 0; }
+
+#dashtodockContainer.right #dash .running4.focused { border-image: url("running2-vr-active.svg") 0 3 3 0; }
+
+#dashtodockContainer.right #dash .running4:hover { box-shadow: inset -3px 0 rgba(255, 255, 255, 0.8); }
+
+#dashtodockContainer.right #dash .app-well-app { padding: 0px; border: 0px solid transparent; border-left: 0; border-right: 0; }
 
 #dashtodockContainer.right #dash .app-well-app .overview-icon { margin: 0; }
 
 #dashtodockContainer.right #dash .app-well-app.focused .overview-icon { background-gradient-direction: horizontal; background-gradient-start: transparent; background-gradient-end: transparent; background: none; }
 
 #dashtodockContainer.right #dash .app-well-app:hover .overview-icon { background: none; }
-
-#dashtodockContainer.right #dash .app-well-app.focused { box-shadow: inset -3px 0 #215d9c; }
 
 #dashtodockContainer.right #dash .app-well-app:hover { box-shadow: inset -3px 0 rgba(255, 255, 255, 0.8); }
 
@@ -1116,19 +1152,37 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.shrink .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { padding: 2px 4px !important; }
 
-#dashtodockContainer.bottom #dash .running1 { box-shadow: inset 0 -3px rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.bottom #dash .running1 { border-image: url("running1-hb-inactive.svg") 1 1 0 3; }
+
+#dashtodockContainer.bottom #dash .running1.focused { border-image: url("running1-hb-active.svg") 1 1 0 3; }
 
 #dashtodockContainer.bottom #dash .running1:hover { box-shadow: inset 0 -3px rgba(255, 255, 255, 0.8); }
 
-#dashtodockContainer.bottom #dash .app-well-app { padding: 0px; border: 2px solid transparent; border-top: 0; border-bottom: 0; }
+#dashtodockContainer.bottom #dash .running2 { border-image: url("running2-hb-inactive.svg") 1 1 0 3; }
+
+#dashtodockContainer.bottom #dash .running2.focused { border-image: url("running2-hb-active.svg") 1 1 0 3; }
+
+#dashtodockContainer.bottom #dash .running2:hover { box-shadow: inset 0 -3px rgba(255, 255, 255, 0.8); }
+
+#dashtodockContainer.bottom #dash .running3 { border-image: url("running2-hb-inactive.svg") 1 1 0 3; }
+
+#dashtodockContainer.bottom #dash .running3.focused { border-image: url("running2-hb-active.svg") 1 1 0 3; }
+
+#dashtodockContainer.bottom #dash .running3:hover { box-shadow: inset 0 -3px rgba(255, 255, 255, 0.8); }
+
+#dashtodockContainer.bottom #dash .running4 { border-image: url("running2-hb-inactive.svg") 1 1 0 3; }
+
+#dashtodockContainer.bottom #dash .running4.focused { border-image: url("running2-hb-active.svg") 1 1 0 3; }
+
+#dashtodockContainer.bottom #dash .running4:hover { box-shadow: inset 0 -3px rgba(255, 255, 255, 0.8); }
+
+#dashtodockContainer.bottom #dash .app-well-app { padding: 0px; border: 0px solid transparent; border-top: 0; border-bottom: 0; }
 
 #dashtodockContainer.bottom #dash .app-well-app .overview-icon { margin: 0; }
 
 #dashtodockContainer.bottom #dash .app-well-app.focused .overview-icon { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; background: none; }
 
 #dashtodockContainer.bottom #dash .app-well-app:hover .overview-icon { background: none; }
-
-#dashtodockContainer.bottom #dash .app-well-app.focused { box-shadow: inset 0 -3px #215d9c; }
 
 #dashtodockContainer.bottom #dash .app-well-app:hover { box-shadow: inset 0 -3px rgba(255, 255, 255, 0.8); }
 
@@ -1150,19 +1204,37 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.shrink .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { padding: 2px 4px !important; }
 
-#dashtodockContainer.top #dash .running1 { box-shadow: inset 0 3px rgba(255, 255, 255, 0.6); }
+#dashtodockContainer.top #dash .running1 { border-image: url("running1-ht-inactive.svg") 1 1 3 0; }
+
+#dashtodockContainer.top #dash .running1.focused { border-image: url("running1-ht-active.svg") 1 1 3 0; }
 
 #dashtodockContainer.top #dash .running1:hover { box-shadow: inset 0 3px rgba(255, 255, 255, 0.8); }
 
-#dashtodockContainer.top #dash .app-well-app { padding: 0px; border: 2px solid transparent; border-top: 0; border-bottom: 0; }
+#dashtodockContainer.top #dash .running2 { border-image: url("running2-ht-inactive.svg") 1 1 3 0; }
+
+#dashtodockContainer.top #dash .running2.focused { border-image: url("running2-ht-active.svg") 1 1 3 0; }
+
+#dashtodockContainer.top #dash .running2:hover { box-shadow: inset 0 3px rgba(255, 255, 255, 0.8); }
+
+#dashtodockContainer.top #dash .running3 { border-image: url("running2-ht-inactive.svg") 1 1 3 0; }
+
+#dashtodockContainer.top #dash .running3.focused { border-image: url("running2-ht-active.svg") 1 1 3 0; }
+
+#dashtodockContainer.top #dash .running3:hover { box-shadow: inset 0 3px rgba(255, 255, 255, 0.8); }
+
+#dashtodockContainer.top #dash .running4 { border-image: url("running2-ht-inactive.svg") 1 1 3 0; }
+
+#dashtodockContainer.top #dash .running4.focused { border-image: url("running2-ht-active.svg") 1 1 3 0; }
+
+#dashtodockContainer.top #dash .running4:hover { box-shadow: inset 0 3px rgba(255, 255, 255, 0.8); }
+
+#dashtodockContainer.top #dash .app-well-app { padding: 0px; border: 0px solid transparent; border-top: 0; border-bottom: 0; }
 
 #dashtodockContainer.top #dash .app-well-app .overview-icon { margin: 0; }
 
 #dashtodockContainer.top #dash .app-well-app.focused .overview-icon { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; background: none; }
 
 #dashtodockContainer.top #dash .app-well-app:hover .overview-icon { background: none; }
-
-#dashtodockContainer.top #dash .app-well-app.focused { box-shadow: inset 0 3px #215d9c; }
 
 #dashtodockContainer.top #dash .app-well-app:hover { box-shadow: inset 0 3px rgba(255, 255, 255, 0.8); }
 

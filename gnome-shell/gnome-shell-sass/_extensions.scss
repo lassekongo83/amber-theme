@@ -137,25 +137,57 @@ $panel_color: transparentize(black, 0.5);
       padding: 2px 4px !important;
     }
 
-    // FIXME: Figure out a way to make this looks better when two or more applications run
-    &.#{$p} #dash .running1 {
-      @extend %panel_fix;
-      @if $p==left { box-shadow: $_running_left; }
-      @else if $p==right { box-shadow: $_running_right; }
-      @else if $p==bottom { box-shadow: $_running_bottom; }
-      @else if $p==top { box-shadow: $_running_top; }
-      
-      &:hover {
-        @if $p==left { box-shadow: $_hover_effect_left; }
-        @else if $p==right { box-shadow: $_hover_effect_right; }
-        @else if $p==bottom { box-shadow: $_hover_effect_bottom; }
-        @else if $p==top { box-shadow: $_hover_effect_top; }        
+    @each $n in (1), (2), (3), (4) {
+      &.#{$p} #dash .running#{$n} {
+        // When using box shadows instead of border-images use @extend %panel_fix;
+        @if $p==left {
+          @if $n==1 { border-image: url('running1-vl-inactive.svg') 3 0 3 0; }
+          @else if $n>=2 { border-image: url('running2-vl-inactive.svg') 3 0 3 0; }
+        }
+        @else if $p==right {
+          @if $n==1 { border-image: url('running1-vr-inactive.svg') 0 3 3 0; }
+          @else if $n>=2 { border-image: url('running2-vr-inactive.svg') 0 3 3 0; }
+        }
+        @else if $p==bottom {
+          @if $n==1 { border-image: url('running1-hb-inactive.svg') 1 1 0 3; }
+          @else if $n>=2 { border-image: url('running2-hb-inactive.svg') 1 1 0 3; }
+        }
+        @else if $p==top {
+          @if $n==1 { border-image: url('running1-ht-inactive.svg') 1 1 3 0; }
+          @else if $n>=2 { border-image: url('running2-ht-inactive.svg') 1 1 3 0; }
+        }
+
+        &.focused {
+          @if $p==left {
+            @if $n==1 { border-image: url('running1-vl-active.svg') 3 0 3 0; }
+            @else if $n>=2 { border-image: url('running2-vl-active.svg') 3 0 3 0; }
+          }
+          @if $p==right {
+            @if $n==1 { border-image: url('running1-vr-active.svg') 0 3 3 0; }
+            @else if $n>=2 { border-image: url('running2-vr-active.svg') 0 3 3 0; }
+          }
+          @if $p==bottom {
+            @if $n==1 { border-image: url('running1-hb-active.svg') 1 1 0 3; }
+            @else if $n>=2 { border-image: url('running2-hb-active.svg') 1 1 0 3; }
+          }
+          @if $p==top {
+            @if $n==1 { border-image: url('running1-ht-active.svg') 1 1 3 0; }
+            @else if $n>=2 { border-image: url('running2-ht-active.svg') 1 1 3 0; }
+          }
+        }
+        // TODO: Create hover effect assets
+        &:hover {
+          @if $p==left { box-shadow: $_hover_effect_left; }
+          @else if $p==right { box-shadow: $_hover_effect_right; }
+          @else if $p==bottom { box-shadow: $_hover_effect_bottom; }
+          @else if $p==top { box-shadow: $_hover_effect_top; }
+        }
       }
     }
 
     &.#{$p} #dash .app-well-app {
       padding: 0px;
-      border: 2px solid transparent;
+      border: 0px solid transparent;
       @if $p==left or $p==right {
         border-left: 0;
         border-right: 0;
@@ -180,13 +212,14 @@ $panel_color: transparentize(black, 0.5);
         background: none;
       }
 
-      &.focused {
-        @extend %panel_fix;
-        @if $p==left { box-shadow: $_selected_left; }
-        @else if $p==right { box-shadow: $_selected_right; }
-        @else if $p==bottom { box-shadow: $_selected_bottom; }
-        @else if $p==top { box-shadow: $_selected_top; }
-      }
+      // Handled by running classes
+      //&.focused {
+        //@extend %panel_fix;
+        //@if $p==left { box-shadow: $_selected_left; }
+        //@else if $p==right { box-shadow: $_selected_right; }
+        //@else if $p==bottom { box-shadow: $_selected_bottom; }
+        //@else if $p==top { box-shadow: $_selected_top; }
+      //}
 
       &:hover {
         @extend %panel_fix;
