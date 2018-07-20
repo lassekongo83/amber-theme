@@ -95,6 +95,10 @@ $panel_color: transparentize(black, 0.5);
 // Dash to dock extension styling
 
 @each $p in (left), (right), (bottom), (top) {
+  $_bil: 3 0 2 2; // left border-image
+  $_bir: 0 3 2 2; // right
+  $_bib: 1 1 0 3; // bottom
+  $_bit: 1 1 3 0; // top
   #dashtodockContainer {
     background-color: $panel_color;
     border-radius: 0;
@@ -141,47 +145,97 @@ $panel_color: transparentize(black, 0.5);
       &.#{$p} #dash .running#{$n} {
         // When using box shadows instead of border-images use @extend %panel_fix;
         @if $p==left {
-          @if $n==1 { border-image: url('running1-vl-inactive.svg') 3 0 3 0; }
-          @else if $n>=2 { border-image: url('running2-vl-inactive.svg') 3 0 3 0; }
+          @if $n==1 {
+            border-image: url('running1-left-inactive.svg') $_bil;
+            &:hover { border-image: url('running1-left-inactive-hover.svg') $_bil; }
+          }
+          @else if $n>=2 {
+            border-image: url('running2-left-inactive.svg') $_bil;
+            &:hover { border-image: url('running1-left-inactive-hover.svg') $_bil; }
+          }
         }
         @else if $p==right {
-          @if $n==1 { border-image: url('running1-vr-inactive.svg') 0 3 3 0; }
-          @else if $n>=2 { border-image: url('running2-vr-inactive.svg') 0 3 3 0; }
+          @if $n==1 {
+            border-image: url('running1-right-inactive.svg') $_bir;
+            &:hover { border-image: url('running1-right-inactive-hover.svg') $_bir; }
+          }
+          @else if $n>=2 {
+            border-image: url('running2-right-inactive.svg') $_bir;
+            &:hover { border-image: url('running2-right-inactive-hover.svg') $_bir; }
+          }
         }
         @else if $p==bottom {
-          @if $n==1 { border-image: url('running1-hb-inactive.svg') 1 1 0 3; }
-          @else if $n>=2 { border-image: url('running2-hb-inactive.svg') 1 1 0 3; }
+          @if $n==1 {
+            border-image: url('running1-bottom-inactive.svg') $_bib;
+            &:hover { border-image: url('running1-bottom-inactive-hover.svg') $_bib; }
+          }
+          @else if $n>=2 {
+            border-image: url('running2-bottom-inactive.svg') $_bib;
+            &:hover { border-image: url('running2-bottom-inactive-hover.svg') $_bib; }
+          }
         }
         @else if $p==top {
-          @if $n==1 { border-image: url('running1-ht-inactive.svg') 1 1 3 0; }
-          @else if $n>=2 { border-image: url('running2-ht-inactive.svg') 1 1 3 0; }
+          @if $n==1 {
+            border-image: url('running1-top-inactive.svg') $_bit;
+            &:hover { border-image: url('running1-top-inactive-hover.svg') $_bit; }
+          }
+          @else if $n>=2 {
+            border-image: url('running2-top-inactive.svg') $_bit;
+            &:hover { border-image: url('running2-top-inactive-hover.svg') $_bit; }
+          }
         }
 
         &.focused {
           @if $p==left {
-            @if $n==1 { border-image: url('running1-vl-active.svg') 3 0 3 0; }
-            @else if $n>=2 { border-image: url('running2-vl-active.svg') 3 0 3 0; }
+            @if $n==1 { 
+              border-image: url('running1-left-active.svg') $_bil;
+              &:hover { border-image: url('running1-left-active-hover.svg') $_bil; }
+            }
+            @else if $n>=2 {
+              border-image: url('running2-left-active.svg') $_bil;
+              &:hover { border-image: url('running2-left-active-hover.svg') $_bil; }
+            }
           }
           @if $p==right {
-            @if $n==1 { border-image: url('running1-vr-active.svg') 0 3 3 0; }
-            @else if $n>=2 { border-image: url('running2-vr-active.svg') 0 3 3 0; }
+            @if $n==1 {
+              border-image: url('running1-right-active.svg') $_bir;
+              &:hover { border-image: url('running1-right-active-hover.svg') $_bir; }
+            }
+            @else if $n>=2 {
+              border-image: url('running2-right-active.svg') $_bir;
+              &:hover { border-image: url('running2-right-active-hover.svg') $_bir; }
+            }
           }
           @if $p==bottom {
-            @if $n==1 { border-image: url('running1-hb-active.svg') 1 1 0 3; }
-            @else if $n>=2 { border-image: url('running2-hb-active.svg') 1 1 0 3; }
+            @if $n==1 {
+              border-image: url('running1-bottom-active.svg') $_bib;
+              &:hover { border-image: url('running1-bottom-active-hover.svg') $_bib; }
+            }
+            @else if $n>=2 {
+              border-image: url('running2-bottom-active.svg') $_bib;
+              &:hover { border-image: url('running2-bottom-active-hover.svg') $_bib; }
+            }
           }
           @if $p==top {
-            @if $n==1 { border-image: url('running1-ht-active.svg') 1 1 3 0; }
-            @else if $n>=2 { border-image: url('running2-ht-active.svg') 1 1 3 0; }
+            @if $n==1 {
+              border-image: url('running1-top-active.svg') $_bit;
+              &:hover { border-image: url('running1-top-active-hover.svg') $_bit; }
+            }
+            @else if $n>=2 {
+              border-image: url('running2-top-active.svg') $_bit;
+              &:hover { border-image: url('running2-top-active-hover.svg') $_bit; }
+            }
           }
         }
-        // TODO: Create hover effect assets
-        &:hover {
-          @if $p==left { box-shadow: $_hover_effect_left; }
-          @else if $p==right { box-shadow: $_hover_effect_right; }
-          @else if $p==bottom { box-shadow: $_hover_effect_bottom; }
-          @else if $p==top { box-shadow: $_hover_effect_top; }
-        }
+      }
+    }
+
+    &.#{$p} #dash .app-well-app {
+      &:hover {
+        @if $p==left { border-image: url('running1-left-inactive-hover.svg') $_bil; }
+        @else if $p==right { border-image: url('running1-right-inactive-hover.svg') $_bir; }
+        @else if $p==bottom { border-image: url('running1-bottom-inactive-hover.svg') $_bib; }
+        @else if $p==top { border-image: url('running1-top-inactive-hover.svg') $_bit; }
       }
     }
 
@@ -220,14 +274,6 @@ $panel_color: transparentize(black, 0.5);
         //@else if $p==bottom { box-shadow: $_selected_bottom; }
         //@else if $p==top { box-shadow: $_selected_top; }
       //}
-
-      &:hover {
-        @extend %panel_fix;
-        @if $p==left { box-shadow: $_hover_effect_left; }
-        @else if $p==right { box-shadow: $_hover_effect_right; }
-        @else if $p==bottom { box-shadow: $_hover_effect_bottom; }
-        @else if $p==top { box-shadow: $_hover_effect_top; }
-      }
 
       &:active .overview-icon,
       &:focus .overview-icon,

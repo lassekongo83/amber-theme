@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 2405546, 2018-03-11"
-   sodipodi:docname="running1-vr-active.svg">
+   sodipodi:docname="running2-left-active.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.313708"
-     inkscape:cx="7.5232601"
+     inkscape:cx="0.012340411"
      inkscape:cy="24.214626"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -62,22 +62,37 @@
      id="layer1"
      transform="translate(0,-284.29999)">
     <g
-       id="g824"
-       transform="matrix(-1,0,0,0.9374999,12.7,18.56253)">
+       id="g826">
       <rect
-         style="fill:#fb6f55;fill-opacity:1;stroke:none;stroke-width:0.40322536;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824"
+         style="fill:#fb6f55;fill-opacity:1;stroke:none;stroke-width:0.37718299;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824"
          id="rect819"
          width="0.79374999"
-         height="12.7"
+         height="11.112511"
          x="-2.7815501e-08"
-         y="284.29996" />
+         y="284.56458" />
       <rect
-         y="284.29999"
-         x="0.79374999"
-         height="12.7"
+         style="fill:#ffffff;fill-opacity:0.1254902;stroke:none;stroke-width:0.24749504;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824"
+         id="rect2749"
          width="11.90625"
-         id="rect834"
-         style="fill:#ffffff;fill-opacity:0.1254902;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824" />
+         height="11.1125"
+         x="0.79374999"
+         y="284.56458" />
+      <rect
+         transform="scale(1,-1)"
+         y="-296.73541"
+         x="0.79374999"
+         height="1.0583456"
+         width="11.90625"
+         id="rect2751"
+         style="fill:#ffffff;fill-opacity:0.0627451;stroke:none;stroke-width:0.07637906;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824" />
+      <rect
+         transform="scale(1,-1)"
+         y="-296.73541"
+         x="-2.7815501e-08"
+         height="1.0583272"
+         width="0.79374999"
+         id="rect2787"
+         style="fill:#fb6f55;fill-opacity:0.48627451;stroke:none;stroke-width:0.1164008;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824" />
     </g>
   </g>
 </svg>
