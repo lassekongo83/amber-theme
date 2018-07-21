@@ -1080,7 +1080,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.left #dash .running4.focused:hover { border-image: url("running2-left-active-hover.svg") 3 0 2 2; }
 
-#dashtodockContainer.left #dash .app-well-app:hover { transition-duration: 100ms; border-image: url("running1-left-inactive-hover.svg") 3 0 2 2; }
+#dashtodockContainer.left #dash .app-well-app { transition-duration: 100ms; }
+
+#dashtodockContainer.left #dash .app-well-app:hover { border-image: url("running1-left-inactive-hover.svg") 3 0 2 2; }
 
 #dashtodockContainer.left #dash .app-well-app { padding: 0px; border: 0px solid transparent; border-left: 0; border-right: 0; }
 
@@ -1140,7 +1142,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.right #dash .running4.focused:hover { border-image: url("running2-right-active-hover.svg") 0 3 2 2; }
 
-#dashtodockContainer.right #dash .app-well-app:hover { transition-duration: 100ms; border-image: url("running1-right-inactive-hover.svg") 0 3 2 2; }
+#dashtodockContainer.right #dash .app-well-app { transition-duration: 100ms; }
+
+#dashtodockContainer.right #dash .app-well-app:hover { border-image: url("running1-right-inactive-hover.svg") 0 3 2 2; }
 
 #dashtodockContainer.right #dash .app-well-app { padding: 0px; border: 0px solid transparent; border-left: 0; border-right: 0; }
 
@@ -1200,7 +1204,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.bottom #dash .running4.focused:hover { border-image: url("running2-bottom-active-hover.svg") 1 1 0 3; }
 
-#dashtodockContainer.bottom #dash .app-well-app:hover { transition-duration: 100ms; border-image: url("running1-bottom-inactive-hover.svg") 1 1 0 3; }
+#dashtodockContainer.bottom #dash .app-well-app { transition-duration: 100ms; }
+
+#dashtodockContainer.bottom #dash .app-well-app:hover { border-image: url("running1-bottom-inactive-hover.svg") 1 1 0 3; }
 
 #dashtodockContainer.bottom #dash .app-well-app { padding: 0px; border: 0px solid transparent; border-top: 0; border-bottom: 0; }
 
@@ -1260,7 +1266,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.top #dash .running4.focused:hover { border-image: url("running2-top-active-hover.svg") 1 1 3 0; }
 
-#dashtodockContainer.top #dash .app-well-app:hover { transition-duration: 100ms; border-image: url("running1-top-inactive-hover.svg") 1 1 3 0; }
+#dashtodockContainer.top #dash .app-well-app { transition-duration: 100ms; }
+
+#dashtodockContainer.top #dash .app-well-app:hover { border-image: url("running1-top-inactive-hover.svg") 1 1 3 0; }
 
 #dashtodockContainer.top #dash .app-well-app { padding: 0px; border: 0px solid transparent; border-top: 0; border-bottom: 0; }
 

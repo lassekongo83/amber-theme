@@ -232,8 +232,8 @@ $panel_color: transparentize(black, 0.5);
     }
 
     &.#{$p} #dash .app-well-app {
+      transition-duration: 100ms;
       &:hover {
-        transition-duration: 100ms;
         @if $p==left { border-image: url('running1-left-inactive-hover.svg') $_bil; }
         @else if $p==right { border-image: url('running1-right-inactive-hover.svg') $_bir; }
         @else if $p==bottom { border-image: url('running1-bottom-inactive-hover.svg') $_bib; }
