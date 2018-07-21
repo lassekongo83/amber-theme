@@ -990,7 +990,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #LookingGlassPropertyInspector { background: rgba(0, 0, 0, 0.8); border: 2px solid grey; border-radius: 0; padding: 6px; }
 
-#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon, #dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon, #dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon, #dashtodockContainer.top #dash .app-well-app:active .overview-icon, #dashtodockContainer.top #dash .app-well-app:focus .overview-icon, #dashtodockContainer.top #dash .app-well-app:selected .overview-icon { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
+#panel.dashtopanelMainPanel.dashtopanelBottom .app-well-app:hover .overview-icon, #panel.dashtopanelMainPanel.dashtopanelTop .app-well-app:hover .overview-icon, #dashtodockContainer.left.extended, #dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon, #dashtodockContainer.right.extended, #dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon, #dashtodockContainer.bottom.extended, #dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon, #dashtodockContainer.top.extended, #dashtodockContainer.top #dash .app-well-app:active .overview-icon, #dashtodockContainer.top #dash .app-well-app:focus .overview-icon, #dashtodockContainer.top #dash .app-well-app:selected .overview-icon { background-gradient-direction: vertical; background-gradient-start: transparent; background-gradient-end: transparent; }
 
 #panel.dashtopanelMainPanel { background-gradient-direction: vertical; background-gradient-start: rgba(0, 0, 0, 0.5); background-gradient-end: rgba(0, 0, 0, 0.5); }
 
@@ -1032,11 +1032,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel.dashtopanelMainPanel .showdesktop-button { padding-right: 8px; }
 
-#dashtodockContainer { background-color: rgba(0, 0, 0, 0.5); border-radius: 0; }
+#dashtodockContainer { border-radius: 0; }
 
 #dashtodockContainer.left.extended { box-shadow: inset 3px 0 rgba(0, 0, 0, 0.4); }
 
-#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: none !important; padding: 0px; }
+#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: none !important; padding: 0px; background-color: rgba(0, 0, 0, 0.5); }
 
 #dashtodockContainer.extended { border: 0; border-radius: 0; }
 
@@ -1080,7 +1080,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.left #dash .running4.focused:hover { border-image: url("running2-left-active-hover.svg") 3 0 2 2; }
 
-#dashtodockContainer.left #dash .app-well-app:hover { border-image: url("running1-left-inactive-hover.svg") 3 0 2 2; }
+#dashtodockContainer.left #dash .app-well-app:hover { transition-duration: 100ms; border-image: url("running1-left-inactive-hover.svg") 3 0 2 2; }
 
 #dashtodockContainer.left #dash .app-well-app { padding: 0px; border: 0px solid transparent; border-left: 0; border-right: 0; }
 
@@ -1092,11 +1092,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.left #dash .app-well-app:active .overview-icon, #dashtodockContainer.left #dash .app-well-app:focus .overview-icon, #dashtodockContainer.left #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
 
-#dashtodockContainer { background-color: rgba(0, 0, 0, 0.5); border-radius: 0; }
+#dashtodockContainer { border-radius: 0; }
 
 #dashtodockContainer.right.extended { box-shadow: inset -3px 0 rgba(0, 0, 0, 0.4); }
 
-#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: none !important; padding: 0px; }
+#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: none !important; padding: 0px; background-color: rgba(0, 0, 0, 0.5); }
 
 #dashtodockContainer.extended { border: 0; border-radius: 0; }
 
@@ -1140,7 +1140,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.right #dash .running4.focused:hover { border-image: url("running2-right-active-hover.svg") 0 3 2 2; }
 
-#dashtodockContainer.right #dash .app-well-app:hover { border-image: url("running1-right-inactive-hover.svg") 0 3 2 2; }
+#dashtodockContainer.right #dash .app-well-app:hover { transition-duration: 100ms; border-image: url("running1-right-inactive-hover.svg") 0 3 2 2; }
 
 #dashtodockContainer.right #dash .app-well-app { padding: 0px; border: 0px solid transparent; border-left: 0; border-right: 0; }
 
@@ -1152,11 +1152,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.right #dash .app-well-app:active .overview-icon, #dashtodockContainer.right #dash .app-well-app:focus .overview-icon, #dashtodockContainer.right #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
 
-#dashtodockContainer { background-color: rgba(0, 0, 0, 0.5); border-radius: 0; }
+#dashtodockContainer { border-radius: 0; }
 
 #dashtodockContainer.bottom.extended { box-shadow: inset 0 -3px rgba(0, 0, 0, 0.4); }
 
-#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: none !important; padding: 0px; }
+#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: none !important; padding: 0px; background-color: rgba(0, 0, 0, 0.5); }
 
 #dashtodockContainer.extended { border: 0; border-radius: 0; }
 
@@ -1200,7 +1200,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.bottom #dash .running4.focused:hover { border-image: url("running2-bottom-active-hover.svg") 1 1 0 3; }
 
-#dashtodockContainer.bottom #dash .app-well-app:hover { border-image: url("running1-bottom-inactive-hover.svg") 1 1 0 3; }
+#dashtodockContainer.bottom #dash .app-well-app:hover { transition-duration: 100ms; border-image: url("running1-bottom-inactive-hover.svg") 1 1 0 3; }
 
 #dashtodockContainer.bottom #dash .app-well-app { padding: 0px; border: 0px solid transparent; border-top: 0; border-bottom: 0; }
 
@@ -1212,11 +1212,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.bottom #dash .app-well-app:active .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:focus .overview-icon, #dashtodockContainer.bottom #dash .app-well-app:selected .overview-icon { background: none; box-shadow: none; }
 
-#dashtodockContainer { background-color: rgba(0, 0, 0, 0.5); border-radius: 0; }
+#dashtodockContainer { border-radius: 0; }
 
 #dashtodockContainer.top.extended { box-shadow: inset 0 3px rgba(0, 0, 0, 0.4); }
 
-#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: none !important; padding: 0px; }
+#dashtodockContainer.shrink #dash, #dashtodockContainer.dashtodock #dash { border: none !important; padding: 0px; background-color: rgba(0, 0, 0, 0.5); }
 
 #dashtodockContainer.extended { border: 0; border-radius: 0; }
 
@@ -1260,7 +1260,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.top #dash .running4.focused:hover { border-image: url("running2-top-active-hover.svg") 1 1 3 0; }
 
-#dashtodockContainer.top #dash .app-well-app:hover { border-image: url("running1-top-inactive-hover.svg") 1 1 3 0; }
+#dashtodockContainer.top #dash .app-well-app:hover { transition-duration: 100ms; border-image: url("running1-top-inactive-hover.svg") 1 1 3 0; }
 
 #dashtodockContainer.top #dash .app-well-app { padding: 0px; border: 0px solid transparent; border-top: 0; border-bottom: 0; }
 
