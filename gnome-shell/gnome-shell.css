@@ -364,13 +364,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel .panel-corner.lock-screen, #panel .panel-corner.login-screen, #panel .panel-corner.unlock-screen { -panel-corner-radius: 0; -panel-corner-background-color: transparent; -panel-corner-border-color: transparent; }
 
-#panel .panel-button { -natural-hpadding: 12px; -minimum-hpadding: 6px; font-weight: bold; color: #f2f1f0; }
+#panel .panel-button { -natural-hpadding: 12px; -minimum-hpadding: 6px; font-weight: bold; color: #f2f1f0; transition-duration: 100ms; }
 
 #panel .panel-button .app-menu-icon { -st-icon-style: symbolic; margin-left: 4px; margin-right: 4px; }
 
 #panel .panel-button:hover { color: #f2f1f0; background-color: rgba(0, 0, 0, 0.01); box-shadow: inset 0 -2px 0px rgba(255, 255, 255, 0.6); }
 
-#panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked { background-color: rgba(0, 0, 0, 0.01); box-shadow: inset 0 -2px 0px #fb6f55; color: #ffffff; }
+#panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked { background-color: rgba(255, 255, 255, 0.2); box-shadow: inset 0 -2px 0px #fb6f55; color: #ffffff; }
 
 #panel .panel-button:active > .system-status-icon, #panel .panel-button:overview > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:checked > .system-status-icon { icon-shadow: black 0 2px 2px; }
 
@@ -512,7 +512,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 .media-message-cover-icon.fallback { color: #676767; background-color: #4d4d4d; border: 2px solid #4d4d4d; border-radius: 0; icon-size: 16px; padding: 8px; }
 
-#panel #panelActivities.panel-button > * { background-image: url("activities.svg"); background-position: center top; width: 39px; height: 24px; background-color: transparent !important; background-gradient-direction: none !important; border: 0 solid transparent !important; text-shadow: 0 0 transparent !important; transition-duration: 0ms !important; box-shadow: none !important; color: transparent; }
+#panel #panelActivities.panel-button > * { background-image: url("activities.svg"); background-position: center center; width: 39px; height: 24px; background-color: transparent !important; background-gradient-direction: none !important; border: 0 solid transparent !important; text-shadow: 0 0 transparent !important; transition-duration: 100ms !important; box-shadow: none !important; color: transparent; }
 
 #panel #panelActivities.panel-button:active, #panel #panelActivities.panel-button:overview, #panel #panelActivities.panel-button:focus, #panel #panelActivities.panel-button:checked { background-color: transparent; box-shadow: none; border-bottom-width: 1px; border-color: transparent; }
 

@@ -768,6 +768,7 @@ StScrollBar {
     -minimum-hpadding: 6px;
     font-weight: bold;
     color: $fg_color;
+    transition-duration: 100ms;
 
     .app-menu-icon {
       -st-icon-style: symbolic;
@@ -784,7 +785,7 @@ StScrollBar {
 
     &:active, &:overview, &:focus, &:checked {
       // Trick due to St limitations. It needs a background to draw a box-shadow
-      background-color: rgba(0, 0, 0, 0.01);
+      background-color: rgba(255, 255, 255, 0.2);
       box-shadow: inset 0 -2px 0px $selected_bg_color;
       color: $selected_fg_color;
 
@@ -1061,7 +1062,8 @@ StScrollBar {
               border: 2px solid $bg_color;
               border-radius: 0;
               icon-size: 16px;
-              padding: 8px; }
+              padding: 8px;
+            }
           }
 
 // Activities button
@@ -1069,14 +1071,14 @@ StScrollBar {
 
   > * {
     background-image: url("activities.svg");
-    background-position: center top;
+    background-position: center center;
     width: 39px;
     height: 24px;
     background-color: transparent !important;
     background-gradient-direction: none !important;
     border: 0 solid transparent !important;
     text-shadow: 0 0 transparent !important;
-    transition-duration: 0ms !important;
+    transition-duration: 100ms !important;
     box-shadow: none !important;
     color: transparent;
   }
