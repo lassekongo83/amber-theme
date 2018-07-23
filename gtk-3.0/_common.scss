@@ -3674,15 +3674,21 @@ decoration {
 headerbar,
 .titlebar {
   &.default-decoration button.titlebutton { // no vertical padding for ssd buttons
-    padding: 0 4px;                        // already handled by the titlebar-padding
+    padding: 0 4px;                         // already handled by the titlebar-padding
     min-width: 0;
     min-height: 24px;
     margin: 0;
   }
 
   // separator for the titlebutton area
-  .right.horizontal { border-left: 1px solid if($darker=='true', transparentize(black, 0.8), $borders_color); }
-  .left.horizontal { border-right: 1px solid if($darker=='true', transparentize(black, 0.8), $borders_color); }
+  .right.horizontal {
+    border-left: 1px solid if($darker=='true', transparentize(black, 0.8), $borders_color);
+    padding-left: 4px;
+  }
+  .left.horizontal {
+    border-right: 1px solid if($darker=='true', transparentize(black, 0.8), $borders_color);
+    padding-right: 4px;
+  }
 
   button.titlebutton {
     padding: 0;
