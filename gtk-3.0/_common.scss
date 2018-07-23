@@ -3587,6 +3587,8 @@ colorchooser .popover.osd { border-radius: 0; }
  * Window Decorations *
  *********************/
 
+$b_size: 22px; // Titlebuttons default size
+
 decoration {
   border-radius: $br_w $br_w 0 0;
   border-width: 0px;
@@ -3597,7 +3599,6 @@ decoration {
   $_wm_border_backdrop: if($variant=='light', transparentize(black, 0.82), transparentize($borders_color, 0.1));
 
   box-shadow: 0 1px 4px 1px transparentize(black, 0.5);
-              //0 0 0 0px $_wm_border; //doing borders with box-shadow
 
   // FIXME rationalize shadows
 
@@ -3611,7 +3612,6 @@ decoration {
     // or the jumping will happen during the transition.
     box-shadow: 0 1px 4px 1px transparent,
                 0 1px 2px 1px transparentize(black, 0.8);
-                //0 0 0 1px $_wm_border_backdrop;
   }
 
   .maximized &,
@@ -3627,7 +3627,6 @@ decoration {
   // server-side decorations as used by mutter
   .ssd {
     border-radius: $br_w $br_w 0 0;
-    //box-shadow: 0 0 0 1px $_wm_border; //just doing borders, wm draws actual shadows
     &.maximized { border-radius: 0; }
     border: none;
   }
@@ -3662,6 +3661,14 @@ decoration {
     border-width: 0; // No line below the title bar
     @include ssd_fill;
     padding: 2px 4px;
+
+    &.default-decoration button.titlebutton {
+      min-width: $b_size;
+      min-height: $b_size;
+      padding: 0;
+      margin: 2px;
+      transition-duration: $shortest_duration;
+    }
 }
 
 headerbar,
@@ -3679,21 +3686,43 @@ headerbar,
 
   button.titlebutton {
     padding: 0;
-    min-width: 24px;
-    min-height: 24px;
+    min-width: $b_size;
+    min-height: $b_size;
     margin: 2px;
 
     @include button(undecorated);
 
-    &.close, &.maximize, &.minimize {
-      color: transparent;
-      background-color: transparent;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-width: 0;
-      box-shadow: none;
+    @each $b in ('close', 'maximize', 'minimize') {
+      &.#{$b} {
+        color: transparent;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-width: 0;
+        box-shadow: none;
+        transition-duration: $shortest_duration;
 
-      &:backdrop { opacity: 1; }
+        @if $b==close {
+          background-color: $close_button;
+          box-shadow: $shadow_normal;
+          &:hover {
+            background-color: $close_button_hover;
+            box-shadow: $shadow_hover;
+          }
+          &:backdrop {
+            box-shadow: none;
+            background-color: $close_button_backdrop;
+            &:hover { background-color: $close_button_hover; }
+          }
+        }
+        @else if $b==maximize or minimize {
+          &:hover {
+            background-color: $max_min_hover;
+            box-shadow: $shadow_hover;
+            &:backdrop { box-shadow: none; }
+          }
+        }
+      }
     }
 
     // Load png assets for each button

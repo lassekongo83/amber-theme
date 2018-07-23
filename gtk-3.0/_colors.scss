@@ -75,3 +75,9 @@ $backdrop_menu_color: if($variant == 'light', $backdrop_base_color, mix($backdro
 
 // Secondary BG color for notebooks and other elements
 $secondary_bg_color: mix($bg_color, $base_color, 50%);
+
+//title buttons
+$close_button: #b55f5f;
+$close_button_hover: lighten($close_button, 5%);
+$close_button_backdrop: lighten($dark_bg_color, 12%);
+$max_min_hover: lighten($dark_bg_color, 12%);
