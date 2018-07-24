@@ -478,7 +478,7 @@ searchbar > revealer > box { margin: -6px; padding: 6px; }
 .inline-toolbar, searchbar > revealer > box, .location-bar { background-color: #343434; }
 
 /*************** Header bars * */
-.titlebar:not(headerbar), headerbar { padding: 0 4px; min-height: 38px; border-width: 0; border-style: solid; border-color: #272727; background-color: #4d4d4d; box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), inset 0 -1px transparent, 0 1px transparent, 0 2px transparent; }
+.titlebar:not(headerbar), headerbar { padding: 0 4px; min-height: 38px; border-width: 0; border-style: solid; border-color: #272727; background-color: #4d4d4d; box-shadow: inset 0 1px rgba(255, 255, 255, 0.04), inset 0 -1px transparent, 0 1px transparent, 0 2px transparent; }
 
 .titlebar:backdrop:not(headerbar), headerbar:backdrop { border-color: #272727; background-image: none; color: #a09f9f; }
 
@@ -588,7 +588,7 @@ window.tiled headerbar, window.tiled headerbar:first-child, window.tiled headerb
 
 window.csd > .titlebar:not(headerbar) { padding: 0; background-color: transparent; background-image: none; border-style: none; border-color: transparent; box-shadow: none; }
 
-.titlebar:not(headerbar) > separator { background-color: #4d4d4d; box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), inset 0 -1px transparent, 0 1px transparent, 0 2px transparent; }
+.titlebar:not(headerbar) > separator { background-color: #4d4d4d; box-shadow: inset 0 1px rgba(255, 255, 255, 0.04), inset 0 -1px transparent, 0 1px transparent, 0 2px transparent; }
 
 /************ Pathbars * */
 filechooser #pathbarbox { background-color: #2f2f2f; border-bottom: 1px solid #272727; }
@@ -1256,7 +1256,7 @@ calendar.highlight { color: #a09f9f; }
 calendar:indeterminate { color: alpha(currentColor,0.1); }
 
 /*********** Dialogs * */
-messagedialog .titlebar { min-height: 20px; background-image: none; background-color: #4d4d4d; border-style: none; border-top-left-radius: 2px; border-top-right-radius: 2px; background-color: #4d4d4d; box-shadow: inset 0 1px rgba(255, 255, 255, 0.08), inset 0 -1px transparent, 0 1px transparent, 0 2px transparent; }
+messagedialog .titlebar { min-height: 20px; background-image: none; background-color: #4d4d4d; border-style: none; border-top-left-radius: 2px; border-top-right-radius: 2px; background-color: #4d4d4d; box-shadow: inset 0 1px rgba(255, 255, 255, 0.04), inset 0 -1px transparent, 0 1px transparent, 0 2px transparent; }
 
 messagedialog.csd.background { border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; }
 
@@ -1454,9 +1454,9 @@ colorchooser .popover.osd { border-radius: 0; }
 .scale-popup button:hover { background-color: rgba(242, 241, 240, 0.1); border-radius: 2px; }
 
 /********************** Window Decorations * */
-decoration { border-radius: 2px 2px 0 0; border-width: 0px; box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.5); /* this is used for the resize cursor area */ margin: 10px; }
+decoration { border-radius: 2px 2px 0 0; border-width: 0px; box-shadow: 0 4px 4px 3px rgba(0, 0, 0, 0.34); /* this is used for the resize cursor area */ margin: 10px; }
 
-decoration:backdrop { box-shadow: 0 1px 4px 1px transparent, 0 1px 2px 1px rgba(0, 0, 0, 0.2); }
+decoration:backdrop { box-shadow: 0 4px 4px 3px transparent, 0 1px 2px 1px rgba(0, 0, 0, 0.2); }
 
 .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration { border-radius: 0; }
 
@@ -1474,7 +1474,7 @@ messagedialog.csd decoration { border-radius: 2px; box-shadow: 0 1px 2px rgba(0,
 
 .solid-csd decoration { border-radius: 0; margin: 4px; background-color: #4d4d4d; border: solid 1px #2b2b2b; box-shadow: none; }
 
-.ssd .titlebar { border-width: 0; background-color: #4d4d4d; box-shadow: inset 0 1px rgba(255, 255, 255, 0.08); padding: 2px 4px; }
+.ssd .titlebar { border-width: 0; background-color: #4d4d4d; box-shadow: inset 0 1px rgba(255, 255, 255, 0.04); padding: 2px 4px; }
 
 .ssd .titlebar.default-decoration button.titlebutton { min-width: 22px; min-height: 22px; padding: 0; margin: 2px; transition-duration: 100ms; }
 
