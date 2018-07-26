@@ -888,7 +888,7 @@ scrollbar button:hover { color: #5c5c5c; box-shadow: none; }
 
 scrollbar button:active, scrollbar button:checked { box-shadow: none; color: #fa4523; }
 
-scrollbar button:disabled { color: rgba(141, 141, 140, 0.2); box-shadow: none; }
+scrollbar button:disabled { color: rgba(141, 141, 140, 0.2); box-shadow: none; background-color: transparent; }
 
 scrollbar.vertical button.up { -gtk-icon-source: -gtk-scaled(url("assets/scrollarrow-up.png"), url("assets/scrollarrow-up@2.png")); }
 
@@ -1488,7 +1488,7 @@ messagedialog.csd decoration { border-radius: 2px; box-shadow: 0 1px 2px rgba(0,
 
 .ssd .titlebar.default-decoration button.titlebutton { min-width: 22px; min-height: 22px; padding: 0; margin: 2px; transition-duration: 100ms; }
 
-headerbar.default-decoration button.titlebutton, .titlebar.default-decoration button.titlebutton { padding: 0 4px; min-width: 0; min-height: 24px; margin: 0; }
+headerbar.default-decoration button.titlebutton, .titlebar.default-decoration button.titlebutton { padding: 0 4px; min-width: 0; min-height: 22px; margin: 0; }
 
 headerbar .right.horizontal, .titlebar .right.horizontal { border-left: 1px solid rgba(0, 0, 0, 0.2); padding-left: 4px; }
 

@@ -2219,6 +2219,7 @@ scrollbar {
     &:disabled {
       color: transparentize($scrollbar_slider_color, 0.8);
       box-shadow: none;
+      background-color: transparent;
     }
   }
 
@@ -3676,7 +3677,7 @@ headerbar,
   &.default-decoration button.titlebutton { // no vertical padding for ssd buttons
     padding: 0 4px;                         // already handled by the titlebar-padding
     min-width: 0;
-    min-height: 24px;
+    min-height: $b_size;
     margin: 0;
   }
 
@@ -3711,6 +3712,9 @@ headerbar,
         @if $b==close {
           background-color: $close_button;
           box-shadow: $shadow_normal;
+          // FIXME Maybe. Increase the click area of the button to make better use of Fitt's law.
+          // This may require negative margins and a larger radius or new assets.
+          //border: 8px solid $dark_bg_color;
           &:hover {
             background-color: $close_button_hover;
             box-shadow: $shadow_hover;
