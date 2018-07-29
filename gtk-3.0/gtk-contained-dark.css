@@ -1358,29 +1358,23 @@ paned.vertical > separator.wide { margin: 0; padding: 0; background-repeat: repe
 /************** GtkInfoBar * */
 infobar { border-style: none; }
 
-infobar.info, infobar.question, infobar.warning, infobar.error { text-shadow: 0 1px #fa4523; }
+infobar.info, infobar.question, infobar.warning, infobar.error { text-shadow: none; }
 
-infobar.info:backdrop, infobar.info, infobar.question:backdrop, infobar.question, infobar.warning:backdrop, infobar.warning, infobar.error:backdrop, infobar.error { background-color: #fb6f55; border-color: #fa4523; }
+infobar.info:backdrop, infobar.info, infobar.question:backdrop, infobar.question, infobar.warning:backdrop, infobar.warning, infobar.error:backdrop, infobar.error { background-color: #676767; border-color: #fa4523; }
 
 infobar.info:backdrop label, infobar.info:backdrop, infobar.info label, infobar.info, infobar.question:backdrop label, infobar.question:backdrop, infobar.question label, infobar.question, infobar.warning:backdrop label, infobar.warning:backdrop, infobar.warning label, infobar.warning, infobar.error:backdrop label, infobar.error:backdrop, infobar.error label, infobar.error { color: #ffffff; }
 
-infobar.info:backdrop, infobar.question:backdrop, infobar.warning:backdrop, infobar.error:backdrop { text-shadow: none; }
+infobar.info button, infobar.question button, infobar.warning button, infobar.error button { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); background-color: #8a8a8a; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(18, 18, 18, 0.1); border-color: transparent; border-bottom-color: transparent; }
 
-infobar.info button, infobar.question button, infobar.warning button, infobar.error button { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); background-color: #fc9582; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(18, 18, 18, 0.1); border-color: transparent; border-bottom-color: transparent; }
+infobar.info button:hover, infobar.question button:hover, infobar.warning button:hover, infobar.error button:hover { color: #ffffff; background-color: #9f9f9f; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.25); }
 
-infobar.info button:hover, infobar.question button:hover, infobar.warning button:hover, infobar.error button:hover { color: #ffffff; background-color: #fdb7aa; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.25); }
+infobar.info button:active, infobar.info button:checked, infobar.question button:active, infobar.question button:checked, infobar.warning button:active, infobar.warning button:checked, infobar.error button:active, infobar.error button:checked { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); background-color: #1f1f1f; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08), inset 0 2px rgba(0, 0, 0, 0.04); border-color: #121212; border-bottom-color: #121212; border-top-color: black; }
 
-infobar.info button:active, infobar.info button:checked, infobar.question button:active, infobar.question button:checked, infobar.warning button:active, infobar.warning button:checked, infobar.error button:active, infobar.error button:checked { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); background-color: #fa4d2d; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08), inset 0 2px rgba(0, 0, 0, 0.04); border-color: #121212; border-bottom-color: #121212; border-top-color: black; }
-
-infobar.info button:disabled, infobar.question button:disabled, infobar.warning button:disabled, infobar.error button:disabled { color: #ecb0a5; background-color: #d8614b; text-shadow: none; -gtk-icon-shadow: none; box-shadow: none; border-color: transparent; }
+infobar.info button:disabled, infobar.question button:disabled, infobar.warning button:disabled, infobar.error button:disabled { color: #a7a7a7; background-color: #4f4f4f; text-shadow: none; -gtk-icon-shadow: none; box-shadow: none; border-color: transparent; }
 
 infobar.info button:disabled > .label, infobar.question button:disabled > .label, infobar.warning button:disabled > .label, infobar.error button:disabled > .label { color: inherit; }
 
-infobar.info button:backdrop, infobar.question button:backdrop, infobar.warning button:backdrop, infobar.error button:backdrop { border-color: #e52805; }
-
-infobar.info button:backdrop:disabled, infobar.question button:backdrop:disabled, infobar.warning button:backdrop:disabled, infobar.error button:backdrop:disabled { border-color: #e52805; }
-
-infobar.info selection, infobar.question selection, infobar.warning selection, infobar.error selection { background-color: #fa4523; }
+infobar.info selection, infobar.question selection, infobar.warning selection, infobar.error selection { background-color: #343434; }
 
 /************ Tooltips * */
 tooltip { padding: 0; /* not working */ border-radius: 0; box-shadow: none; text-shadow: 0 1px black; }

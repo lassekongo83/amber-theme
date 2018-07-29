@@ -3375,7 +3375,7 @@ paned {
 /**************
  * GtkInfoBar *
  **************/
-
+// FIXME: Revisit this one at some point and use proper colors for each one
 infobar {
   border-style: none;
 
@@ -3385,38 +3385,33 @@ infobar {
   &.error {
     &:backdrop, & {
       label, & { color: $selected_fg_color; }
-      background-color: $selected_bg_color;
+      background-color: lighten($dark_bg_color, 10%);
       border-color: darken($selected_bg_color, 10%);
     }
 
-    text-shadow: 0 1px darken($selected_bg_color, 10%);
-
-    &:backdrop { text-shadow: none; }
+    text-shadow: none;
 
     button {
       // FIXME: extend selection mode buttons
-      @include button(normal, $selected_bg_color, $selected_fg_color, none);
+      @include button(normal, lighten($dark_bg_color, 15%), $selected_fg_color, none);
 
-      &:hover { @include button(hover, lighten($selected_bg_color, 5%), $selected_fg_color, none); }
+      &:hover { @include button(hover, lighten($dark_bg_color, 20%), $selected_fg_color, none); }
 
       &:active,
-      &:checked { @include button(active, $selected_bg_color, $selected_fg_color, none); }
+      &:checked { @include button(active, darken($dark_bg_color, 10%), $selected_fg_color, none); }
 
-      &:disabled { @include button(insensitive,$selected_bg_color,$selected_fg_color,none); }
+      &:disabled { @include button(insensitive,lighten($dark_bg_color, 5%),$selected_fg_color,none); }
 
       &:backdrop {
-        @include button(backdrop, $selected_bg_color, $selected_fg_color, none);
-        border-color: _border_color($selected_bg_color);
+        @include button(backdrop, lighten($dark_bg_color, 5%), $selected_fg_color, none);
 
         &:disabled {
-          @include button(backdrop-insensitive, $selected_bg_color,
-                          $selected_fg_color, none);
-          border-color: _border_color($selected_bg_color);
+          @include button(backdrop-insensitive, $dark_bg_color, $selected_fg_color, none);
         }
       }
     }
 
-    selection { background-color: darken($selected_bg_color, 10%); }
+    selection { background-color: darken($dark_bg_color, 10%); }
 
     *:link { @extend %link_selected; }
   }

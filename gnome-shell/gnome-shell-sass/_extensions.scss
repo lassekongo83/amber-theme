@@ -80,7 +80,6 @@ $panel_color: transparentize(black, 0.5);
   // clock and system menu area
   & > #panelRight {
     box-shadow: inset 1px 0 $panel_color;
-    //background-color: $panel_color;
     .panel-button:hover { box-shadow: none; }
   }
   
@@ -97,6 +96,23 @@ $panel_color: transparentize(black, 0.5);
   #dashtodockContainer {
     border-radius: 0;
 
+    &.extended .show-apps {
+      // FIXME: Figure out if there is a way to extend the box to the edges
+      // &:hover { background-color: transparentize(black,0.3); }
+      transition-duration: 100ms;
+      .overview-icon {
+        border-radius: 0;
+        border: none;
+        //background: none;
+      }
+      &:active, &:checked {
+        .overview-icon {
+          background-color: $selected_bg_color;
+          box-shadow: none;
+        }
+      }
+    }
+
     &.#{$p}.extended {
       @extend %panel_fix;
       @if $p==left { box-shadow: $_panel_left; }
@@ -105,8 +121,8 @@ $panel_color: transparentize(black, 0.5);
       @else if $p==top { box-shadow: $_panel_top; }
     }
 
-    &.shrink #dash,
-    &.dashtodock #dash {
+    &.shrink.#{$p} #dash,
+    &.dashtodock.#{$p} #dash {
       border: none !important;
       padding: 0px;
       background-color: $panel_color;
@@ -238,6 +254,7 @@ $panel_color: transparentize(black, 0.5);
 
     &.#{$p} #dash .app-well-app {
       padding: 0px;
+      // Increase the value if a larger padding between the icons is required
       border: 0px solid transparent;
       @if $p==left or $p==right {
         border-left: 0;
@@ -251,26 +268,16 @@ $panel_color: transparentize(black, 0.5);
       & .overview-icon { margin: 0; }
 
       &.focused .overview-icon {
-        // FIXME: The bg on this one is a stubborn one when showing dots is activated
-        @if $p==left or $p==right { background-gradient-direction: horizontal; }
-        @else if $p==bottom or $p==top { background-gradient-direction: vertical; }
-        background-gradient-start: transparent;
-        background-gradient-end: transparent;
-        background: none;
+        border-radius: 0;
+        // This fixes the hardcoded(?) bg when running dots are activated
+        // Some options with dash to dock's appearance may look a bit wierd. (Metro style for example.)
+        // FIXME: Figure out a way to properly ignore the included styles for better user choice.
+        border-image: url('transparent.png');
       }
 
       &:hover .overview-icon {
         background: none;
       }
-
-      // Handled by running classes
-      //&.focused {
-        //@extend %panel_fix;
-        //@if $p==left { box-shadow: $_selected_left; }
-        //@else if $p==right { box-shadow: $_selected_right; }
-        //@else if $p==bottom { box-shadow: $_selected_bottom; }
-        //@else if $p==top { box-shadow: $_selected_top; }
-      //}
 
       &:active .overview-icon,
       &:focus .overview-icon,
