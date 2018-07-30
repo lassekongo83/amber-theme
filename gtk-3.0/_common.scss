@@ -146,7 +146,6 @@ label {
 
   &.separator {
     @extend .dim-label;
-
     color: $fg_color;
   }
 
@@ -160,15 +159,13 @@ label {
 
   &:disabled {
     color: $insensitive_fg_color;
-
     selection { @extend %selected_items:disabled; }
-
     &:backdrop { color: $backdrop_insensitive_color; }
   }
 }
 
 .dim-label {
-  opacity: 0.55;
+  opacity: 0.6;
   text-shadow: none;
 }
 
@@ -179,9 +176,7 @@ assistant {
   }
 
   &.csd .sidebar { border-top-style: none; }
-
   .sidebar label { padding: 6px 12px; }
-
   .sidebar label.highlight { background-color: mix($bg_color, $fg_color, 80%); }
 }
 
@@ -893,7 +888,6 @@ modelbutton.flat,
 
   &:selected { @extend %selected_items; }
 
-  // FIXME: Not needed in Adwaita any longer
   check:last-child,
   radio:last-child { margin-left: 8px; }
 
@@ -1434,6 +1428,7 @@ headerbar {
     @include entry(normal-header);
     &:focus { @include entry(focus); }
     &:disabled { @include entry(insensitive-header); }
+    caret-color: if($darker=='true', $dark_fg_color, $fg_color);
   }
   .suggested-action {
     &:disabled { @include button(undecorated-disabled); }
@@ -1786,6 +1781,8 @@ menubar,
       background-color: lighten($dark_bg_color, 14%);
     }
 
+    &:backdrop { color: $backdrop_fg_color; }
+
     &:disabled {
       color: $insensitive_fg_color;
       box-shadow: none;
@@ -1989,8 +1986,8 @@ notebook {
     }
 
     tab {
-      min-height: 20px;
-      min-width: 20px;
+      min-height: 24px;
+      min-width: 24px;
       padding: 2px 10px;
 
       outline-offset: -4px;
@@ -2309,6 +2306,11 @@ switch {
   &:checked:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.7); }
 
   row:selected & {
+    &:checked { background-color: transparentize(lighten($selected_bg_color, 20%), 0.5); }
+    &:checked slider { background-color: lighten(lighten($selected_bg_color, 20%), 20%); }
+    &:hover slider { box-shadow: 0 0 0 6px transparentize(lighten($selected_bg_color, 20%), 0.7); }
+    &:focus slider { box-shadow: 0 0 0 6px transparentize(lighten($selected_bg_color, 20%), 0.6); }
+    &:focus:hover slider { box-shadow: 0 0 0 6px transparentize(lighten($selected_bg_color, 20%), 0.5); }
   }
 }
 

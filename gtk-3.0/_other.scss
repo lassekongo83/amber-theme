@@ -204,3 +204,13 @@ window.background.chromium {
     &:selected { &:focus, & { @extend %selected_items; }}
   }
 }
+
+// Gedit
+// Global fix would perhaps be "revealer button"
+.gedit-search-slider {
+  button, button:hover {
+    box-shadow: none;
+    border: 1px solid $borders_color;
+    &:last-child { border-left: 0; }
+  }
+}
