@@ -50,7 +50,7 @@ $shadow_color: transparentize(black, 0.9);
 $drop_target_color: #4e9a06;
 
 //headerbar color
-$header_bg: if($darker == 'true', $dark_bg_color, darken($bg_color, 2%));
+$header_bg: if($darker == 'true', $dark_bg_color, darken($bg_color, 6%));
 
 //insensitive state derived colors
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
@@ -80,4 +80,4 @@ $secondary_bg_color: mix($bg_color, $base_color, 50%);
 $close_button: #b55f5f;
 $close_button_hover: lighten($close_button, 5%);
 $close_button_backdrop: lighten($dark_bg_color, 12%);
-$max_min_hover: lighten($dark_bg_color, 12%);
+$max_min_hover: if($darker=='true' or $variant=='dark', lighten($dark_bg_color, 12%), $borders_color);

@@ -1927,7 +1927,6 @@ popover.background {
 
   list separator { margin: 0px; }
 
-  //FIXME: May not be needed any more
   checkbutton,
   radiobutton { @extend modelbutton.flat; }
 }
@@ -3683,10 +3682,12 @@ headerbar,
   // separator for the titlebutton area
   .right.horizontal {
     border-left: 1px solid if($darker=='true', transparentize(black, 0.8), $borders_color);
+    @if $variant=='dark' { border-left: 0; }
     padding-left: 4px;
   }
   .left.horizontal {
     border-right: 1px solid if($darker=='true', transparentize(black, 0.8), $borders_color);
+    @if $variant=='dark' { border-right: 0; }
     padding-right: 4px;
   }
 
@@ -3712,8 +3713,11 @@ headerbar,
           background-color: $close_button;
           box-shadow: $shadow_normal;
           // FIXME Maybe. Increase the click area of the button to make better use of Fitt's law.
-          // This may require negative margins and a larger radius or new assets.
+          // Will need to redo the assets, using a bg-color doesn't work with this "hack"
+          //margin: 0 -4px 0 0;
           //border: 8px solid $dark_bg_color;
+          //border-radius: 10px;
+
           &:hover {
             background-color: $close_button_hover;
             box-shadow: $shadow_hover;

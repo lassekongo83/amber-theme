@@ -98,17 +98,17 @@ $panel_color: transparentize(black, 0.5);
 
     &.extended .show-apps {
       // FIXME: Figure out if there is a way to extend the box to the edges
-      // &:hover { background-color: transparentize(black,0.3); }
+      //&:hover { background-color: transparentize(black,0.3); }
       transition-duration: 100ms;
       .overview-icon {
-        border-radius: 0;
         border: none;
-        //background: none;
+        //color: transparentize(white, 0.4);
       }
-      &:active, &:checked {
+      &:active, &:checked, &:overview, &:hover {
         .overview-icon {
-          background-color: $selected_bg_color;
-          box-shadow: none;
+          //background-color: transparent;
+          //box-shadow: none;
+          //color: white;
         }
       }
     }
