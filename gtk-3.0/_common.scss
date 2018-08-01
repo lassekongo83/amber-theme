@@ -2227,13 +2227,13 @@ scrollbar {
         &.up#{$s} {
             $_url: 'assets/scrollarrow-up#{$as}#{$asset_suffix}';
             -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
-                                      url('#{$_url}@2.png'));
+                                          url('#{$_url}@2.png'));
         }
 
         &.down#{$s} {
             $_url: 'assets/scrollarrow-down#{$as}#{$asset_suffix}';
             -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
-                                      url('#{$_url}@2.png'));
+                                          url('#{$_url}@2.png'));
         }
       }
     }
@@ -2246,13 +2246,13 @@ scrollbar {
         &.up#{$s} {
             $_url: 'assets/scrollarrow-left#{$as}#{$asset_suffix}';
             -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
-                                      url('#{$_url}@2.png'));
+                                          url('#{$_url}@2.png'));
         }
 
         &.down#{$s} {
             $_url: 'assets/scrollarrow-right#{$as}#{$asset_suffix}';
             -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
-                                      url('#{$_url}@2.png'));
+                                          url('#{$_url}@2.png'));
         }
       }
     }
@@ -2270,7 +2270,7 @@ treeview ~ scrollbar.vertical {
 
 // Originally from materia-theme by nana-4
 switch {
-  transition: background-color 100ms $deceleration_curve, opacity $longer_duration $deceleration_curve;
+  transition: background-color $shortest_duration $deceleration_curve, opacity $longer_duration $deceleration_curve;
   margin: 6px 0;
   padding: 0 2px;
   border: 5px solid transparent;
@@ -2284,7 +2284,7 @@ switch {
   &:disabled { opacity: 0.5; }
 
   slider {
-    transition: all 100ms $deceleration_curve, box-shadow $longer_duration $deceleration_curve;
+    transition: all $shortest_duration $deceleration_curve, box-shadow $longer_duration $deceleration_curve;
     min-width: 20px;
     min-height: 20px;
     margin: -3px -2px;
@@ -3741,8 +3741,7 @@ headerbar,
     // Load png assets for each button
     @each $k in ('close', 'maximize', 'minimize') {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
-      {
-        &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
+      { &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
                                                      url('assets/titlebutton-#{$k}#{$m}@2.png')); }
       }
     }
@@ -3755,9 +3754,8 @@ headerbar,
   .maximized & {
     button.titlebutton {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
-      {
-      &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}.png'),
-                                                      url('assets/titlebutton-unmaximize#{$m}@2.png')); }
+      { &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}.png'),
+                                                        url('assets/titlebutton-unmaximize#{$m}@2.png')); }
       }
     }
   }
@@ -3770,9 +3768,8 @@ headerbar,
   .left {
     button.titlebutton {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
-      {
-      &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-maximize#{$m}-left.png'),
-                                                      url('assets/titlebutton-maximize#{$m}-left@2.png')); }
+      { &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-maximize#{$m}-left.png'),
+                                                        url('assets/titlebutton-maximize#{$m}-left@2.png')); }
       }
     }
   }
@@ -3784,9 +3781,8 @@ headerbar,
   .maximized & {
     .left button.titlebutton {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
-      {
-      &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}-left.png'),
-                                                      url('assets/titlebutton-unmaximize#{$m}-left@2.png')); }
+      { &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}-left.png'),
+                                                        url('assets/titlebutton-unmaximize#{$m}-left@2.png')); }
       }
     }
   }
