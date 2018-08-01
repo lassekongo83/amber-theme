@@ -26,7 +26,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.313708"
-     inkscape:cx="-33.179576"
+     inkscape:cx="31.433466"
      inkscape:cy="24.214626"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -52,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -62,18 +62,29 @@
      id="layer1"
      transform="translate(0,-284.29999)">
     <g
-       id="g842"
-       transform="matrix(0,-0.66666668,1,0,-284.29999,296.99999)">
-      <path
-         id="rect819"
-         d="m 0,284.56457 v 11.1125 h 0.79374999 v -11.1125 z"
-         style="fill:#ffffff;fill-opacity:0.78431373;stroke:none;stroke-width:0.3852953;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824"
-         inkscape:connector-curvature="0" />
-      <path
-         inkscape:connector-curvature="0"
-         style="fill:#ffffff;fill-opacity:0.32941176;stroke:none;stroke-width:0.1189047;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824"
-         d="m 0,296.73541 v -1.05833 h 0.79374999 v 1.05833 z"
-         id="path2798" />
+       id="g2708"
+       transform="matrix(0,1,1,0,-284.29998,296.47082)">
+      <g
+         transform="scale(0.66666668,1)"
+         id="g842">
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:#ffffff;fill-opacity:0.78431373;stroke:none;stroke-width:0.3852953;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824"
+           d="m 0,284.56457 v 11.1125 h 0.79374999 v -11.1125 z"
+           id="rect819" />
+        <path
+           id="path2798"
+           d="m 0,296.73541 v -1.05833 h 0.79374999 v 1.05833 z"
+           style="fill:#ffffff;fill-opacity:0.32941176;stroke:none;stroke-width:0.1189047;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824"
+           inkscape:connector-curvature="0" />
+      </g>
+      <rect
+         y="295.67706"
+         x="-4.4408921e-16"
+         height="0.26458332"
+         width="0.52916664"
+         id="rect2562"
+         style="fill:#1a1a1a;fill-opacity:0.8627451;stroke:none;stroke-width:0.05400784;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824" />
     </g>
   </g>
 </svg>

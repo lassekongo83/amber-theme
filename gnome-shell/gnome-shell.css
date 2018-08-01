@@ -1046,41 +1046,41 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.shrink .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { padding: 2px 4px !important; }
 
-#dashtodockContainer.left #dash .running1 { border-image: url("running1-left-inactive.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running1 { border-image: url("running1-left-inactive.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running1:hover { border-image: url("running1-left-inactive-hover.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running1:hover { border-image: url("running1-left-inactive-hover.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running1.focused { border-image: url("running1-left-active.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running1.focused { border-image: url("running1-left-active.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running1.focused:hover { border-image: url("running1-left-active-hover.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running1.focused:hover { border-image: url("running1-left-active-hover.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running2 { border-image: url("running2-left-inactive.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running2 { border-image: url("running2-left-inactive.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running2:hover { border-image: url("running1-left-inactive-hover.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running2:hover { border-image: url("running1-left-inactive-hover.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running2.focused { border-image: url("running2-left-active.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running2.focused { border-image: url("running2-left-active.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running2.focused:hover { border-image: url("running2-left-active-hover.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running2.focused:hover { border-image: url("running2-left-active-hover.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running3 { border-image: url("running2-left-inactive.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running3 { border-image: url("running2-left-inactive.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running3:hover { border-image: url("running1-left-inactive-hover.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running3:hover { border-image: url("running1-left-inactive-hover.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running3.focused { border-image: url("running2-left-active.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running3.focused { border-image: url("running2-left-active.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running3.focused:hover { border-image: url("running2-left-active-hover.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running3.focused:hover { border-image: url("running2-left-active-hover.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running4 { border-image: url("running2-left-inactive.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running4 { border-image: url("running2-left-inactive.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running4:hover { border-image: url("running1-left-inactive-hover.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running4:hover { border-image: url("running1-left-inactive-hover.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running4.focused { border-image: url("running2-left-active.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running4.focused { border-image: url("running2-left-active.svg") 2 0 2 5; }
 
-#dashtodockContainer.left #dash .running4.focused:hover { border-image: url("running2-left-active-hover.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .running4.focused:hover { border-image: url("running2-left-active-hover.svg") 2 0 2 5; }
 
 #dashtodockContainer.left #dash .app-well-app { transition-duration: 100ms; }
 
-#dashtodockContainer.left #dash .app-well-app:hover { border-image: url("running1-left-inactive-hover.svg") 2 0 2 2; }
+#dashtodockContainer.left #dash .app-well-app:hover { border-image: url("running1-left-inactive-hover.svg") 2 0 2 5; }
 
 #dashtodockContainer.left #dash .app-well-app { padding: 0px; margin: 2px; margin-left: 0; margin-right: 0; }
 
@@ -1110,41 +1110,41 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.shrink .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { padding: 2px 4px !important; }
 
-#dashtodockContainer.right #dash .running1 { border-image: url("running1-right-inactive.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running1 { border-image: url("running1-right-inactive.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running1:hover { border-image: url("running1-right-inactive-hover.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running1:hover { border-image: url("running1-right-inactive-hover.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running1.focused { border-image: url("running1-right-active.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running1.focused { border-image: url("running1-right-active.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running1.focused:hover { border-image: url("running1-right-active-hover.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running1.focused:hover { border-image: url("running1-right-active-hover.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running2 { border-image: url("running2-right-inactive.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running2 { border-image: url("running2-right-inactive.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running2:hover { border-image: url("running2-right-inactive-hover.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running2:hover { border-image: url("running2-right-inactive-hover.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running2.focused { border-image: url("running2-right-active.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running2.focused { border-image: url("running2-right-active.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running2.focused:hover { border-image: url("running2-right-active-hover.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running2.focused:hover { border-image: url("running2-right-active-hover.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running3 { border-image: url("running2-right-inactive.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running3 { border-image: url("running2-right-inactive.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running3:hover { border-image: url("running2-right-inactive-hover.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running3:hover { border-image: url("running2-right-inactive-hover.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running3.focused { border-image: url("running2-right-active.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running3.focused { border-image: url("running2-right-active.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running3.focused:hover { border-image: url("running2-right-active-hover.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running3.focused:hover { border-image: url("running2-right-active-hover.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running4 { border-image: url("running2-right-inactive.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running4 { border-image: url("running2-right-inactive.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running4:hover { border-image: url("running2-right-inactive-hover.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running4:hover { border-image: url("running2-right-inactive-hover.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running4.focused { border-image: url("running2-right-active.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running4.focused { border-image: url("running2-right-active.svg") 0 2 2 5; }
 
-#dashtodockContainer.right #dash .running4.focused:hover { border-image: url("running2-right-active-hover.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .running4.focused:hover { border-image: url("running2-right-active-hover.svg") 0 2 2 5; }
 
 #dashtodockContainer.right #dash .app-well-app { transition-duration: 100ms; }
 
-#dashtodockContainer.right #dash .app-well-app:hover { border-image: url("running1-right-inactive-hover.svg") 0 2 2 2; }
+#dashtodockContainer.right #dash .app-well-app:hover { border-image: url("running1-right-inactive-hover.svg") 0 2 2 5; }
 
 #dashtodockContainer.right #dash .app-well-app { padding: 0px; margin: 2px; margin-left: 0; margin-right: 0; }
 
@@ -1174,41 +1174,41 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.shrink .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { padding: 2px 4px !important; }
 
-#dashtodockContainer.bottom #dash .running1 { border-image: url("running1-bottom-inactive.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running1 { border-image: url("running1-bottom-inactive.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running1:hover { border-image: url("running1-bottom-inactive-hover.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running1:hover { border-image: url("running1-bottom-inactive-hover.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running1.focused { border-image: url("running1-bottom-active.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running1.focused { border-image: url("running1-bottom-active.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running1.focused:hover { border-image: url("running1-bottom-active-hover.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running1.focused:hover { border-image: url("running1-bottom-active-hover.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running2 { border-image: url("running2-bottom-inactive.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running2 { border-image: url("running2-bottom-inactive.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running2:hover { border-image: url("running2-bottom-inactive-hover.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running2:hover { border-image: url("running2-bottom-inactive-hover.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running2.focused { border-image: url("running2-bottom-active.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running2.focused { border-image: url("running2-bottom-active.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running2.focused:hover { border-image: url("running2-bottom-active-hover.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running2.focused:hover { border-image: url("running2-bottom-active-hover.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running3 { border-image: url("running2-bottom-inactive.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running3 { border-image: url("running2-bottom-inactive.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running3:hover { border-image: url("running2-bottom-inactive-hover.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running3:hover { border-image: url("running2-bottom-inactive-hover.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running3.focused { border-image: url("running2-bottom-active.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running3.focused { border-image: url("running2-bottom-active.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running3.focused:hover { border-image: url("running2-bottom-active-hover.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running3.focused:hover { border-image: url("running2-bottom-active-hover.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running4 { border-image: url("running2-bottom-inactive.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running4 { border-image: url("running2-bottom-inactive.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running4:hover { border-image: url("running2-bottom-inactive-hover.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running4:hover { border-image: url("running2-bottom-inactive-hover.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running4.focused { border-image: url("running2-bottom-active.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running4.focused { border-image: url("running2-bottom-active.svg") 2 5 0 2; }
 
-#dashtodockContainer.bottom #dash .running4.focused:hover { border-image: url("running2-bottom-active-hover.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .running4.focused:hover { border-image: url("running2-bottom-active-hover.svg") 2 5 0 2; }
 
 #dashtodockContainer.bottom #dash .app-well-app { transition-duration: 100ms; }
 
-#dashtodockContainer.bottom #dash .app-well-app:hover { border-image: url("running1-bottom-inactive-hover.svg") 2 2 0 2; }
+#dashtodockContainer.bottom #dash .app-well-app:hover { border-image: url("running1-bottom-inactive-hover.svg") 2 5 0 2; }
 
 #dashtodockContainer.bottom #dash .app-well-app { padding: 0px; margin: 2px; margin-top: 0; margin-bottom: 0; }
 
@@ -1238,41 +1238,41 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #dashtodockContainer.shrink .dash-item-container > StButton, #dashtodockContainer.dashtodock .dash-item-container > StButton { padding: 2px 4px !important; }
 
-#dashtodockContainer.top #dash .running1 { border-image: url("running1-top-inactive.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running1 { border-image: url("running1-top-inactive.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running1:hover { border-image: url("running1-top-inactive-hover.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running1:hover { border-image: url("running1-top-inactive-hover.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running1.focused { border-image: url("running1-top-active.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running1.focused { border-image: url("running1-top-active.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running1.focused:hover { border-image: url("running1-top-active-hover.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running1.focused:hover { border-image: url("running1-top-active-hover.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running2 { border-image: url("running2-top-inactive.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running2 { border-image: url("running2-top-inactive.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running2:hover { border-image: url("running2-top-inactive-hover.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running2:hover { border-image: url("running2-top-inactive-hover.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running2.focused { border-image: url("running2-top-active.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running2.focused { border-image: url("running2-top-active.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running2.focused:hover { border-image: url("running2-top-active-hover.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running2.focused:hover { border-image: url("running2-top-active-hover.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running3 { border-image: url("running2-top-inactive.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running3 { border-image: url("running2-top-inactive.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running3:hover { border-image: url("running2-top-inactive-hover.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running3:hover { border-image: url("running2-top-inactive-hover.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running3.focused { border-image: url("running2-top-active.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running3.focused { border-image: url("running2-top-active.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running3.focused:hover { border-image: url("running2-top-active-hover.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running3.focused:hover { border-image: url("running2-top-active-hover.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running4 { border-image: url("running2-top-inactive.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running4 { border-image: url("running2-top-inactive.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running4:hover { border-image: url("running2-top-inactive-hover.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running4:hover { border-image: url("running2-top-inactive-hover.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running4.focused { border-image: url("running2-top-active.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running4.focused { border-image: url("running2-top-active.svg") 2 5 2 0; }
 
-#dashtodockContainer.top #dash .running4.focused:hover { border-image: url("running2-top-active-hover.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .running4.focused:hover { border-image: url("running2-top-active-hover.svg") 2 5 2 0; }
 
 #dashtodockContainer.top #dash .app-well-app { transition-duration: 100ms; }
 
-#dashtodockContainer.top #dash .app-well-app:hover { border-image: url("running1-top-inactive-hover.svg") 2 2 2 0; }
+#dashtodockContainer.top #dash .app-well-app:hover { border-image: url("running1-top-inactive-hover.svg") 2 5 2 0; }
 
 #dashtodockContainer.top #dash .app-well-app { padding: 0px; margin: 2px; margin-top: 0; margin-bottom: 0; }
 

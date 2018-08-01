@@ -89,10 +89,10 @@ $panel_color: transparentize(black, 0.4);
 // Dash to dock extension styling
 
 @each $p in (left), (right), (bottom), (top) {
-  $_bil: 2 0 2 2; // left border-image
-  $_bir: 0 2 2 2; // right
-  $_bib: 2 2 0 2; // bottom
-  $_bit: 2 2 2 0; // top
+  $_bil: 2 0 2 5; // left border-image
+  $_bir: 0 2 2 5; // right
+  $_bib: 2 5 0 2; // bottom
+  $_bit: 2 5 2 0; // top
   #dashtodockContainer {
     border-radius: 0;
 
