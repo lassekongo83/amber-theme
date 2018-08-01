@@ -26,7 +26,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.313708"
-     inkscape:cx="-9.4914976"
+     inkscape:cx="0.84993956"
      inkscape:cy="24.214626"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -52,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -67,31 +67,31 @@
       <rect
          style="fill:#fb6f55;fill-opacity:1;stroke:none;stroke-width:0.37718299;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824"
          id="rect819"
-         width="0.79374999"
-         height="11.112511"
+         width="0.5291667"
+         height="11.112498"
          x="-2.7815501e-08"
          y="284.56458" />
       <rect
          style="fill:#ffffff;fill-opacity:0.25098039;stroke:none;stroke-width:0.24749504;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824"
          id="rect2749"
-         width="11.90625"
-         height="11.1125"
-         x="0.79374999"
+         width="12.170834"
+         height="11.11249"
+         x="0.52916664"
          y="284.56458" />
       <rect
          transform="scale(1,-1)"
          y="-296.73541"
-         x="0.79374999"
-         height="1.0583456"
-         width="11.90625"
+         x="0.52916664"
+         height="1.0583436"
+         width="12.170835"
          id="rect2751"
          style="fill:#ffffff;fill-opacity:0.18823529;stroke:none;stroke-width:0.07637906;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824" />
       <rect
          transform="scale(1,-1)"
          y="-296.73541"
          x="-2.7815501e-08"
-         height="1.0583272"
-         width="0.79374999"
+         height="1.0583392"
+         width="0.5291667"
          id="rect2787"
          style="fill:#fb6f55;fill-opacity:0.64313725;stroke:none;stroke-width:0.1164008;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.07058824" />
     </g>

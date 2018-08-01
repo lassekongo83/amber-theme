@@ -1,27 +1,27 @@
 $_running_color: transparentize(white,0.4);
-$_running_top: inset 0 3px $_running_color;
-$_running_bottom: inset 0 -3px $_running_color;
-$_running_left: inset 3px 0 $_running_color;
-$_running_right: inset -3px 0 $_running_color;
+$_running_top: inset 0 2px $_running_color;
+$_running_bottom: inset 0 -2px $_running_color;
+$_running_left: inset 2px 0 $_running_color;
+$_running_right: inset -2px 0 $_running_color;
 
 $_hover_color: transparentize(white,0.2);
-$_hover_effect_top: inset 0 3px $_hover_color;
-$_hover_effect_bottom: inset 0 -3px $_hover_color;
-$_hover_effect_left: inset 3px 0 $_hover_color;
-$_hover_effect_right: inset -3px 0 $_hover_color;
+$_hover_effect_top: inset 0 2px $_hover_color;
+$_hover_effect_bottom: inset 0 -2px $_hover_color;
+$_hover_effect_left: inset 2px 0 $_hover_color;
+$_hover_effect_right: inset -2px 0 $_hover_color;
 
-$_selected_top: inset 0 3px $selected_bg_color;
-$_selected_bottom: inset 0 -3px $selected_bg_color;
-$_selected_left: inset 3px 0 $selected_bg_color;
-$_selected_right: inset -3px 0 $selected_bg_color;
+$_selected_top: inset 0 2px $selected_bg_color;
+$_selected_bottom: inset 0 -2px $selected_bg_color;
+$_selected_left: inset 2px 0 $selected_bg_color;
+$_selected_right: inset -2px 0 $selected_bg_color;
 
-$_panel_shade: transparentize(black,0.6);
-$_panel_top: inset 0 3px $_panel_shade;
-$_panel_bottom: inset 0 -3px $_panel_shade;
-$_panel_left: inset 3px 0 $_panel_shade;
-$_panel_right: inset -3px 0 $_panel_shade;
+$_panel_shade: transparentize(black,0.66);
+$_panel_top: inset 0 2px $_panel_shade;
+$_panel_bottom: inset 0 -2px $_panel_shade;
+$_panel_left: inset 2px 0 $_panel_shade;
+$_panel_right: inset -2px 0 $_panel_shade;
 
-$panel_color: transparentize(black, 0.5);
+$panel_color: transparentize(black, 0.4);
 
 // Trick due to St limitations. It needs a background to draw a box-shadow
 %panel_fix {
@@ -89,10 +89,10 @@ $panel_color: transparentize(black, 0.5);
 // Dash to dock extension styling
 
 @each $p in (left), (right), (bottom), (top) {
-  $_bil: 3 0 2 2; // left border-image
-  $_bir: 0 3 2 2; // right
-  $_bib: 1 1 0 3; // bottom
-  $_bit: 1 1 3 0; // top
+  $_bil: 2 0 2 2; // left border-image
+  $_bir: 0 2 2 2; // right
+  $_bib: 2 2 0 2; // bottom
+  $_bit: 2 2 2 0; // top
   #dashtodockContainer {
     border-radius: 0;
 
@@ -100,17 +100,17 @@ $panel_color: transparentize(black, 0.5);
       // FIXME: Figure out if there is a way to extend the box to the edges
       //&:hover { background-color: transparentize(black,0.3); }
       transition-duration: 100ms;
-      .overview-icon {
-        border: none;
+      //.overview-icon {
+        //border: none;
         //color: transparentize(white, 0.4);
-      }
-      &:active, &:checked, &:overview, &:hover {
-        .overview-icon {
+      //}
+      //&:active, &:checked, &:overview, &:hover {
+        //.overview-icon {
           //background-color: transparent;
           //box-shadow: none;
           //color: white;
-        }
-      }
+        //}
+      //}
     }
 
     &.#{$p}.extended {
@@ -124,7 +124,7 @@ $panel_color: transparentize(black, 0.5);
     &.shrink.#{$p} #dash,
     &.dashtodock.#{$p} #dash {
       border: none !important;
-      padding: 0px;
+      padding: 0;
       background-color: $panel_color;
     }
 
@@ -254,15 +254,16 @@ $panel_color: transparentize(black, 0.5);
 
     &.#{$p} #dash .app-well-app {
       padding: 0px;
-      // Increase the value if a larger padding between the icons is required
-      border: 0px solid transparent;
+
+      // Increase the value to increase the space between the icons
+      margin: 2px;
       @if $p==left or $p==right {
-        border-left: 0;
-        border-right: 0;
+        margin-left: 0;
+        margin-right: 0;
       }
       @else if $p==bottom or $p==top {
-        border-top: 0;
-        border-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
       }
 
       & .overview-icon { margin: 0; }
