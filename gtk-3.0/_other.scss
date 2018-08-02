@@ -206,11 +206,21 @@ window.background.chromium {
 }
 
 // Gedit
-// Global fix would perhaps be "revealer button"
 .gedit-search-slider {
   button, button:hover {
     box-shadow: none;
     border: 1px solid $borders_color;
     &:last-child { border-left: 0; }
   }
+}
+
+// Firefox
+#MozillaGtkWidget.background  {
+  headerbar.titlebar {
+    //Remove the round corners until firefox fixed the white border bleed at the top edges
+    border-radius: 0;
+  }
+
+  > menu, .menu { border: none; } // Removed ugly menu borders
+  > menu > menuitem { border-radius: 0; } // Removed rounded menu corners
 }

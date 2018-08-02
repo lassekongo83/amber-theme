@@ -1795,3 +1795,9 @@ window.background.chromium button { border-color: #b9b9b5; }
 .gedit-search-slider button, .gedit-search-slider button:hover { box-shadow: none; border: 1px solid #b9b9b5; }
 
 .gedit-search-slider button:last-child, .gedit-search-slider button:hover:last-child { border-left: 0; }
+
+#MozillaGtkWidget.background headerbar.titlebar { border-radius: 0; }
+
+#MozillaGtkWidget.background > menu, #MozillaGtkWidget.background .menu { border: none; }
+
+#MozillaGtkWidget.background > menu > menuitem { border-radius: 0; }

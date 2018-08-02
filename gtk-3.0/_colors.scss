@@ -82,3 +82,9 @@ $close_button: transparentize($selected_bg_color, 0.4); //#b55f5f;
 $close_button_hover: $selected_bg_color; //lighten($close_button, 5%);
 $close_button_backdrop: lighten($dark_bg_color, 12%);
 $max_min_hover: if($darker=='true' or $variant=='dark', lighten($dark_bg_color, 12%), $borders_color);
+
+// Terminal colors
+$terminal_bg_color: #300A24;
+$terminal_base_color: lighten($terminal_bg_color, 5%);
+$terminal_fg_color: white;
+$terminal_borders_color: darken($terminal_bg_color, 10%);
