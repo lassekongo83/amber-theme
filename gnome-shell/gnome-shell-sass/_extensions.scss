@@ -123,7 +123,9 @@ $panel_color: transparentize(black, 0.4);
 
     &.shrink.#{$p} #dash,
     &.dashtodock.#{$p} #dash {
-      border: none !important;
+      // Seems the border can't be removed with a theme
+      // Need to change it in ~/.local/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/stylsheet.css
+      border: 0 !important;
       padding: 0;
       background-color: $panel_color;
     }
