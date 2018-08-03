@@ -530,7 +530,7 @@ searchbar > revealer > box { margin: -6px; padding: 6px; }
 
 .default-decoration.titlebar:not(headerbar), headerbar.default-decoration { padding: 4px; min-height: 28px; }
 
-.default-decoration.titlebar:not(headerbar) button.titlebutton, headerbar.default-decoration button.titlebutton { min-height: 24px; min-width: 24px; margin: 0; padding: 0; }
+.default-decoration.titlebar:not(headerbar) button.titlebutton, headerbar.default-decoration button.titlebutton { min-height: 22px; min-width: 22px; margin: 0; padding: 0; }
 
 .titlebar:not(headerbar) separator, .titlebar:not(headerbar) separator:backdrop, headerbar separator, headerbar separator:backdrop { background-color: #4d4d4d; }
 
@@ -1482,9 +1482,11 @@ messagedialog.csd decoration { border-radius: 2px; box-shadow: 0 1px 2px rgba(0,
 
 .solid-csd decoration { border-radius: 0; margin: 4px; background-color: #4d4d4d; border: solid 1px #2b2b2b; box-shadow: none; }
 
+.ssd .titlebar.default-decoration button.titlebutton, headerbar button.titlebutton, .titlebar button.titlebutton, #MozillaGtkWidget.background headerbar.titlebar button.titlebutton { min-width: 22px; min-height: 22px; padding: 0; margin: 2px; }
+
 .ssd .titlebar { border-width: 0; background-color: #4d4d4d; box-shadow: inset 0 1px rgba(255, 255, 255, 0.04); padding: 2px 4px; }
 
-.ssd .titlebar.default-decoration button.titlebutton { min-width: 22px; min-height: 22px; padding: 0; margin: 2px; transition-duration: 100ms; }
+.ssd .titlebar.default-decoration button.titlebutton { transition-duration: 100ms; }
 
 headerbar.default-decoration button.titlebutton, .titlebar.default-decoration button.titlebutton { padding: 0 4px; min-width: 0; min-height: 22px; margin: 0; }
 
@@ -1492,7 +1494,7 @@ headerbar .right.horizontal, .titlebar .right.horizontal { border-left: 1px soli
 
 headerbar .left.horizontal, .titlebar .left.horizontal { border-right: 1px solid rgba(0, 0, 0, 0.2); border-right: 0; padding-right: 4px; }
 
-headerbar button.titlebutton, .titlebar button.titlebutton { padding: 0; min-width: 22px; min-height: 22px; margin: 2px; border-color: transparent; background-color: transparent; background-image: none; box-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(242, 241, 240, 0); text-shadow: none; -gtk-icon-shadow: none; }
+headerbar button.titlebutton, .titlebar button.titlebutton { border-color: transparent; background-color: transparent; background-image: none; box-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(242, 241, 240, 0); text-shadow: none; -gtk-icon-shadow: none; }
 
 headerbar button.titlebutton.close, .titlebar button.titlebutton.close { color: transparent; background-color: transparent; background-position: center; background-repeat: no-repeat; border-width: 0; box-shadow: none; transition-duration: 100ms; background-color: rgba(251, 111, 85, 0.6); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16); }
 
@@ -1791,3 +1793,17 @@ window.background.chromium button { border-color: #272727; }
 #MozillaGtkWidget.background > menu, #MozillaGtkWidget.background .menu { border: none; }
 
 #MozillaGtkWidget.background > menu > menuitem { border-radius: 0; }
+
+#MozillaGtkWidget.background entry, #MozillaGtkWidget.background button { border-color: #272727; }
+
+#MozillaGtkWidget.background entry:focus, #MozillaGtkWidget.background button:focus { border-color: #fb6f55; }
+
+normal-button { color: #f2f1f0; outline-color: rgba(242, 241, 240, 0.3); background-color: #646464; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(18, 18, 18, 0.1); border-color: transparent; border-bottom-color: transparent; }
+
+normal-button:hover { color: #f2f1f0; background-color: #6c6c6c; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.25); }
+
+normal-button:active { color: #f2f1f0; outline-color: rgba(242, 241, 240, 0.3); background-color: #393939; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08), inset 0 2px rgba(0, 0, 0, 0.04); border-color: #121212; border-bottom-color: #121212; border-top-color: black; }
+
+normal-button:disabled { color: #a09f9f; background-color: #5e5d5d; text-shadow: none; -gtk-icon-shadow: none; box-shadow: none; border-color: transparent; }
+
+normal-button:disabled > .label { color: inherit; }

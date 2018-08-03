@@ -1396,8 +1396,8 @@ headerbar {
     min-height: 28px;
 
     button.titlebutton {
-      min-height: 24px;
-      min-width: 24px;
+      min-height: $b_size;
+      min-width: $b_size;
       margin: 0;
       padding: 0;
     }
@@ -3586,8 +3586,6 @@ colorchooser .popover.osd { border-radius: 0; }
  * Window Decorations *
  *********************/
 
-$b_size: 22px; // Titlebuttons default size
-
 decoration {
   border-radius: $br_w $br_w 0 0;
   border-width: 0px;
@@ -3658,18 +3656,22 @@ decoration {
   }
 }
 
-.ssd .titlebar {
-    border-width: 0; // No line below the title bar
-    @include ssd_fill;
-    padding: 2px 4px;
+%titlebutton {
+  min-width: $b_size;
+  min-height: $b_size;
+  padding: 0;
+  margin: 2px;
+}
 
-    &.default-decoration button.titlebutton {
-      min-width: $b_size;
-      min-height: $b_size;
-      padding: 0;
-      margin: 2px;
-      transition-duration: $shortest_duration;
-    }
+.ssd .titlebar {
+  border-width: 0; // No line below the title bar
+  @include ssd_fill;
+  padding: 2px 4px;
+
+  &.default-decoration button.titlebutton {
+    @extend %titlebutton;
+    transition-duration: $shortest_duration;
+  }
 }
 
 headerbar,
@@ -3694,10 +3696,7 @@ headerbar,
   }
 
   button.titlebutton {
-    padding: 0;
-    min-width: $b_size;
-    min-height: $b_size;
-    margin: 2px;
+    @extend %titlebutton;
 
     @include button(undecorated);
 

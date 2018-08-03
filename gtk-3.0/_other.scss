@@ -219,8 +219,23 @@ window.background.chromium {
   headerbar.titlebar {
     //Remove the round corners until firefox fixed the white border bleed at the top edges
     border-radius: 0;
+
+    button.titlebutton { @extend %titlebutton; }
   }
 
   > menu, .menu { border: none; } // Removed ugly menu borders
   > menu > menuitem { border-radius: 0; } // Removed rounded menu corners
+
+  // box-shadows doesn't work, so a border color is needed on the entries and buttons instead
+  entry, button {
+    border-color: $borders_color;
+    &:focus { border-color: $selected_bg_color; }
+  }
+}
+
+normal-button {
+  @include button(normal);
+  &:hover { @include button(hover); }
+  &:active { @include button(active) }
+  &:disabled { @include button(insensitive); }
 }
