@@ -1396,8 +1396,8 @@ headerbar {
     min-height: 28px;
 
     button.titlebutton {
-      min-height: $b_size;
-      min-width: $b_size;
+      min-height: $titlebutton_size;
+      min-width: $titlebutton_size;
       margin: 0;
       padding: 0;
     }
@@ -3657,8 +3657,8 @@ decoration {
 }
 
 %titlebutton {
-  min-width: $b_size;
-  min-height: $b_size;
+  min-width: $titlebutton_size;
+  min-height: $titlebutton_size;
   padding: 0;
   margin: 2px;
 }
@@ -3679,7 +3679,7 @@ headerbar,
   &.default-decoration button.titlebutton { // no vertical padding for ssd buttons
     padding: 0 4px;                         // already handled by the titlebar-padding
     min-width: 0;
-    min-height: $b_size;
+    min-height: $titlebutton_size;
     margin: 0;
   }
 
