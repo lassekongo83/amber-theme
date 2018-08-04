@@ -2,7 +2,7 @@
 // it gets @if ed depending on $variant
 
 // When we want to use the dark colors in the light theme
-$dark_bg_color: #4d4d4d;
+$dark_bg_color: #444240; //#4d4d4d;
 $dark_fg_color: #f2f1f0;
 $dark_borders_color: darken($dark_bg_color,15%);
 $dark_base_color: #111;

@@ -7,11 +7,11 @@ gtk-color-scheme   = "bg_color:#dededc\nselected_bg_color:#fb6f55\nbase_color:#f
 gtk-color-scheme   = "fg_color:#3C3C3C\nselected_fg_color:#ffffff\ntext_color:#3C3C3C" # Foreground, text.
 gtk-color-scheme   = "tooltip_bg_color:#000000\ntooltip_fg_color:#FFFFFF" # Tooltips.
 gtk-color-scheme   = "link_color:#2d71b8" # Hyperlinks
-gtk-color-scheme   = "panel_bg_color:#4d4d4d" # Panel bg color
+gtk-color-scheme   = "panel_bg_color:#444240" # Panel bg color
 gtk-color-scheme   = "panel_fg_color:#FFFFFF" # Panel fg color
 gtk-color-scheme   = "fm_color:#F7F7F7" # Color used in Thunar.
-gtk-color-scheme   = "bg_color_dark:#4d4d4d\ntext_color_dark:#f2f1f0"
-gtk-color-scheme   = "titlebar_color:#4d4d4d"
+gtk-color-scheme   = "bg_color_dark:#444240\ntext_color_dark:#f2f1f0"
+gtk-color-scheme   = "titlebar_color:#444240"
 
 gtk-icon-sizes     = "panel-applications-menu=24,24:panel-menu=24,24:panel=16,16:gtk-button=16,16"
 gtk-button-images  = 1 # Disables icons for buttons with text
