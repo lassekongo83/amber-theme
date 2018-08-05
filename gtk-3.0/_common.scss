@@ -81,7 +81,7 @@ $asset_suffix: if($variant=='dark', '-dark', '');
 %view {
   color: $text_color;
   background-color: $base_color;
-  &:hover { background-color: darken($base_color, 5%); }
+  &:hover { background-color: transparentize($selected_bg_color, 0.84); }
   &:selected {
     border-radius: 0;
     @extend %selected_items;
@@ -3224,6 +3224,10 @@ placessidebar {
   }
 
   separator { border-top: 1px solid $secondary_borders_color; }
+
+  .sidebar-row {
+    &:hover { background-color: transparentize($selected_bg_color, 0.84); }
+  }
 
   row {
     // Needs overriding of the GtkListBoxRow padding

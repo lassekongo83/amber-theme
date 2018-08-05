@@ -20,7 +20,7 @@
 
 .view, iconview, .view text, iconview text, textview text, .nautilus-window notebook, .nautilus-window notebook > stack:not(:only-child) searchbar { color: white; background-color: #111; }
 
-.view:hover, iconview:hover, .view text:hover, iconview text:hover, textview text:hover, .nautilus-window notebook:hover, .nautilus-window notebook > stack:not(:only-child) searchbar:hover { background-color: #040404; }
+.view:hover, iconview:hover, .view text:hover, iconview text:hover, textview text:hover, .nautilus-window notebook:hover, .nautilus-window notebook > stack:not(:only-child) searchbar:hover { background-color: rgba(251, 111, 85, 0.16); }
 
 .view:selected, iconview:selected, .view text:selected, iconview text:selected, textview text:selected, .nautilus-window notebook:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:selected { border-radius: 0; }
 
@@ -1309,6 +1309,8 @@ row image.sidebar-icon { opacity: 0.7; }
 placessidebar > viewport.frame { border-style: none; border-right: #1d1c1b; box-shadow: inset -2px 0 rgba(0, 0, 0, 0.02), inset -1px 0 rgba(0, 0, 0, 0.06); }
 
 placessidebar separator { border-top: 1px solid #161615; }
+
+placessidebar .sidebar-row:hover { background-color: rgba(251, 111, 85, 0.16); }
 
 placessidebar row { min-height: 36px; padding: 0px; }
 
