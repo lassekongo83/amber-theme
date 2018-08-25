@@ -837,8 +837,8 @@ widget "*swt-toolbar-flat"  style "null"
 
 # EXTERNAL FILES
 include "panel.rc"
-include "check-radio.rc"
 include "buttons.rc"
+include "check-radio.rc"
 include "chromium.rc"
 include "thunar.rc"
 include "caja.rc"

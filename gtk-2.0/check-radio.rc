@@ -190,5 +190,5 @@ style "check-radio"
     }
 }
 
-widget_class "*<GtkRadioButton>*" style "check-radio"
-widget_class "*<GtkCheckButton>*" style "check-radio"
+widget_class "*<GtkRadioButton>*" style:highest "check-radio"
+widget_class "*<GtkCheckButton>*" style:highest "check-radio"
