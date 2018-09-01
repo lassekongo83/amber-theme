@@ -2359,9 +2359,9 @@ radio {
 
   @include check(normal);
 
-  &:hover { @include check(hover); }
-  &:active { @include check(checked); }
-  &:checked { @include check(checked); }
+  &:hover, &:hover:backdrop { @include check(hover); }
+  &:active, &:active:backdrop { @include check(checked); }
+  &:checked, &:checked:backdrop { @include check(checked); }
   &:checked:hover { @include check(checked); }
   &:disabled { @include check(insensitive); }
 
@@ -2384,7 +2384,7 @@ radio {
     border: 1px solid;
     box-shadow: none;
 
-    &, &:hover, &:disabled, &:checked { //FIXME use button reset mixin
+    &, &:disabled, &:checked { //FIXME use button reset mixin
       min-height: 14px;
       min-width: 14px;
       background-image: none;
@@ -2392,7 +2392,11 @@ radio {
       box-shadow: none;
       -gtk-icon-shadow: none;
       color: inherit;
-      border-color: $borders_color; // FIXME: Make this look better.
+      border-color: $borders_color;
+    }
+    &:checked:hover, &:hover {
+      border-color: $selected_borders_color;
+      color: $selected_fg_color;
     }
   }
 }

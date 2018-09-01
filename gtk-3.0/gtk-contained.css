@@ -82,7 +82,7 @@ spinner:checked { opacity: 1; animation: spin 1s linear infinite; }
 spinner:checked:disabled { opacity: 0.5; }
 
 /**************** Text Entries * */
-spinbutton:not(.vertical), entry { min-height: 24px; padding-left: 8px; padding-right: 8px; border: 1px solid; border-radius: 2px; transition: none; color: #3C3C3C; border-color: #b9b9b5; border-bottom-color: #94948d; background-color: #FFFFFF; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; }
+spinbutton:not(.vertical), entry { min-height: 24px; padding-left: 8px; padding-right: 8px; border: 1px solid; border-radius: 2px; transition: none; color: #3C3C3C; border-color: #b9b9b5; border-bottom-color: #94948d; background-color: #FFFFFF; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); }
 
 spinbutton:not(.vertical) image.left, entry image.left { padding-left: 0; padding-right: 6px; }
 
@@ -172,7 +172,7 @@ treeview entry.flat:focus, treeview entry:focus { border-color: #fb6f55; }
 @keyframes needs_attention { from { background-image: radial-gradient(farthest-side, #fb6f55 0%, rgba(251, 111, 85, 0) 0%); }
   to { background-image: radial-gradient(farthest-side, #fb6f55 95%, rgba(251, 111, 85, 0)); } }
 
-notebook > header > tabs > arrow, button { min-height: 20px; min-width: 16px; padding: 4px 4px; border: 1px solid; border-radius: 2px; color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; }
+notebook > header > tabs > arrow, button { min-height: 20px; min-width: 16px; padding: 4px 4px; border: 1px solid; border-radius: 2px; color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); }
 
 notebook > header > tabs > arrow, button.sidebar-button, button.flat { border-color: transparent; background-color: transparent; background-image: none; box-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); text-shadow: none; -gtk-icon-shadow: none; transition: none; }
 
@@ -236,7 +236,7 @@ popover.background.touch-selection button.flat:disabled, popover.background.magn
 
 popover.background.touch-selection button.flat:active, popover.background.magnifier button.flat:active, .app-notification button.flat:active, popover.background.touch-selection button.flat:checked, popover.background.magnifier button.flat:checked, .app-notification button.flat:checked, .osd button.flat:active, .osd button.flat:checked { color: white; border-color: rgba(0, 0, 0, 0.7); background-image: image(rgba(0, 0, 0, 0.7)); background-clip: padding-box; box-shadow: none; text-shadow: none; -gtk-icon-shadow: none; outline-color: rgba(238, 238, 236, 0.3); }
 
-button.suggested-action { color: white; outline-color: rgba(255, 255, 255, 0.3); background-color: #fc9582; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; }
+button.suggested-action { color: white; outline-color: rgba(255, 255, 255, 0.3); background-color: #fc9582; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); }
 
 button.suggested-action.flat { border-color: transparent; background-color: transparent; background-image: none; box-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); text-shadow: none; -gtk-icon-shadow: none; color: #fb6f55; }
 
@@ -262,7 +262,7 @@ button.suggested-action:disabled:active > .label, button.suggested-action:disabl
 
 .osd button.suggested-action:disabled { color: #999896; border-color: rgba(0, 0, 0, 0.7); background-image: image(rgba(85, 83, 81, 0.5)); background-clip: padding-box; box-shadow: none; text-shadow: none; -gtk-icon-shadow: none; }
 
-button.destructive-action { color: white; outline-color: rgba(255, 255, 255, 0.3); background-color: #f37c7a; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; }
+button.destructive-action { color: white; outline-color: rgba(255, 255, 255, 0.3); background-color: #f37c7a; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); }
 
 button.destructive-action.flat { border-color: transparent; background-color: transparent; background-image: none; box-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); text-shadow: none; -gtk-icon-shadow: none; color: #ef5350; }
 
@@ -318,7 +318,7 @@ button.circular label { padding: 0; }
 
 .stack-switcher > button.needs-attention > label:dir(rtl), .stack-switcher > button.needs-attention > image:dir(rtl), stacksidebar row.needs-attention > label:dir(rtl) { background-position: left 3px, left 4px; }
 
-.inline-toolbar toolbutton > button { color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; }
+.inline-toolbar toolbutton > button { color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); }
 
 .inline-toolbar toolbutton > button:hover { color: #3C3C3C; background-color: #fcfcfc; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.25); }
 
@@ -498,7 +498,7 @@ searchbar > revealer > box { margin: -6px; padding: 6px; }
 
 .selection-mode.titlebar:backdrop:not(headerbar), headerbar.selection-mode:backdrop { background-color: #fb6f55; background-image: none; box-shadow: inset 0 1px #fdc5bb; }
 
-.selection-mode.titlebar:not(headerbar) button, headerbar.selection-mode button { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); background-color: #fc9582; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; }
+.selection-mode.titlebar:not(headerbar) button, headerbar.selection-mode button { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); background-color: #fc9582; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); }
 
 .selection-mode.titlebar:not(headerbar) button.flat, headerbar.selection-mode button.flat { border-color: transparent; background-color: transparent; background-image: none; box-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); text-shadow: none; -gtk-icon-shadow: none; }
 
@@ -516,7 +516,7 @@ searchbar > revealer > box { margin: -6px; padding: 6px; }
 
 .selection-mode.titlebar:not(headerbar) button:disabled:active > .label, .selection-mode.titlebar:not(headerbar) button:disabled:checked > .label, headerbar.selection-mode button:disabled:active > .label, headerbar.selection-mode button:disabled:checked > .label { color: inherit; }
 
-.selection-mode.titlebar:not(headerbar) button.suggested-action, headerbar.selection-mode button.suggested-action { color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; border-color: #e52805; }
+.selection-mode.titlebar:not(headerbar) button.suggested-action, headerbar.selection-mode button.suggested-action { color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); border-color: #e52805; }
 
 .selection-mode.titlebar:not(headerbar) button.suggested-action:hover, headerbar.selection-mode button.suggested-action:hover { color: #3C3C3C; background-color: #fcfcfc; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.25); border-color: #e52805; }
 
@@ -954,13 +954,19 @@ check, radio { margin: 0 4px; min-height: 14px; min-width: 14px; border: 1px sol
 
 check:only-child, radio:only-child { margin: 0; }
 
-check:hover, radio:hover { color: #3C3C3C; border: 1px solid #fb6f55; }
+check:hover, check:hover:backdrop, radio:hover, radio:hover:backdrop { color: #3C3C3C; border: 1px solid #fb6f55; }
 
-check:active, radio:active { color: #ffffff; background-color: #fb6f55; border: 1px solid #fb6f55; }
+check:active, check:active:backdrop, radio:active, radio:active:backdrop { color: #ffffff; background-color: #fb6f55; border: 1px solid #fb6f55; }
 
-check:checked, radio:checked { color: #ffffff; background-color: #fb6f55; border: 1px solid #fb6f55; }
+check:active:backdrop, check:active:backdrop:backdrop, radio:active:backdrop, radio:active:backdrop:backdrop { color: #ffffff; }
+
+check:checked, check:checked:backdrop, radio:checked, radio:checked:backdrop { color: #ffffff; background-color: #fb6f55; border: 1px solid #fb6f55; }
+
+check:checked:backdrop, check:checked:backdrop:backdrop, radio:checked:backdrop, radio:checked:backdrop:backdrop { color: #ffffff; }
 
 check:checked:hover, radio:checked:hover { color: #ffffff; background-color: #fb6f55; border: 1px solid #fb6f55; }
+
+check:checked:hover:backdrop, radio:checked:hover:backdrop { color: #ffffff; }
 
 check:disabled, radio:disabled { color: #8d8d8c; border-color: #9b9b95; background-color: #cececc; }
 
@@ -976,7 +982,9 @@ row:selected check, row:selected radio { border-color: #e52805; }
 
 menu menuitem check, menu menuitem radio { margin: 0; border: 1px solid; box-shadow: none; }
 
-menu menuitem check, menu menuitem check:hover, menu menuitem check:disabled, menu menuitem check:checked, menu menuitem radio, menu menuitem radio:hover, menu menuitem radio:disabled, menu menuitem radio:checked { min-height: 14px; min-width: 14px; background-image: none; background-color: transparent; box-shadow: none; -gtk-icon-shadow: none; color: inherit; border-color: #b9b9b5; }
+menu menuitem check, menu menuitem check:disabled, menu menuitem check:checked, menu menuitem radio, menu menuitem radio:disabled, menu menuitem radio:checked { min-height: 14px; min-width: 14px; background-image: none; background-color: transparent; box-shadow: none; -gtk-icon-shadow: none; color: inherit; border-color: #b9b9b5; }
+
+menu menuitem check:checked:hover, menu menuitem check:hover, menu menuitem radio:checked:hover, menu menuitem radio:hover { border-color: #e52805; color: #ffffff; }
 
 check { border-radius: 2px; }
 
@@ -1043,7 +1051,7 @@ scale fill:disabled { border-color: transparent; background-color: transparent; 
 
 .osd scale fill:disabled { border-color: transparent; background-color: transparent; }
 
-scale slider { transition: all 100ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1); color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; border-radius: 100%; }
+scale slider { transition: all 100ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1); color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); border-radius: 100%; }
 
 scale slider:hover { color: #3C3C3C; background-color: #fcfcfc; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.25); box-shadow: 0 0 0 6px rgba(251, 111, 85, 0.3); }
 
@@ -1167,7 +1175,7 @@ levelbar block { min-width: 32px; min-height: 1px; }
 
 levelbar.vertical block { min-width: 1px; min-height: 32px; }
 
-levelbar trough { border: 1px solid; padding: 2px; border-radius: 0; color: #3C3C3C; border-color: #b9b9b5; border-bottom-color: #94948d; background-color: #FFFFFF; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; box-shadow: none; }
+levelbar trough { border: 1px solid; padding: 2px; border-radius: 0; color: #3C3C3C; border-color: #b9b9b5; border-bottom-color: #94948d; background-color: #FFFFFF; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); box-shadow: none; }
 
 levelbar.horizontal.discrete block { margin: 0 1px; }
 
@@ -1390,7 +1398,7 @@ infobar.info:backdrop, infobar.info, infobar.question:backdrop, infobar.question
 
 infobar.info:backdrop label, infobar.info:backdrop, infobar.info label, infobar.info, infobar.question:backdrop label, infobar.question:backdrop, infobar.question label, infobar.question, infobar.warning:backdrop label, infobar.warning:backdrop, infobar.warning label, infobar.warning, infobar.error:backdrop label, infobar.error:backdrop, infobar.error label, infobar.error { color: #ffffff; }
 
-infobar.info button, infobar.question button, infobar.warning button, infobar.error button { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); background-color: #837f7b; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; }
+infobar.info button, infobar.question button, infobar.warning button, infobar.error button { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); background-color: #837f7b; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); }
 
 infobar.info button:hover, infobar.question button:hover, infobar.warning button:hover, infobar.error button:hover { color: #ffffff; background-color: #979490; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.25); }
 
@@ -1448,7 +1456,7 @@ colorswatch#add-color-button { border-radius: 0; }
 
 colorswatch#add-color-button:only-child { border-radius: 0; }
 
-colorswatch#add-color-button overlay { color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; }
+colorswatch#add-color-button overlay { color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); }
 
 colorswatch#add-color-button overlay:hover { color: #3C3C3C; background-color: #fcfcfc; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.25); }
 
@@ -1727,7 +1735,7 @@ XfceHeading, .XfceHeading { margin: 0; padding: 0; border-width: 0; background-i
 
 .xfce4-panel menu { -gtk-icon-effect: none; text-shadow: none; }
 
-.xfce4-panel menu button { color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; }
+.xfce4-panel menu button { color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); }
 
 .xfce4-panel menu button:hover { color: #3C3C3C; background-color: #fcfcfc; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.25); }
 
@@ -1810,7 +1818,7 @@ window.background.chromium button { border-color: #b9b9b5; }
 
 #MozillaGtkWidget.background entry:focus, #MozillaGtkWidget.background button:focus { border-color: #fb6f55; }
 
-normal-button { color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; }
+normal-button { color: #3C3C3C; outline-color: rgba(60, 60, 60, 0.3); background-color: #f4f4f4; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(165, 165, 160, 0.1); border-color: transparent; border-bottom-color: transparent; transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1); }
 
 normal-button:hover { color: #3C3C3C; background-color: #fcfcfc; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.25); }
 
