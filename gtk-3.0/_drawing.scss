@@ -141,7 +141,6 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
     box-shadow: $shadow_normal, 0 1px transparentize($b, 0.9);
     border-color: transparent;
     border-bottom-color: transparent;
-    transition: box-shadow $shortest_duration $deceleration_curve;
   }
   @else if $s == normal-dark {
     box-shadow: $shadow_normal;
@@ -386,6 +385,7 @@ $entry_inner_shadow: inset 0 1px transparentize(black, 0.98), inset 0 2px transp
     background-color: $base_color;
     border: 1px solid $borders_color;
     box-shadow: none;
+    transition-duration: $shorter_duration;
   }
   @else if $t==hover {
     color: $tc;
