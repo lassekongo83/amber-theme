@@ -172,10 +172,20 @@ menu,
   min-height: 24px;
 }
 
-// Chromium - https://github.com/lassekongo83/plano-theme/issues/15 and 16
+// Chromium
 window.background.chromium {
   background-color: $bg_color;
+
   button { border-color: $borders_color; } // tab borders
+
+  // https://github.com/lassekongo83/amber-theme/issues/5
+  menubar { color: if($darker=='true', $dark_fg_color, $fg_color); }
+
+  // FIXME: Background images are blurry, use default from icon theme for now
+  button.titlebutton, button.titlebutton:backdrop {
+    color: $dark_fg_color;
+    background-image: none;
+  }
 }
 
 // Thunar

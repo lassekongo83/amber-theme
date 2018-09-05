@@ -1782,6 +1782,10 @@ window.background.chromium { background-color: #444240; }
 
 window.background.chromium button { border-color: #1d1c1b; }
 
+window.background.chromium menubar { color: #f2f1f0; }
+
+window.background.chromium button.titlebutton, window.background.chromium button.titlebutton:backdrop { color: #f2f1f0; background-image: none; }
+
 .thunar .standard-view { border-width: 0; }
 
 .thunar .sidebar .view, .thunar .sidebar iconview { background-color: #2b2a29; }
