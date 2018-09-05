@@ -15,7 +15,7 @@ It is very likely your change will happen in the `_common.scss` file. That's whe
 | _colors-public.scss | SCSS colors exported through gtk to allow for 3rd party apps color mixing.
 | _drawing.scss       | drawing helper mixings/functions to allow easier definition of widget drawing under specific context. This is why the theme isn't 15000 LOC.
 | _common.scss        | actual definitions of style for each widget. This is where you are likely to add/remove your changes.
-| _other.scss         | Application specific styles.
+| _apps.scss          | Application specific styles.
 | _variables.scss     | Some commonly used variables.
 
 You can read about SASS at http://sass-lang.com/documentation/. Once you make your changes to the the scss files, use `./parse-sass.sh` to generate the CSS files.
