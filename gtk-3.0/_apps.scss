@@ -17,11 +17,9 @@
   }
 }
 
-/*
-  XFCE GTK3 Styling
-  Note: If you wish to edit the theme for XFCE 4.12 or earlier you do it in the GTK-2.0 folder.
-*/
-
+//
+// XFCE GTK3 Styling
+//
 CatfishWindow .pane-separator {
   background-color: darken($base_color, 10%);
 }
@@ -73,9 +71,9 @@ XfceHeading,
   @extend %panelbutton;
 }
 
-/*
-  Mate/Gnome Flashback Panel
-*/
+//
+// Mate/Gnome Flashback Panel
+//
 .gnome-panel-menu-bar,
 .mate-panel-menu-bar {
 
@@ -116,14 +114,6 @@ XfceHeading,
 }
 
 // Application specific fixes should be avoided as much as possible! In some cases they are unavoidable.
-
-// Firefox
-menu,
-.menu,
-.context-menu {
-  .separator:not(label),
-  .csd & .separator:not(label) { color: darken($dark_bg_color, 5%); }
-}
 
 // Caja
 .caja-desktop { @extend .nautilus-desktop.nautilus-canvas-item; }
@@ -235,6 +225,10 @@ window.background.chromium {
 
   > menu, .menu { border: none; } // Removed ugly menu borders
   > menu > menuitem { border-radius: 0; } // Removed rounded menu corners
+  > menu, .menu, .context-menu {
+      .separator:not(label),
+      .csd & .separator:not(label) { color: darken($dark_bg_color, 5%); }    
+    }
 
   // box-shadows doesn't work, so a border color is needed on the entries and buttons instead
   entry, button {
