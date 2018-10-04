@@ -3765,7 +3765,9 @@ headerbar,
           // FIXME Maybe. Increase the click area of the button to make better use of Fitt's law.
           // Will need to redo the assets, using a bg-color doesn't work with this "hack"
           //margin: 0 -4px 0 0;
-          //border: 8px solid $dark_bg_color;
+          //border-top: 8px solid $dark_bg_color;
+          //border-bottom: 8px solid $dark_bg_color;
+          //border-right: 8px solid $dark_bg_color;
           //border-radius: 10px;
 
           &:hover {
@@ -3781,7 +3783,6 @@ headerbar,
         @else if $b==maximize or minimize {
           &:hover {
             background-color: $max_min_hover;
-            box-shadow: $shadow_hover;
             &:backdrop { box-shadow: none; }
           }
         }
