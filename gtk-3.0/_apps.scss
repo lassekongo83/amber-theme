@@ -173,12 +173,6 @@ window.background.chromium {
 
   // https://github.com/lassekongo83/amber-theme/issues/5
   menubar { color: if($darker=='true', $dark_fg_color, $fg_color); }
-
-  // FIXME: Background images are blurry, use default from icon theme for now
-  button.titlebutton, button.titlebutton:backdrop {
-    color: $dark_fg_color;
-    background-image: none;
-  }
 }
 
 // Thunar

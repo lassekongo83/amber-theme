@@ -311,7 +311,7 @@ button.circular { border-radius: 9999px; -gtk-outline-radius: 9999px; }
 
 button.circular label { padding: 0; }
 
-.stack-switcher > button.needs-attention > label, .stack-switcher > button.needs-attention > image, stacksidebar row.needs-attention > label { animation: needs_attention 150ms ease-in; background-image: radial-gradient(farthest-side, #fdaea0 96%, rgba(253, 174, 160, 0)), radial-gradient(farthest-side, rgba(0, 0, 0, 0.792941) 95%, transparent); background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; background-position: right 3px, right 2px; }
+.stack-switcher > button.needs-attention > label, .stack-switcher > button.needs-attention > image, stacksidebar row.needs-attention > label { animation: needs_attention 150ms ease-in; background-image: radial-gradient(farthest-side, #fdaea0 96%, rgba(253, 174, 160, 0)), radial-gradient(farthest-side, rgba(0, 0, 0, 0.792941) 95%, rgba(0, 0, 0, 0)); background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; background-position: right 3px, right 2px; }
 
 .stack-switcher > button.needs-attention > label:backdrop, .stack-switcher > button.needs-attention > image:backdrop, stacksidebar row.needs-attention > label:backdrop { background-size: 6px 6px, 0 0; }
 
@@ -1629,7 +1629,7 @@ button.emoji-section:checked label { opacity: 1; }
 @define-color success_color #83bf3f;
 @define-color wm_title shade(#f2f1f0, 1.8);
 @define-color wm_unfocused_title #9b9a98;
-@define-color wm_highlight transparent;
+@define-color wm_highlight rgba(0, 0, 0, 0);
 @define-color wm_borders_edge rgba(242, 241, 240, 0.1);
 @define-color wm_bg_a shade(#444240, 1.2);
 @define-color wm_bg_b #444240;
@@ -1716,8 +1716,6 @@ window.background.chromium { background-color: #444240; }
 window.background.chromium button { border-color: #1d1c1b; }
 
 window.background.chromium menubar { color: #f2f1f0; }
-
-window.background.chromium button.titlebutton, window.background.chromium button.titlebutton:backdrop { color: #f2f1f0; background-image: none; }
 
 .thunar .standard-view { border-width: 0; }
 
