@@ -655,7 +655,7 @@ treeview.view header button:last-child:backdrop, .table-header:last-child:backdr
 
 menubar, .menubar { -GtkWidget-window-dragging: true; padding: 0px; background-color: #444240; }
 
-menubar > menuitem, .menubar > menuitem { min-height: 16px; padding: 2px 8px; border: 0; border-color: transparent; color: #ffffff; }
+menubar > menuitem, .menubar > menuitem { min-height: 16px; padding: 2px 8px; border: 0; border-color: transparent; color: #f2f1f0; }
 
 menubar > menuitem:hover, menubar > menuitem:active, .menubar > menuitem:hover, .menubar > menuitem:active { box-shadow: inset 0 -2px #fb6f55; color: #ffffff; border-radius: 0; background-color: #696663; }
 
