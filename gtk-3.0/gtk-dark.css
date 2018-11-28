@@ -1543,13 +1543,13 @@ headerbar .left button.titlebutton.maximize:hover, .titlebar .left button.titleb
 
 headerbar .left button.titlebutton.maximize:active, .titlebar .left button.titlebutton.maximize:active { background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-left.png"), url("assets/titlebutton-maximize-hover-left@2.png")); }
 
-.maximized headerbar .left button.titlebutton.maximize, .maximized .titlebar .left button.titlebutton.maximize { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-left.png"), url("assets/titlebutton-unmaximize-left@2.png")); }
+headerbar .left button.titlebutton.maximize, .titlebar .left button.titlebutton.maximize { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-left.png"), url("assets/titlebutton-unmaximize-left@2.png")); }
 
-.maximized headerbar .left button.titlebutton.maximize:backdrop, .maximized .titlebar .left button.titlebutton.maximize:backdrop { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-backdrop-left.png"), url("assets/titlebutton-unmaximize-backdrop-left@2.png")); }
+headerbar .left button.titlebutton.maximize:backdrop, .titlebar .left button.titlebutton.maximize:backdrop { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-backdrop-left.png"), url("assets/titlebutton-unmaximize-backdrop-left@2.png")); }
 
-.maximized headerbar .left button.titlebutton.maximize:hover, .maximized .titlebar .left button.titlebutton.maximize:hover { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-hover-left.png"), url("assets/titlebutton-unmaximize-hover-left@2.png")); }
+headerbar .left button.titlebutton.maximize:hover, .titlebar .left button.titlebutton.maximize:hover { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-hover-left.png"), url("assets/titlebutton-unmaximize-hover-left@2.png")); }
 
-.maximized headerbar .left button.titlebutton.maximize:active, .maximized .titlebar .left button.titlebutton.maximize:active { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-hover-left.png"), url("assets/titlebutton-unmaximize-hover-left@2.png")); }
+headerbar .left button.titlebutton.maximize:active, .titlebar .left button.titlebutton.maximize:active { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-hover-left.png"), url("assets/titlebutton-unmaximize-hover-left@2.png")); }
 
 .view:selected, iconview:selected, .view text:selected, iconview text:selected, textview text:selected, .nautilus-window notebook:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection, textview text selection:focus, textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, entry selection, modelbutton.flat:selected, popover.background checkbutton:selected, popover.background radiobutton:selected, .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected { background-color: #fb6f55; }
 
@@ -1641,13 +1641,13 @@ button.emoji-section:checked label { opacity: 1; }
 @define-color wm_button_active_color_b shade(#444240, 0.89);
 @define-color wm_button_active_color_c shade(#444240, 0.9);
 @define-color content_view_bg #111;
-.budgie-panel button, .xfce4-panel button, #pulseaudio-button, #indicator-button, .gnome-panel-menu-bar button:not(#tasklist-button), .mate-panel-menu-bar button:not(#tasklist-button) { color: rgba(242, 241, 240, 0.9); border-radius: 0; border: none; background-color: transparent; box-shadow: none; }
+.budgie-panel button, .xfce4-panel button, #pulseaudio-button, #indicator-button, .gnome-panel-menu-bar button:not(#tasklist-button), .mate-panel-menu-bar button:not(#tasklist-button) { color: rgba(242, 241, 240, 0.9); border-radius: 0; border: none; background-color: transparent; box-shadow: none; transition-duration: 100ms; }
 
-.budgie-panel button:hover, .xfce4-panel button:hover, #pulseaudio-button:hover, #indicator-button:hover, .gnome-panel-menu-bar button:hover:not(#tasklist-button), .mate-panel-menu-bar button:hover:not(#tasklist-button) { color: #f2f1f0; background-color: #4f4c4a; }
+.budgie-panel button:hover, .xfce4-panel button:hover, #pulseaudio-button:hover, #indicator-button:hover, .gnome-panel-menu-bar button:hover:not(#tasklist-button), .mate-panel-menu-bar button:hover:not(#tasklist-button) { color: #f2f1f0; background-color: transparent; box-shadow: inset 0 -2px 0px rgba(255, 255, 255, 0.6); }
 
-.budgie-panel button:active, .xfce4-panel button:active, #pulseaudio-button:active, #indicator-button:active, .gnome-panel-menu-bar button:active:not(#tasklist-button), .mate-panel-menu-bar button:active:not(#tasklist-button), .budgie-panel button:checked, .xfce4-panel button:checked, #pulseaudio-button:checked, #indicator-button:checked, .gnome-panel-menu-bar button:checked:not(#tasklist-button), .mate-panel-menu-bar button:checked:not(#tasklist-button) { color: #f2f1f0; background-color: #595654; }
+.budgie-panel button:active, .xfce4-panel button:active, #pulseaudio-button:active, #indicator-button:active, .gnome-panel-menu-bar button:active:not(#tasklist-button), .mate-panel-menu-bar button:active:not(#tasklist-button), .budgie-panel button:checked, .xfce4-panel button:checked, #pulseaudio-button:checked, #indicator-button:checked, .gnome-panel-menu-bar button:checked:not(#tasklist-button), .mate-panel-menu-bar button:checked:not(#tasklist-button) { color: #f2f1f0; background-color: rgba(255, 255, 255, 0.2); box-shadow: inset 0 -2px 0px #fb6f55; }
 
-.budgie-panel button:active:hover, .xfce4-panel button:active:hover, #pulseaudio-button:active:hover, #indicator-button:active:hover, .gnome-panel-menu-bar button:active:hover:not(#tasklist-button), .mate-panel-menu-bar button:active:hover:not(#tasklist-button), .budgie-panel button:checked:hover, .xfce4-panel button:checked:hover, #pulseaudio-button:checked:hover, #indicator-button:checked:hover, .gnome-panel-menu-bar button:checked:hover:not(#tasklist-button), .mate-panel-menu-bar button:checked:hover:not(#tasklist-button) { background-color: #5c5956; }
+.budgie-panel button:active:hover, .xfce4-panel button:active:hover, #pulseaudio-button:active:hover, #indicator-button:active:hover, .gnome-panel-menu-bar button:active:hover:not(#tasklist-button), .mate-panel-menu-bar button:active:hover:not(#tasklist-button), .budgie-panel button:checked:hover, .xfce4-panel button:checked:hover, #pulseaudio-button:checked:hover, #indicator-button:checked:hover, .gnome-panel-menu-bar button:checked:hover:not(#tasklist-button), .mate-panel-menu-bar button:checked:hover:not(#tasklist-button) { background-color: #fb5e41; }
 
 CatfishWindow .pane-separator { background-color: black; }
 

@@ -3772,7 +3772,7 @@ headerbar,
 
           &:hover {
             background-color: $close_button_hover;
-            box-shadow: $shadow_hover;
+            @if($darker=='true' or $variant=='dark') { box-shadow: $shadow_hover; }
           }
           &:backdrop {
             box-shadow: none;
@@ -3793,8 +3793,17 @@ headerbar,
     @each $k in ('close', 'maximize', 'minimize') {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
       { &.#{$k}#{$l} {
-        background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
-                                      url('assets/titlebutton-#{$k}#{$m}@2.png')); }
+          @if($darker=='true' or $variant=='dark') {
+            background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
+                                          url('assets/titlebutton-#{$k}#{$m}@2.png'));
+          }
+          // FIXME: Make some assets for the light option
+          @else {
+            background-image: none;
+            @if $k==close { color: white; }
+            @else { color: $fg_color; }
+          }
+        }
       }
     }
   }
@@ -3806,8 +3815,16 @@ headerbar,
   .maximized & {
     button.titlebutton {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
-      { &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}.png'),
-                                                        url('assets/titlebutton-unmaximize#{$m}@2.png')); }
+      { &.maximize#{$l} {
+          @if($darker=='true' or $variant=='dark') {
+            background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}.png'),
+                                          url('assets/titlebutton-unmaximize#{$m}@2.png'));
+          }
+          @else {
+            background-image: none;
+            color: $fg_color;
+          }
+        }
       }
     }
   }
@@ -3820,8 +3837,16 @@ headerbar,
   .left {
     button.titlebutton {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
-      { &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-maximize#{$m}-left.png'),
-                                                        url('assets/titlebutton-maximize#{$m}-left@2.png')); }
+      { &.maximize#{$l} {
+          @if($darker=='true' or $variant=='dark') {
+            background-image: -gtk-scaled(url('assets/titlebutton-maximize#{$m}-left.png'),
+                                          url('assets/titlebutton-maximize#{$m}-left@2.png'));
+          }
+          @else {
+            background-image: none;
+            color: $fg_color;
+          }
+        }
       }
     }
   }
@@ -3830,11 +3855,19 @@ headerbar,
 // Left unmaximize
 headerbar,
 .titlebar {
-  .maximized & {
-    .left button.titlebutton {
+  .left {
+    button.titlebutton {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
-      { &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}-left.png'),
-                                                        url('assets/titlebutton-unmaximize#{$m}-left@2.png')); }
+      { &.maximize#{$l} {
+          @if($darker=='true' or $variant=='dark') {
+            background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}-left.png'),
+                                          url('assets/titlebutton-unmaximize#{$m}-left@2.png'));
+          }
+          @else {
+            background-image: none;
+            color: $fg_color;
+          }
+        }
       }
     }
   }
