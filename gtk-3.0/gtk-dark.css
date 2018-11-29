@@ -1543,13 +1543,13 @@ headerbar .left button.titlebutton.maximize:hover, .titlebar .left button.titleb
 
 headerbar .left button.titlebutton.maximize:active, .titlebar .left button.titlebutton.maximize:active { background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-left.png"), url("assets/titlebutton-maximize-hover-left@2.png")); }
 
-headerbar .left button.titlebutton.maximize, .titlebar .left button.titlebutton.maximize { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-left.png"), url("assets/titlebutton-unmaximize-left@2.png")); }
+.maximized headerbar .left button.titlebutton.maximize, .maximized .titlebar .left button.titlebutton.maximize { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-left.png"), url("assets/titlebutton-unmaximize-left@2.png")); }
 
-headerbar .left button.titlebutton.maximize:backdrop, .titlebar .left button.titlebutton.maximize:backdrop { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-backdrop-left.png"), url("assets/titlebutton-unmaximize-backdrop-left@2.png")); }
+.maximized headerbar .left button.titlebutton.maximize:backdrop, .maximized .titlebar .left button.titlebutton.maximize:backdrop { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-backdrop-left.png"), url("assets/titlebutton-unmaximize-backdrop-left@2.png")); }
 
-headerbar .left button.titlebutton.maximize:hover, .titlebar .left button.titlebutton.maximize:hover { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-hover-left.png"), url("assets/titlebutton-unmaximize-hover-left@2.png")); }
+.maximized headerbar .left button.titlebutton.maximize:hover, .maximized .titlebar .left button.titlebutton.maximize:hover { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-hover-left.png"), url("assets/titlebutton-unmaximize-hover-left@2.png")); }
 
-headerbar .left button.titlebutton.maximize:active, .titlebar .left button.titlebutton.maximize:active { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-hover-left.png"), url("assets/titlebutton-unmaximize-hover-left@2.png")); }
+.maximized headerbar .left button.titlebutton.maximize:active, .maximized .titlebar .left button.titlebutton.maximize:active { background-image: -gtk-scaled(url("assets/titlebutton-unmaximize-hover-left.png"), url("assets/titlebutton-unmaximize-hover-left@2.png")); }
 
 .view:selected, iconview:selected, .view text:selected, iconview text:selected, textview text:selected, .nautilus-window notebook:selected, .nautilus-window notebook > stack:not(:only-child) searchbar:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection, textview text selection:focus, textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, entry selection, modelbutton.flat:selected, popover.background checkbutton:selected, popover.background radiobutton:selected, .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus, .nemo-window .nemo-window-pane widget.entry:selected { background-color: #fb6f55; }
 
