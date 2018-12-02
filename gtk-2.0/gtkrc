@@ -439,7 +439,7 @@ style "scrollbar"
     engine "murrine"
     {
         colorize_scrollbar = FALSE
-        roundness          = 0
+        roundness          = 14
         border_shades      = {1.0, 1.0}
         trough_shades      = {1.0, 1.0}
         contrast           = 0.0
