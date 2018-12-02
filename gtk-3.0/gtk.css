@@ -535,7 +535,9 @@ searchbar > revealer > box { margin: -6px; padding: 6px; }
 
 .default-decoration.titlebar:not(headerbar) button.titlebutton, headerbar.default-decoration button.titlebutton { min-height: 22px; min-width: 22px; margin: 0; padding: 0; }
 
-.titlebar:not(headerbar) separator, .titlebar:not(headerbar) separator:backdrop, headerbar separator, headerbar separator:backdrop { background-color: transparent; }
+.titlebar:not(headerbar) separator, headerbar separator { background-color: transparent; }
+
+.titlebar:not(headerbar) separator:backdrop, headerbar separator:backdrop { background-color: #444240; box-shadow: inset 0 1px rgba(255, 255, 255, 0.04), inset 0 -1px transparent; }
 
 headerbar { color: #f2f1f0; }
 
