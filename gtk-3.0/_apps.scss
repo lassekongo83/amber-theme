@@ -243,3 +243,17 @@ normal-button {
   &:active { @include button(active) }
   &:disabled { @include button(insensitive); }
 }
+
+// Tweak tool
+list.tweak-categories separator {
+  // hide sidebar separators
+  // make the sidebar look like a normal sidebar
+  background: transparent;
+}
+
+.tweak-categories {
+  background-color: $secondary_bg_color;
+  border-color: $secondary_borders_color;
+  box-shadow: inset -2px 0 transparentize(black, 0.98), 
+              inset -1px 0 transparentize(black, 0.94);
+}

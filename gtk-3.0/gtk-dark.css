@@ -1760,3 +1760,7 @@ normal-button:active { color: #f2f1f0; outline-color: rgba(242, 241, 240, 0.3); 
 normal-button:disabled { color: #9b9a98; background-color: #555452; text-shadow: none; -gtk-icon-shadow: none; box-shadow: none; border-color: transparent; }
 
 normal-button:disabled > .label { color: inherit; }
+
+list.tweak-categories separator { background: transparent; }
+
+.tweak-categories { background-color: #2b2a29; border-color: #161615; box-shadow: inset -2px 0 rgba(0, 0, 0, 0.02), inset -1px 0 rgba(0, 0, 0, 0.06); }
