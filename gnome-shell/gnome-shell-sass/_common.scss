@@ -26,7 +26,7 @@ $panel-corner-radius: 0px;
  */
 
 
-/* GLOBALS */
+// GLOBALS
 $font-size: 11;
 $font-family: Ubuntu, Sans-Serif;
 $_bubble_bg_color: opacify($osd_bg_color,0.25);
@@ -41,9 +41,9 @@ stage {
   color: $fg_color;
 }
 
-/* WIDGETS */
+// WIDGETS
 
-/* Buttons */
+// Buttons
 .button {
   border-radius: 0;
   border-width: 1px;
@@ -80,7 +80,7 @@ stage {
   }
 }
 
-/* Entries */
+// Entries
 StEntry {
   border-radius: 0;
   padding: 4px;
@@ -100,7 +100,7 @@ StEntry {
 }
 
 
-/* Scrollbars */
+// Scrollbars
 
 StScrollView {
   &.vfade { -st-vfade-offset: 68px; }
@@ -130,7 +130,7 @@ StScrollBar {
   }
 }
 
-/* Slider */
+// Slider
 
 .slider {
   height: 1em;
@@ -143,7 +143,7 @@ StScrollBar {
   -slider-handle-radius: 6px;
 }
 
-/* Check Boxes */
+// Check Boxes
 
 .check-box {
   StBoxLayout { spacing: .8em; }
@@ -157,7 +157,7 @@ StScrollBar {
   &:focus:checked StBin { background-image: url("checkbox.svg"); }
 }
 
-/* Switches */
+// Switches
 .toggle-switch {
   width: 52px;
   height: 24px;
@@ -169,13 +169,13 @@ StScrollBar {
   }
 }
 
-/* links */
+// links
 .shell-link {
   color: $link_color;
   &:hover { color: lighten($link_color,10%); }
 }
 
-/* Modal Dialogs */
+// Modal Dialogs
 
 .headline { font-size: 110%; }
 .lightbox { background-color: black; }
@@ -214,7 +214,7 @@ StScrollBar {
   @include fontsize($font-size * 1.3);
 }
 
-/* Message Dialog */
+// Message Dialog
 .message-dialog-main-layout {
   padding: 12px 20px 0;
   spacing: 12px;
@@ -237,7 +237,7 @@ StScrollBar {
   font-weight: bold;
 }
 
-/* End Session Dialog */
+// End Session Dialog
 .end-session-dialog { spacing: 42px; }
 
 .end-session-dialog-list { padding-top: 20px; }
@@ -306,7 +306,7 @@ StScrollBar {
   font-size: 10pt;
 }
 
-/* ShellMountOperation Dialogs */
+// ShellMountOperation Dialogs
 .shell-mount-operation-icon { icon-size: 48px; }
 
 .mount-dialog {
@@ -361,7 +361,7 @@ StScrollBar {
 
 .mount-dialog-app-list-item-name { font-size: 10pt; }
 
-/* Password or Authentication Dialog */
+// Password or Authentication Dialog
 
 .prompt-dialog {
   //this is the width of the entire modal popup
@@ -399,7 +399,7 @@ StScrollBar {
 }
 
 
-/* Polkit Dialog */
+// Polkit Dialog
 
 .polkit-dialog-user-layout {
   padding-left: 10px;
@@ -421,7 +421,7 @@ StScrollBar {
   height: 48px;
 }
 
-/* Audio selection dialog */
+// Audio selection dialog
 .audio-device-selection-dialog {
   spacing: 30px;
 }
@@ -453,28 +453,28 @@ StScrollBar {
 
 .audio-selection-device-icon { icon-size: 64px; }
 
-/* Access Dialog */
+// Access Dialog
 .access-dialog {
   spacing: 30px;
 }
 
-/* Geolocation Dialog */
+// Geolocation Dialog
 .geolocation-dialog {
   spacing: 30px;
 }
 
-/* Extension Dialog */
+// Extension Dialog
 .extension-dialog {
   .message-dialog-main-layout { spacing: 24px; padding: 10px; }
   .message-dialog-title { color: darken($osd_fg_color,25%); }
 }
 
-/* Inhibit-Shortcuts Dialog */
+// Inhibit-Shortcuts Dialog
 .inhibit-shortcuts-dialog {
   spacing: 30px;
 }
 
-/* Network Agent Dialog */
+// Network Agent Dialog
 
 .network-dialog-secret-table {
   spacing-rows: 15px;
@@ -486,7 +486,7 @@ StScrollBar {
   spacing-columns: 1em;
 }
 
-/* Popovers/Menus */
+// Popovers/Menus
 
 .popup-menu {
   min-width: 15em;
@@ -555,13 +555,11 @@ StScrollBar {
 // Background menu
 .background-menu { -boxpointer-gap: 4px; -arrow-rise: 0px; }
 
-/* fallback menu
-- odd thing for styling App menu when apparently not running under shell. Light Adwaita styled
-  app menu inside the main app window itself rather than the top bar
-*/
+// fallback menu
+// - odd thing for styling App menu when apparently not running under shell. Light Adwaita styled
+//   app menu inside the main app window itself rather than the top bar
 
-
-/* OSD */
+// OSD
 .osd-window {
   text-align: center;
   font-weight: bold;
@@ -579,7 +577,7 @@ StScrollBar {
   }
 }
 
-/* Pad OSD */
+// Pad OSD
 .pad-osd-window {
   padding: 32px;
   background-color: transparentize(black, 0.2);
@@ -592,7 +590,7 @@ StScrollBar {
   width: 15em;
 }
 
-/* App Switcher */
+// App Switcher
 .switcher-popup {
   padding: 8px;
   spacing: 16px;
@@ -647,10 +645,10 @@ StScrollBar {
   height: 96px;
 }
 
-/* Window Cycler */
+// Window Cycler
 .cycler-highlight { border: 5px solid $selected_bg_color; }
 
-/* Workspace Switcher */
+// Workspace Switcher
 .workspace-switcher-group { padding: 12px; }
 
 .workspace-switcher-container { @extend %osd-panel; }
@@ -686,7 +684,7 @@ StScrollBar {
   padding: 12px;
 }
 
-/* Tiled window previews */
+// Tiled window previews
 .tile-preview {
   background-color: transparentize($selected_bg_color, 0.5);
   border: 1px solid $selected_bg_color;
@@ -704,7 +702,7 @@ StScrollBar {
   border-radius: $panel-corner-radius $panel-corner-radius 0 0;
 }
 
-/* TOP BAR */
+// TOP BAR
 
 #panel {
   background-color: transparentize(black, 0.2);
@@ -823,7 +821,7 @@ StScrollBar {
 .datemenu-today-button,
 .world-clocks-button,
 .weather-button,
-.message-list-section-title, // FIXME: Remove this one eventually.
+.message-list-section-title,
 .events-section-title {
   border-radius: 0;
   padding: .4em;
@@ -840,7 +838,7 @@ StScrollBar {
 .datemenu-today-button,
 .world-clocks-button,
 .weather-button,
-.message-list-section-title, // FIXME: Remove this one eventually.
+.message-list-section-title,
 .events-section-title {
   &:hover,&:focus { background-color: lighten($bg_color, 5%); }
   &:active {
@@ -857,7 +855,7 @@ StScrollBar {
 
 .world-clocks-header,
 .weather-header,
-.message-list-section-title, // FIXME: Remove this one eventually.
+.message-list-section-title,
 .events-section-title {
   color: darken($fg_color, 40%);
   font-weight: bold;
@@ -939,7 +937,7 @@ StScrollBar {
   opacity: 0.5;
 }
 
-/* Message list */
+// Message list
 .message-list {
   width: 31.5em;
 }
@@ -954,8 +952,6 @@ StScrollBar {
 
 .message-list-section,
 .message-list-section-list { spacing: 0.4em; }
-
-// FIXME: Remove eventually.
 .message-list-section-title-box { spacing: 0.4em; }
 
 .message-list-section-close > StIcon {
@@ -970,7 +966,6 @@ StScrollBar {
 .message-list-section-close:focus > StIcon {
   background-color: darken($fg_color, 40%);
 }
-// END REMOVE FIXME
 
 .message {
   &:hover,&:focus { background-color: lighten($bg_color, 5%); }
@@ -1134,7 +1129,7 @@ StScrollBar {
   &:active { background-image: url("close-window-hover.svg"); }
 }
 
-/* NETWORK DIALOGS */
+// NETWORK DIALOGS
 
 .nm-dialog {
   max-height: 34em;
@@ -1176,7 +1171,7 @@ StScrollBar {
   .no-networks-label { color: #999999; }
   .no-networks-box { spacing: 12px; }
 
-/* OVERVIEW */
+// OVERVIEW
 
 #overview {
   spacing: 24px;
@@ -1265,7 +1260,7 @@ StScrollBar {
 .list-search-provider-content { spacing: 20px; }
 .search-provider-icon { padding: 15px; }
 
-/* DASHBOARD */
+// DASHBOARD
 
 #dash {
   font-size: 9pt;
@@ -1305,7 +1300,7 @@ StScrollBar {
   -x-offset: 8px;
 }
 
-/* App Vault/Grid */
+// App Vault/Grid
 .icon-grid {
   spacing: 30px;
   -shell-grid-horizontal-item-size: 136px;
@@ -1473,7 +1468,7 @@ StScrollBar {
   color: $fg_color;
 }
 
-/* NOTIFICATIONS & MESSAGE TRAY */
+// NOTIFICATIONS & MESSAGE TRAY
 
 .url-highlighter { link-color: lighten($selected_bg_color,10%); }
 
@@ -1585,17 +1580,17 @@ StScrollBar {
   color: pink;
 }
 
-/* Eeeky things */
+// Eeeky things
 
-//magnifier
+// magnifier
 
 .magnifier-zoom-region {
   border: 2px solid $selected_bg_color;
   &.full-screen { border-width: 0; }
 }
 
-//Keyboard
-/* On-screen Keyboard */
+// Keyboard
+// On-screen Keyboard
 .word-suggestions {
   font-size: 14pt;
   spacing: 12px;
@@ -1682,7 +1677,7 @@ StScrollBar {
 .candidate-page-button-next { border-radius: 0px 4px 4px 0px; }
 .candidate-page-button-icon { icon-size: 1em; }
 
-/* Auth Dialogs & Screen Shield */
+// Auth Dialogs & Screen Shield
 
 .framed-user-icon {
   background-size: contain;
