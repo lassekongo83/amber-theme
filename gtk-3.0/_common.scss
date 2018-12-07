@@ -1572,6 +1572,9 @@ headerbar { // headerbar border rounding
 // Note also we select on filechooser to avoid interfering with NautilusPathBar.
 filechooser .path-bar.linked > button {
   @extend %linked_flippable;
+  @include button(undecorated);
+  &:hover { box-shadow: 0 2px $borders_color; }
+  &:active, &:checked { box-shadow: 0 2px $selected_bg_color; }
 }
 
 filechooser {
@@ -2466,7 +2469,7 @@ treeview.view radio {
     }
   }
 
-  &:backdrop { &:selected, & { color: $backdrop_fg_color; }}
+  &:backdrop { &:selected, & { color: $selected_fg_color; }}
 }
 
 treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a workaround

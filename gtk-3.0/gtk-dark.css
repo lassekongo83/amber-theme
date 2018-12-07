@@ -589,6 +589,12 @@ window.csd > .titlebar:not(headerbar) { padding: 0; background-color: transparen
 
 .titlebar:not(headerbar) separator { background-color: #444240; box-shadow: inset 0 1px rgba(255, 255, 255, 0.04), inset 0 -1px transparent; }
 
+filechooser .path-bar.linked > button { border-color: transparent; background-color: transparent; background-image: none; box-shadow: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(242, 241, 240, 0); text-shadow: none; -gtk-icon-shadow: none; }
+
+filechooser .path-bar.linked > button:hover { box-shadow: 0 2px #1d1c1b; }
+
+filechooser .path-bar.linked > button:active, filechooser .path-bar.linked > button:checked { box-shadow: 0 2px #fb6f55; }
+
 filechooser #pathbarbox { background-color: #2b2a29; border-bottom: 1px solid #1d1c1b; }
 
 .path-bar button.text-button, .path-bar button.image-button, .path-bar button { padding-left: 4px; padding-right: 4px; }
@@ -985,7 +991,7 @@ treeview.view check:selected:disabled, treeview.view radio:selected:disabled { c
 
 treeview.view check:selected:disabled:backdrop, treeview.view radio:selected:disabled:backdrop { color: #6b6865; }
 
-treeview.view check:backdrop:selected, treeview.view check:backdrop, treeview.view radio:backdrop:selected, treeview.view radio:backdrop { color: #9b9a98; }
+treeview.view check:backdrop:selected, treeview.view check:backdrop, treeview.view radio:backdrop:selected, treeview.view radio:backdrop { color: #ffffff; }
 
 scale trough, scale fill, progressbar trough { border: 1px solid #363533; border-radius: 3px; background-color: #363533; box-shadow: none; }
 
