@@ -1,3 +1,8 @@
+btn
+btn-hover
+btn-active
+btn-active-hover
+btn-insensitive
 checkbox-unchecked
 checkbox-unchecked-hover
 checkbox-checked

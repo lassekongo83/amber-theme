@@ -64,7 +64,7 @@ style "default"
     GtkScrollbar::min-slider-length            = 42
     GtkScrollbar::slider-width                 = 14
     GtkScrollbar::activate-slider              = 1
-    GtkScrollbar::trough-border                = 0
+    GtkScrollbar::trough-border                = 1
     GtkScrollbar::has-backward-stepper         = 1
     GtkScrollbar::has-forward-stepper          = 1
 
@@ -301,7 +301,7 @@ style "menubar"
     GtkMenuBar :: shadow-type = GTK_SHADOW_NONE
 
     bg[NORMAL]   = @titlebar_color
-    fg[NORMAL]   = @selected_fg_color
+    fg[NORMAL]   = @text_color_dark
     fg[PRELIGHT] = @selected_fg_color
     fg[SELECTED] = @selected_fg_color
 }
@@ -439,7 +439,7 @@ style "scrollbar"
     engine "murrine"
     {
         colorize_scrollbar = FALSE
-        roundness          = 14
+        roundness          = 10
         border_shades      = {1.0, 1.0}
         trough_shades      = {1.0, 1.0}
         contrast           = 0.0
@@ -690,9 +690,7 @@ style "pixmap-sidebar-handle-left" {
 }
 
 style "null" {
-
   engine "pixmap" {
-
     image {
     function = BOX
     file = "assets/null.png"
@@ -837,8 +835,8 @@ widget "*swt-toolbar-flat"  style "null"
 
 # EXTERNAL FILES
 include "panel.rc"
-include "buttons.rc"
 include "check-radio.rc"
+include "buttons.rc"
 include "chromium.rc"
 include "thunar.rc"
 include "caja.rc"
