@@ -175,7 +175,7 @@ window.background.chromium {
   button { border-color: $borders_color; } // tab borders
 
   // https://github.com/lassekongo83/amber-theme/issues/5
-  menubar { color: if($darker=='true', $dark_fg_color, $fg_color); }
+  menubar { color: if($dark_header=='true', $dark_fg_color, $fg_color); }
 }
 
 // Thunar

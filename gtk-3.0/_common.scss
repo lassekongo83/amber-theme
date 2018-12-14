@@ -1427,11 +1427,11 @@ headerbar {
 // Headerbar widgets
 // Things that can be found in a headerbar
 %header_widgets {
-  color: if($darker=='true', $dark_fg_color, $fg_color);
+  color: if($dark_header=='true', $dark_fg_color, $fg_color);
   // Normal headerbar buttons
   button {
-    color: if($darker=='true', $dark_fg_color, $fg_color);
-    border-width: if($darker=='true' or $variant=='dark', 0, 1px);
+    color: if($dark_header=='true', $dark_fg_color, $fg_color);
+    border-width: if($dark_header=='true' or $variant=='dark', 0, 1px);
     border-radius: $br_b;
     @include button(headerbutton-normal);
     &:hover { @include button(headerbutton-hover); }
@@ -1446,7 +1446,7 @@ headerbar {
     @include entry(normal-header);
     &:focus { @include entry(focus); }
     &:disabled { @include entry(insensitive-header); }
-    caret-color: if($darker=='true', $dark_fg_color, $fg_color);
+    caret-color: if($dark_header=='true', $dark_fg_color, $fg_color);
   }
   .suggested-action {
     &:disabled { @include button(undecorated-disabled); }
@@ -1796,20 +1796,20 @@ menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0px;
-  background-color: if($darker=='true' or $variant=='dark', $dark_bg_color, $bg_color);
+  background-color: if($dark_header=='true' or $variant=='dark', $dark_bg_color, $bg_color);
 
   > menuitem {
     min-height: 16px;
     padding: 2px 8px;
     border: 0;
     border-color: transparent;
-    color: if($darker=='true' or $variant=='dark', $dark_fg_color, $fg_color);
+    color: if($dark_header=='true' or $variant=='dark', $dark_fg_color, $fg_color);
 
     &:hover, &:active { //Seems like it :hover even with keyboard focus
-      box-shadow: if($darker=='true' or $variant=='dark', inset 0 -2px $selected_bg_color, none);
+      box-shadow: if($dark_header=='true' or $variant=='dark', inset 0 -2px $selected_bg_color, none);
       color: $selected_fg_color;
       border-radius: 0;
-      background-color: if($darker=='true' or $variant=='dark', lighten($dark_bg_color, 14%), $selected_bg_color);
+      background-color: if($dark_header=='true' or $variant=='dark', lighten($dark_bg_color, 14%), $selected_bg_color);
     }
 
     &:backdrop { color: $backdrop_fg_color; }
@@ -3740,12 +3740,12 @@ headerbar,
 
   // separator for the titlebutton area
   .right.horizontal {
-    border-left: 1px solid if($darker=='true', transparentize(black, 0.8), $borders_color);
+    border-left: 1px solid if($dark_header=='true', transparentize(black, 0.8), $borders_color);
     @if $variant=='dark' { border-left: 0; }
     padding-left: 4px;
   }
   .left.horizontal {
-    border-right: 1px solid if($darker=='true', transparentize(black, 0.8), $borders_color);
+    border-right: 1px solid if($dark_header=='true', transparentize(black, 0.8), $borders_color);
     @if $variant=='dark' { border-right: 0; }
     padding-right: 4px;
   }
@@ -3767,7 +3767,7 @@ headerbar,
 
         @if $b==close {
           background-color: $close_button;
-          box-shadow: if($darker=='true' or $variant=='dark', $shadow_normal, none);
+          box-shadow: if($dark_header=='true' or $variant=='dark', $shadow_normal, none);
           // FIXME Maybe. Increase the click area of the button to make better use of Fitt's law.
           // Will need to redo the assets, using a bg-color doesn't work with this "hack"
           //margin: 0 -4px 0 0;
@@ -3778,7 +3778,7 @@ headerbar,
 
           &:hover {
             background-color: $close_button_hover;
-            @if($darker=='true' or $variant=='dark') { box-shadow: $shadow_hover; }
+            @if($dark_header=='true' or $variant=='dark') { box-shadow: $shadow_hover; }
           }
           &:backdrop {
             box-shadow: none;
@@ -3799,7 +3799,7 @@ headerbar,
     @each $k in ('close', 'maximize', 'minimize') {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
       { &.#{$k}#{$l} {
-          @if($darker=='true' or $variant=='dark') {
+          @if($dark_header=='true' or $variant=='dark') {
             background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}.png'),
                                           url('assets/titlebutton-#{$k}#{$m}@2.png'));
           }
@@ -3820,7 +3820,7 @@ headerbar,
     button.titlebutton {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
       { &.maximize#{$l} {
-          @if($darker=='true' or $variant=='dark') {
+          @if($dark_header=='true' or $variant=='dark') {
             background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}.png'),
                                           url('assets/titlebutton-unmaximize#{$m}@2.png'));
           }
@@ -3842,7 +3842,7 @@ headerbar,
     button.titlebutton {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
       { &.maximize#{$l} {
-          @if($darker=='true' or $variant=='dark') {
+          @if($dark_header=='true' or $variant=='dark') {
             background-image: -gtk-scaled(url('assets/titlebutton-maximize#{$m}-left.png'),
                                           url('assets/titlebutton-maximize#{$m}-left@2.png'));
           }
@@ -3864,7 +3864,7 @@ headerbar,
       button.titlebutton {
         @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-hover') 
         { &.maximize#{$l} {
-            @if($darker=='true' or $variant=='dark') {
+            @if($dark_header=='true' or $variant=='dark') {
               background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}-left.png'),
                                             url('assets/titlebutton-unmaximize#{$m}-left@2.png'));
             }
