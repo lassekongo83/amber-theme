@@ -2187,8 +2187,8 @@ scrollbar {
         background-clip: padding-box;
         background-color: transparent;
         border: 1px solid transparent;
-        
-        -gtk-icon-source: none;
+
+        //-gtk-icon-source: none;
       }
 
       &.horizontal {
