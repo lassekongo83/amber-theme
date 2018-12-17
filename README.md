@@ -68,7 +68,6 @@ Make sure you have `git`, `meson`, [ninja](https://github.com/ninja-build/ninja/
 2. `cd amber-theme`
 3. `meson build`
 4. `sudo ninja -C build install`
-5. `cd .. && rm -r amber-theme`
 
 The theme will be installed in: `/usr/share/themes/Amber`
 
