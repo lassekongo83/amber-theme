@@ -38,8 +38,9 @@ Make sure you have `wget` **or** `git` installed.
 mkdir -p ~/.themes/Amber && cd ~/.themes/Amber
 wget https://github.com/lassekongo83/amber-theme/archive/master.zip
 unzip master.zip
-sh amber-theme/install.sh
-rm -r amber-theme
+chmod +x amber-theme-master/install.sh
+sh amber-theme-master/install.sh
+rm -r amber-theme-master master.zip
 ```
 
 **With git:**
