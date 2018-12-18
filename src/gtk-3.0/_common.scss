@@ -2395,6 +2395,7 @@ radio {
   &:checked, &:checked:backdrop { @include check(checked); }
   &:checked:hover { @include check(checked); }
   &:disabled { @include check(insensitive); }
+  &:disabled:backdrop, &:disabled:checked:backdrop { @include check(insensitive); color: $insensitive_fg_color; }
 
   @if $variant == 'light' {
     // the borders of the light variant versions of checks and radios are too similar in luminosity to the selected background
