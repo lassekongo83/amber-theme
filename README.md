@@ -28,7 +28,7 @@ GTK 3.22+
 * Opensuse - `zypper in gtk2-engine-murrine gtk2-engines ubuntu-fonts`
 * Fedora - `dnf install gtk-murrine-engine gtk2-engines`
 
-### How to install
+## Installation
 
 #### Option 1: Running install.sh
 Make sure you have `wget` **or** `git` installed.
@@ -75,7 +75,7 @@ sudo ninja -C build install
 ```
 The theme will be installed in: `/usr/share/themes/Amber`
 
-### Using the theme
+## Using the theme
 Using `gnome-tweaks`. (Make sure you have `gnome-shell-extensions` installed.)
 
 1. Go to Extensions and activate `User themes`. (You may have to restart `gnome-tweaks` after doing that for the option to swap shell theme to be available in the next step.)
@@ -95,7 +95,7 @@ A shell restart may be needed after swapping themes. <kbd>Alt</kbd> + <kbd>F2</k
 
 Xfce users can change themes in `Settings > Appearance` and `Settings > Window manager`.
 
-### Known issues
+## Known issues
 None of these steps below are required.
 
 #### Ubuntu Dock double indicators
