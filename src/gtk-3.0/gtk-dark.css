@@ -919,15 +919,15 @@ switch:checked slider { background-color: #fb6f55; color: #f2f1f0; box-shadow: n
 
 switch:checked:hover slider { box-shadow: 0 0 0 6px rgba(251, 111, 85, 0.3); }
 
-row:selected switch:checked { background-color: rgba(253, 195, 185, 0.5); }
+row:selected switch:checked, menuitem:hover switch:checked { background-color: rgba(253, 195, 185, 0.5); }
 
-row:selected switch:checked slider { background-color: white; }
+row:selected switch:checked slider, menuitem:hover switch:checked slider { background-color: white; }
 
-row:selected switch:hover slider { box-shadow: 0 0 0 6px rgba(253, 195, 185, 0.3); }
+row:selected switch:hover slider, menuitem:hover switch:hover slider { box-shadow: 0 0 0 6px rgba(253, 195, 185, 0.3); }
 
-row:selected switch:focus slider { box-shadow: 0 0 0 6px rgba(253, 195, 185, 0.4); }
+row:selected switch:focus slider, menuitem:hover switch:focus slider { box-shadow: 0 0 0 6px rgba(253, 195, 185, 0.4); }
 
-row:selected switch:focus:hover slider { box-shadow: 0 0 0 6px rgba(253, 195, 185, 0.5); }
+row:selected switch:focus:hover slider, menuitem:hover switch:focus:hover slider { box-shadow: 0 0 0 6px rgba(253, 195, 185, 0.5); }
 
 .view.content-view.check:not(list), iconview.content-view.check:not(list), .content-view .tile check:not(list) { -gtk-icon-shadow: none; -gtk-icon-source: -gtk-scaled(url("assets/checkbox-selectionmode.png"), url("assets/checkbox-selectionmode@2.png")); background-color: transparent; min-width: 40px; min-height: 40px; background-image: none; transition: none; box-shadow: none; border-width: 0; }
 

@@ -2335,7 +2335,7 @@ switch {
   }
   &:checked:hover slider { box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.7); }
 
-  row:selected & {
+  row:selected &, menuitem:hover & {
     &:checked { background-color: transparentize(lighten($selected_bg_color, 20%), 0.5); }
     &:checked slider { background-color: lighten(lighten($selected_bg_color, 20%), 20%); }
     &:hover slider { box-shadow: 0 0 0 6px transparentize(lighten($selected_bg_color, 20%), 0.7); }
