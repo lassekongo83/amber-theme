@@ -3155,12 +3155,14 @@ messagedialog { // Message Dialog styling
     .dialog-action-area button {
       padding: 10px 14px; // labels are not vertically centered on message dialog, this is a workaround
       border-radius: 0;
-      border-left-style: solid;
-      border-right-style: none;
-      border-bottom-style: none;
+      border-style: none;
+      border-top-style: solid;
+      box-shadow: none;
+      border-color: $borders_color;
 
-      &:first-child{
-        border-left-style: none;
+      &:focus { box-shadow: inset 0 0 0 1px $selected_bg_color; }
+
+      &:first-child {
         border-bottom-left-radius: $br_b;
         -gtk-outline-bottom-left-radius: $br_b;
       }
