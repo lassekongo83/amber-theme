@@ -1767,6 +1767,8 @@ window.background.chromium menubar { color: #f2f1f0; }
 
 .thunar toolbar { border-bottom: 1px solid #1d1c1b; }
 
+.thunar .shortcuts-pane { border-top: 0; }
+
 .nemo-window .nemo-window-pane widget.entry { border: 1px solid; border-radius: 2px; border-color: #fb6f55; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(251, 111, 85, 0.3), 0 0 0 2px rgba(251, 111, 85, 0.1); }
 
 .gedit-search-slider button, .gedit-search-slider button:hover { box-shadow: none; border: 1px solid #1d1c1b; }
