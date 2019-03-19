@@ -64,7 +64,7 @@ assistant .sidebar label { padding: 6px 12px; }
 
 assistant .sidebar label.highlight { background-color: #bebebc; }
 
-.csd popover.background.touch-selection, .csd popover.background.magnifier, popover.background.touch-selection, popover.background.magnifier, .csd popover.background.osd, popover.background.osd, .app-notification, .app-notification.frame, .osd .scale-popup, .osd { color: #eeeeec; border: none; background-color: rgba(68, 66, 64, 0.7); background-clip: padding-box; outline-color: rgba(238, 238, 236, 0.3); text-shadow: 0 1px black; -gtk-icon-shadow: 0 1px black; }
+.csd popover.background.touch-selection, .csd popover.background.magnifier, popover.background.touch-selection, popover.background.magnifier, .csd popover.background.osd, popover.background.osd, .app-notification, .app-notification.frame, .osd .scale-popup, #XfceNotifyWindow, .osd { color: #eeeeec; border: none; background-color: rgba(68, 66, 64, 0.7); background-clip: padding-box; outline-color: rgba(238, 238, 236, 0.3); text-shadow: 0 1px black; -gtk-icon-shadow: 0 1px black; }
 
 statusbar, .statusbar { font-size: smaller; }
 
@@ -1716,6 +1716,32 @@ XfceHeading, .XfceHeading { margin: 0; padding: 0; border-width: 0; background-i
 .xfce4-panel menu button:disabled { color: #8d8d8c; background-color: #cececc; text-shadow: none; -gtk-icon-shadow: none; box-shadow: none; border-color: transparent; }
 
 .xfce4-panel menu button:disabled > .label { color: inherit; }
+
+#XfceNotifyWindow { border-radius: 2px; }
+
+#XfceNotifyWindow buttonbox { padding: 0; }
+
+#XfceNotifyWindow button { color: #eeeeec; border-color: rgba(0, 0, 0, 0.7); background-image: image(rgba(68, 66, 64, 0.7)); background-clip: padding-box; box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); text-shadow: 0 1px black; -gtk-icon-shadow: 0 1px black; outline-color: rgba(238, 238, 236, 0.3); border-radius: 2px; text-shadow: none; }
+
+#XfceNotifyWindow button:hover, #XfceNotifyWindow button:focus { color: white; border-color: rgba(0, 0, 0, 0.7); background-image: image(rgba(100, 97, 94, 0.7)); background-clip: padding-box; box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); text-shadow: 0 1px black; -gtk-icon-shadow: 0 1px black; outline-color: rgba(238, 238, 236, 0.3); }
+
+#XfceNotifyWindow button:active, #XfceNotifyWindow button:checked { color: white; border-color: rgba(0, 0, 0, 0.7); background-image: image(rgba(0, 0, 0, 0.7)); background-clip: padding-box; box-shadow: none; text-shadow: none; -gtk-icon-shadow: none; outline-color: rgba(238, 238, 236, 0.3); }
+
+#XfceNotifyWindow button:active:hover, #XfceNotifyWindow button:checked:hover { color: white; border-color: rgba(0, 0, 0, 0.7); background-image: image(rgba(0, 0, 0, 0.7)); background-clip: padding-box; box-shadow: none; text-shadow: none; -gtk-icon-shadow: none; outline-color: rgba(238, 238, 236, 0.3); }
+
+#XfceNotifyWindow button.default { color: white; border-color: rgba(0, 0, 0, 0.7); background-image: image(rgba(100, 97, 94, 0.7)); background-clip: padding-box; box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); text-shadow: 0 1px black; -gtk-icon-shadow: 0 1px black; outline-color: rgba(238, 238, 236, 0.3); }
+
+#XfceNotifyWindow button:disabled { color: #999896; border-color: rgba(0, 0, 0, 0.7); background-image: image(rgba(85, 83, 81, 0.5)); background-clip: padding-box; box-shadow: none; text-shadow: none; -gtk-icon-shadow: none; }
+
+#XfceNotifyWindow entry { color: white; border-color: rgba(0, 0, 0, 0.7); background-color: rgba(0, 0, 0, 0.5); background-clip: padding-box; box-shadow: none; text-shadow: 0 1px black; -gtk-icon-shadow: 0 1px black; border-radius: 2px; text-shadow: none; }
+
+#XfceNotifyWindow label#summary { font-weight: bold; }
+
+#XfceNotifyWindow progressbar { min-height: 6px; border-radius: 2px; }
+
+#XfceNotifyWindow progressbar progress { background-image: none; background-color: #fb6f55; border: none; box-shadow: none; }
+
+#XfceNotifyWindow progressbar trough { background-color: ligthen(#444240, 10%); border: none; border-radius: 2px; padding: 1px 0; }
 
 #xfwm-tabwin { padding: 12px; background-image: none; background-color: rgba(0, 0, 0, 0.8); color: shade(#ffffff, 0.65); text-shadow: 0px 1px rgba(0, 0, 0, 0.8); border-radius: 12px; -XfwmTabwinWidget-icon-size: 64px; -XfwmTabwinWidget-preview-size: 64px; }
 
