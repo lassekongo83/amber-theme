@@ -68,7 +68,6 @@ $panel_color: transparentize(black, 0.4);
       transition-duration: 100ms;
     }
 
-    // FIXME: The icon in the overview is still showing
     .show-apps:#{$d} .overview-icon {
       background-image: url("d2p-activities-active.svg");
       background-color: $panel_color;
@@ -76,6 +75,8 @@ $panel_color: transparentize(black, 0.4);
       color: transparent;
     }
   }
+
+  .show-apps-icon { color: transparent; } // Makes sure that no default icon from the icon theme is showing
 
   // clock and system menu area
   & > #panelRight {

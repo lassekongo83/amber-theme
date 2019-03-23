@@ -1004,6 +1004,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 
 #panel.dashtopanelMainPanel .show-apps:overview .overview-icon { background-image: url("d2p-activities-active.svg"); background-color: rgba(0, 0, 0, 0.6); background-position: center center; color: transparent; }
 
+#panel.dashtopanelMainPanel .show-apps-icon { color: transparent; }
+
 #panel.dashtopanelMainPanel > #panelRight { box-shadow: inset 1px 0 rgba(0, 0, 0, 0.6); }
 
 #panel.dashtopanelMainPanel > #panelRight .panel-button:hover { box-shadow: none; }
