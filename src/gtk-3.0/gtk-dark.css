@@ -1505,7 +1505,7 @@ messagedialog.csd decoration { border-radius: 2px; box-shadow: 0 1px 2px rgba(0,
 
 .ssd .titlebar.default-decoration button.titlebutton { transition-duration: 100ms; }
 
-headerbar.default-decoration button.titlebutton, .titlebar.default-decoration button.titlebutton { padding: 0 4px; min-width: 0; min-height: 22px; margin: 0; }
+headerbar.default-decoration button.titlebutton, .titlebar.default-decoration button.titlebutton { padding: 0 3px; min-width: 0; min-height: 22px; margin: 0 2px; }
 
 headerbar .right.horizontal, .titlebar .right.horizontal { border-left: 1px solid rgba(0, 0, 0, 0.2); border-left: 0; padding-left: 4px; }
 
@@ -1731,7 +1731,7 @@ XfceHeading, .XfceHeading { margin: 0; padding: 0; border-width: 0; background-i
 
 #XfceNotifyWindow progressbar progress { background-image: none; background-color: #fb6f55; border: none; box-shadow: none; }
 
-#XfceNotifyWindow progressbar trough { background-color: ligthen(#444240, 10%); border: none; border-radius: 2px; padding: 1px 0; }
+#XfceNotifyWindow progressbar trough { background-color: #5e5c59; border: none; border-radius: 2px; padding: 1px 0; }
 
 #xfwm-tabwin { padding: 12px; background-image: none; background-color: rgba(0, 0, 0, 0.8); color: shade(#ffffff, 0.65); text-shadow: 0px 1px rgba(0, 0, 0, 0.8); border-radius: 12px; -XfwmTabwinWidget-icon-size: 64px; -XfwmTabwinWidget-preview-size: 64px; }
 

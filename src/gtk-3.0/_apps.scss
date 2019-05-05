@@ -107,7 +107,7 @@ XfceHeading,
       box-shadow: none;
     }
     trough {
-      background-color: ligthen($dark_bg_color, 10%);
+      background-color: lighten($dark_bg_color, 10%);
       border: none;
       border-radius: $br_b;
       padding: 1px 0;
