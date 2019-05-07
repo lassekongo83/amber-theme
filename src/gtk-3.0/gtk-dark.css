@@ -1065,11 +1065,11 @@ scale fill:disabled { border-color: transparent; background-color: transparent; 
 
 .osd scale fill:disabled { border-color: transparent; background-color: transparent; }
 
-scale slider { transition: all 100ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1); color: #f2f1f0; outline-color: rgba(242, 241, 240, 0.3); background-color: #5c5956; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(8, 7, 7, 0.1); border-color: transparent; border-bottom-color: transparent; border-radius: 100%; }
+scale slider { transition: all 100ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1); color: #f2f1f0; outline-color: rgba(242, 241, 240, 0.3); background-color: #5c5956; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px rgba(8, 7, 7, 0.1); border-color: transparent; border-bottom-color: transparent; border: 1px solid transparent; border-radius: 100%; }
 
 scale slider:hover { color: #f2f1f0; background-color: #64615e; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.25); box-shadow: 0 0 0 6px rgba(251, 111, 85, 0.3); }
 
-scale slider:active { border-color: #e52805; }
+scale slider:active { border-color: #e52805; box-shadow: none; }
 
 scale slider:disabled { color: #9b9a98; background-color: #555452; text-shadow: none; -gtk-icon-shadow: none; box-shadow: none; border-color: transparent; }
 

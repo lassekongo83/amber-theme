@@ -2657,6 +2657,7 @@ scale {
   slider {
     transition: all 100ms $deceleration_curve, box-shadow $shorter_duration $deceleration_curve;
     @include button(normal);
+    border: 1px solid transparent;
 
     border-radius: 100%;
 
@@ -2665,7 +2666,10 @@ scale {
       box-shadow: 0 0 0 6px transparentize($selected_bg_color, 0.7); 
     }
 
-    &:active { border-color: $selected_borders_color; }
+    &:active {
+      border-color: $selected_borders_color;
+      box-shadow: none;
+    }
 
     &:disabled { @include button (insensitive); }
 
