@@ -1323,7 +1323,7 @@ paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .
 
 .sidebar separator { background-color: transparent; }
 
-.sidebar treeview { background-color: #efefee; }
+.sidebar treeview, .sidebar treeview:backdrop { background-color: #efefee; }
 
 stacksidebar row { padding: 10px 4px; }
 
