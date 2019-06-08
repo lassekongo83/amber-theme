@@ -645,13 +645,17 @@ treeview.view.expander:selected:hover { color: #ffffff; }
 
 treeview.view.expander:checked { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
-treeview.view.progressbar { border: 1px solid #e52805; border-radius: 2px; background-color: #fb6f55; background-image: none; box-shadow: inset 0 1px rgba(255, 255, 255, 0.15), 0 1px rgba(0, 0, 0, 0.1); }
+treeview.view.progressbar { background-color: #fb6f55; background-image: image(#fb6f55); box-shadow: none; }
 
-treeview.view.progressbar:selected:focus, treeview.view.progressbar:selected { border-radius: 2px; box-shadow: inset 0 1px rgba(255, 255, 255, 0.05); background-image: none; background-color: black; }
+treeview.view.progressbar:selected:focus, treeview.view.progressbar:selected { box-shadow: inset 0 1px rgba(255, 255, 255, 0.05); background-image: image(#111); }
 
-treeview.view.trough { background-color: rgba(242, 241, 240, 0.1); border-radius: 2px; }
+treeview.view.progressbar:selected:focus:backdrop, treeview.view.progressbar:selected:backdrop { background-color: #111; }
 
-treeview.view.trough:selected:focus, treeview.view.trough:selected { background-color: #fa4523; border-radius: 2px; }
+treeview.view.progressbar:backdrop { background-image: none; box-shadow: none; }
+
+treeview.view.trough { background-color: rgba(242, 241, 240, 0.1); }
+
+treeview.view.trough:selected:focus, treeview.view.trough:selected { background-color: #fa4523; }
 
 treeview.view header button { color: #828181; background-color: #111; font-weight: bold; text-shadow: none; box-shadow: none; }
 
