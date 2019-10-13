@@ -108,3 +108,7 @@ Ubuntu changes the opacity of the panel when you maximize applications. The opac
 
 #### Left aligned maximize buttons
 Left aligned maximize buttons in the titlebar will swap appearance on normal GNOME applications using client side decorations (csd). Applications that don't use csd (gnome-terminal for example) will use the right aligned appearance, even if it's left aligned. Just a minor inconsistency.
+
+## Copying or Reusing
+
+The GTK theme(s) and included scripts are free software licensed under the terms of the [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.txt).
