@@ -81,19 +81,21 @@ $asset_suffix: if($variant=='dark', '-dark', '');
 %view {
   color: $text_color;
   background-color: $base_color;
-  &:hover { background-color: transparentize($selected_bg_color, 0.84); }
-  &:selected {
-    border-radius: 0;
-    @extend %selected_items;
-  }
-  &:backdrop { // Keep for now or selected backdrop color will behave bad when hovering.
+  &:hover, &:backdrop:hover { background-color: transparentize($selected_bg_color, 0.84); } // Custom style
+
+  &:backdrop {
     color: $backdrop_text_color;
     background-color: $backdrop_base_color;
     &:disabled { color: $backdrop_insensitive_color; }
   }
+
   &:disabled {
     color: $insensitive_fg_color;
     background-color: $insensitive_bg_color;
+  }
+
+  &:selected {
+    &:focus, & { @extend %selected_items; }
   }
 }
 
