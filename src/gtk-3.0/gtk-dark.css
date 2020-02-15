@@ -487,7 +487,7 @@ searchbar > revealer > box, .location-bar { border-width: 0 0 1px; padding: 3px;
 
 searchbar > revealer > box { margin: -6px; padding: 6px; }
 
-.inline-toolbar, searchbar > revealer > box, .location-bar { background-color: #2a2927; }
+.inline-toolbar { background-color: #2a2927; }
 
 .titlebar:not(headerbar), headerbar { padding: 0 4px; min-height: 38px; border-width: 0; border-style: solid; border-color: #1d1c1b; background-color: #444240; box-shadow: inset 0 1px rgba(255, 255, 255, 0.04), inset 0 -1px transparent; }
 
