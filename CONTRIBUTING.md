@@ -28,9 +28,9 @@ Now everything should be in place. Select the GTK via:
 gsettings set org.gnome.desktop.interface gtk-theme Amber
 ```
 
-The theme will be installed in `/usr/share/themes/Amber`. You can edit the `gtk.css` and `gnome-shell.css` files in those folders directly for testing, or you can edit the SCSS files inside the folder you cloned from GitHub.
+The themes will be installed in `/usr/share/themes`. You can edit the `gtk.css` and `gnome-shell.css` files in those folders directly for testing, or you can edit the SCSS files inside the folder you cloned from GitHub.
 
-SCSS is the actual "source code" of the theme. This is compiled into the CSS files. Edit the SCSS if you want to contribute your changes back here. SCSS is simple enough to get the hang of if you already know CSS. You can go through [this SCSS tutorial](http://marksheet.io/sass-scss-less.html) to learn more. After making your edits in the SCSS files, you can run `sudo ninja install` in the `Amber/build` folder. That’ll do all the compiling and installing.
+SCSS is the actual "source code" of the theme. This is compiled into the CSS files. Edit the SCSS if you want to contribute your changes back here. SCSS is simple enough to get the hang of if you already know CSS. You can go through [this SCSS tutorial](http://marksheet.io/sass-scss-less.html) to learn more. After making your edits in the SCSS files, you can run `sudo ninja install` in the build folder. That’ll do all the compiling and installing.
 
 Changes to the GNOME Shell theme are visible after doing <kbd>Alt</kbd> + <kbd>F2</kbd> and running `rt` as command. The changes to the GTK theme will be visible after running the following commands.
 
