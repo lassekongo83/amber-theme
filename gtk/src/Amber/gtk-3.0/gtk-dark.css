@@ -1411,7 +1411,7 @@ calendar:indeterminate { color: alpha(currentColor,0.1); }
 
 messagedialog .titlebar { min-height: 20px; background-image: none; background-color: #444240; border-style: none; border-top-left-radius: 7px; border-top-right-radius: 7px; }
 
-messagedialog.csd.background { border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; }
+messagedialog.csd.background { border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; }
 
 messagedialog.csd .dialog-action-area button { padding: 10px 14px; border-right-style: none; border-bottom-style: none; border-radius: 0; -gtk-outline-radius: 0; }
 
