@@ -1115,7 +1115,7 @@ row:selected scale trough:disabled, scale row:selected trough:disabled, row:sele
 
 .osd scale trough:disabled, scale .osd trough:disabled, .osd scale fill:disabled, scale .osd fill:disabled, .osd progressbar trough:disabled, progressbar .osd trough:disabled { background-color: rgba(75, 75, 75, 0.5); }
 
-scale highlight, progressbar progress { border: 1px solid #fb6f55; border-radius: 2px; background-color: #fb6f55; }
+scale highlight, progressbar progress { border: 1px solid #fb6f55; border-radius: 4px; background-color: #fb6f55; }
 
 scale highlight:disabled, progressbar progress:disabled { background-color: transparent; border-color: transparent; }
 
