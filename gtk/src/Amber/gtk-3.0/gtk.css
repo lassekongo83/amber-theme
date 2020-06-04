@@ -1105,7 +1105,7 @@ menu menuitem radio:checked:not(:backdrop), menu menuitem radio:indeterminate:no
 
 treeview.view check:selected:focus, treeview.view check:selected, treeview.view radio:selected:focus, treeview.view radio:selected { color: #ffffff; border-color: #e52805; }
 
-scale trough, scale fill, progressbar trough { border: 1px solid #c4c4c0; border-radius: 99px; background-color: #c4c4c0; }
+scale trough, scale fill, progressbar trough { border: 1px solid #c4c4c0; border-radius: 4px; background-color: #c4c4c0; }
 
 scale trough:disabled, scale fill:disabled, progressbar trough:disabled { background-color: #cececc; }
 
