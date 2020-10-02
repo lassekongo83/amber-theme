@@ -1965,7 +1965,7 @@ XfdesktopIconView.view .label { text-shadow: 1px 1px 2px black; }
 
 XfdesktopIconView.view .rubberband { border-radius: 0; }
 
-#XfceNotifyWindow { background-color: #2a2927; border-radius: 2px; }
+#XfceNotifyWindow { background-color: #2a2927; border-radius: 2px; color: #f6f6f7; }
 
 #XfceNotifyWindow buttonbox { padding: 0; }
 
