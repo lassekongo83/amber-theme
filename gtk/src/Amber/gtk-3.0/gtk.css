@@ -1971,11 +1971,13 @@ headerbar .left button.titlebutton.maximize:active, .titlebar .left button.title
 
 #MozillaGtkWidget.background menubar, #MozillaGtkWidget.background .menubar, #MozillaGtkWidget.background menubar > menuitem:hover { background-color: #444240; color: #eeeeec; }
 
-window.background.chromium { background-color: #444240; }
+window.background.chromium { background-color: #444240; color: #eeeeec; }
 
 window.background.chromium button { border-color: #2a2927; }
 
 window.background.chromium menubar { color: #eeeeec; }
+
+window.background.chromium menu, window.background.chromium .menu, window.background.chromium .context-menu { color: #3C3C3C; }
 
 switch { margin: 4px 0; padding: 0; border-radius: 99px; border-width: 0; background-color: rgba(0, 0, 0, 0.38); background-clip: padding-box; transition: all 75ms cubic-bezier(0, 0, 0.2, 1); }
 
