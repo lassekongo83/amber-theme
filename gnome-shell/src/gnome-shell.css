@@ -28,9 +28,9 @@ stage { font-size: 11pt; color: #f2f1f0; }
 
 .modal-dialog .modal-dialog-linked-button:insensitive, .hotplug-notification-item:insensitive, .notification-banner .notification-button:insensitive { color: #9b9a98; border-color: #232221; background-color: #302e2d; box-shadow: none; text-shadow: none; icon-shadow: none; }
 
-.modal-dialog .modal-dialog-linked-button:hover, .hotplug-notification-item:hover, .notification-banner .notification-button:hover { color: #f2f1f0; background-color: #514f4c; border-color: #393836; box-shadow: none; text-shadow: 0 1px rgba(0, 0, 0, 0.2); icon-shadow: 0 1px rgba(0, 0, 0, 0.2); }
-
 .modal-dialog .modal-dialog-linked-button:focus, .hotplug-notification-item:focus, .notification-banner .notification-button:focus { color: #f2f1f0; text-shadow: 0 1px rgba(0, 0, 0, 0.2); icon-shadow: 0 1px rgba(0, 0, 0, 0.2); box-shadow: inset 0 0 0 2px rgba(251, 111, 85, 0.6); }
+
+.modal-dialog .modal-dialog-linked-button:hover, .hotplug-notification-item:hover, .notification-banner .notification-button:hover { color: #f2f1f0; background-color: #514f4c; border-color: #393836; box-shadow: none; text-shadow: 0 1px rgba(0, 0, 0, 0.2); icon-shadow: 0 1px rgba(0, 0, 0, 0.2); }
 
 .modal-dialog .modal-dialog-linked-button:active, .hotplug-notification-item:active, .notification-banner .notification-button:active { color: #f2f1f0; background-color: #3c3a39; border-color: #272625; text-shadow: none; icon-shadow: none; box-shadow: none; }
 
@@ -1039,6 +1039,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active { backg
 .user-widget.horizontal .user-widget-label:rtl { padding-right: 14px; text-align: right; }
 
 .user-widget.vertical .user-widget-label { font-size: 16pt; text-align: center; font-weight: normal; padding-top: 16px; }
+
+.login-dialog-timed-login-indicator { height: 2px; background-color: #938b83; }
 
 .login-dialog-prompt-layout { padding-top: 24px; padding-bottom: 12px; spacing: 12px; width: 23em; }
 
