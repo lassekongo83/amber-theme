@@ -1,5 +1,5 @@
 project('Amber',
-        meson_version: '>= 0.45',
+        meson_version: '>= 0.51',
         license : ['GPL3'],
         default_options: ['prefix=/usr'])
 

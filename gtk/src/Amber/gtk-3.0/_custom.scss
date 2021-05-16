@@ -778,6 +778,9 @@ XfdesktopIconView.view {
   searchbar { border-top: 1px solid $borders_color; }
   .searchbar-container { margin-top: -1px; }
 
+  // Border radius on .nautilus-window since version 40
+  border-radius: $window_radius $window_radius 0 0;
+
   // sidebar separator
   paned {
     > separator {
