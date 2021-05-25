@@ -1779,6 +1779,8 @@ popover.emoji-completion .emoji:hover { background: #4f4c4a; }
 
 headerbar button.titlebutton.close, .titlebar button.titlebutton.close, headerbar button.titlebutton.maximize, .titlebar button.titlebutton.maximize, headerbar button.titlebutton.minimize, .titlebar button.titlebutton.minimize { color: transparent; background-color: transparent; background-position: center; background-repeat: no-repeat; border-width: 0; box-shadow: none; transition-property: background-color; }
 
+headerbar button.titlebutton.close > image, .titlebar button.titlebutton.close > image, headerbar button.titlebutton.maximize > image, .titlebar button.titlebutton.maximize > image, headerbar button.titlebutton.minimize > image, .titlebar button.titlebutton.minimize > image { opacity: 0; }
+
 headerbar button.titlebutton.close, .titlebar button.titlebutton.close { background-color: rgba(251, 111, 85, 0.6); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.16); }
 
 headerbar button.titlebutton.close:hover, .titlebar button.titlebutton.close:hover, headerbar button.titlebutton.close:active, .titlebar button.titlebutton.close:active { background-color: #fb6f55; }
