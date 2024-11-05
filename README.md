@@ -1,3 +1,5 @@
+# THIS THEME IS NO LONGER MAINTAINED
+
 # Amber Theme
 A theme for GNOME and Xfce4.
 
